@@ -635,11 +635,13 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
 }
 @media (max-width: 991.98px) {
   .master-home {
-    height: unset;
+    min-height: 100vh;
   }
 }
 .master-home.category-hotel {
   background: #f7f7f7;
+  min-height: unset;
+  height: auto;
 }
 .master-home nav.navbar {
   padding: 0;
@@ -790,7 +792,7 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
 }
 @media (max-width: 767.98px) {
   .master-home {
-    height: unset;
+    min-height: 100vh;
   }
   .master-home .content-master-page {
     width: 90%;
