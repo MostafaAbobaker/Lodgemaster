@@ -1,0 +1,16 @@
+.container-fluid 
+  .row
+    .col-lg-12.pt-3
+      header.header-filter
+        .group-filter.d-flex 
+          .input-group.me-3
+            input.form-control(type='text', placeholder="Search", aria-label="Recipient's username", aria-describedby='button-addon2')
+            button#button-addon2.btn.btn-outline-master(type='button') 
+              i.fa-solid.fa-magnifying-glass
+          button.btn.btn-outline-master.d-flex.align-items-center(type='button' data-bs-toggle="modal" data-bs-target="#exampleModal") 
+            i.fa-solid.fa-arrow-down-wide-short.me-2
+            | Filter
+        .date Thursday, 20 April 2023
+        a.btn.btn-master.d-flex.align-items-center.rounded-pill.btn-Create-Order(href='CreateOrderGeneral.html') 
+          i.fa-solid.fa-plus.me-2
+          | Create Order

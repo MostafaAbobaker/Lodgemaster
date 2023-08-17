@@ -1,0 +1,70 @@
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .Dashboard-home
+      include includes/headerNavBar.pug
+      include includes/asideBar.pug
+      //- start Content category hotel
+      section.content-category-hotel 
+        //- Start Filter
+        include includes/FilterDashboard.pug
+        //- End Filter
+        //- Start Load Master page 
+        #pageMasterLoad
+          //- Start Create Order
+          .information-Row-Table
+            .container-fluid 
+              .row 
+                .col-lg-12 
+                  .card-master.card-Order-SMS.mb-5.p-3
+                    .container-fluid 
+                      .row 
+                        .col-lg-12.d-flex.justify-content-end 
+                          a(href="informationRowTable.html")
+                            i.fa-solid.fa-arrow-right-long
+
+                        .col-lg-7.col-md-6.col-sm-12
+                          h4.fw-bold.text-primary.mb-4 Order SMS
+                          p Dear Katteff, a new service order has been assigned to you. Please bring following Items 
+                            | O
+                            sub 2  
+                            |  Water Bottles.
+                          p This task was created by Hassan.
+                          p   Reply with Order number space “1” to complete the order. “2” for out of stock.      
+
+                        .col-lg-5.col-md-6.col-sm-12
+                            .content-msg 
+                              h4.fw-bold.text-primary.mb-4 To
+                              .card-send.d-flex.align-items-center.mb-4
+                                .icon
+                                  span R
+                                .text.text-primary Rohana
+                              h5.label.text-primary.fw-bold Status:
+                              .Status.mb-4 Sent
+
+                              h5.label.text-primary.fw-bold Email:
+                              .Status.mb-4 Kattef@company.com
+
+                              h5.label.text-primary.fw-bold Phone:
+                              .Status.mb-4 +13- 88077-00
+
+                              h5.label.text-primary.fw-bold Date:
+
+                              .Status.mb-4 15 May, 2023, 14:05
+                        .col-lg-12.d-flex.justify-content-center.pt-4 
+                          a.btn.btn-dark.me-3.rounded-pill.px-5(href="") Resend
+                          a.btn.btn-primary.rounded-pill.px-5(href="" data-bs-toggle="modal" data-bs-target="#OrderSMS") Continue
+      //- End Content category hotel
+    //- Start Modal
+    include includes/modal.pug 
+    include includes/script.pug
+    script(src="../assets/js/ajaxLoad.js") 
+    
+      
+
+
+
+     
+//- End Create Order

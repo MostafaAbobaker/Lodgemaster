@@ -1,0 +1,85 @@
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .master-home.category-hotel
+      //- Start Nav Bar
+      nav.navbar.navbar-expand-lg
+        .container
+          a.navbar-brand(href='#') 
+            img(src="./assets/images/Logo.png", alt="logo")
+          //- button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+          //-   span.navbar-toggler-icon
+          //- #navbarSupportedContent.collapse.navbar-collapse
+          //-   ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+          //-     li.nav-item
+          //-       a.nav-link.active(aria-current='page' href='#') Home
+          //-     li.nav-item
+          //-       a.nav-link(href='#') Services
+          //-     li.nav-item
+          //-       a.nav-link(href='#') Contact
+          //-     li.nav-item
+          //-       a.nav-link(href='#' data-bs-toggle="modal" data-bs-target="#exampleModal") Login
+          nav.navbar-user.d-flex.align-items-center 
+            .image.me-2 
+              img(src="./assets/images/user.png", alt="" height='65')
+            .body-navbar-user  
+              .text.fw-bold Hassan
+              a(href="login.html")  
+                span.text-black Sign out
+                i.fa-solid.fa-right-from-bracket.ms-2.text-primary
+
+      //- End Nav Bar      
+      //- start Content category hotel
+      section.content-category-hotel 
+        .container 
+          .row 
+            .col-lg-4.col-md-6.col-sm-6 
+              a.category-item(href="LayoutDashboard.html") 
+                 
+                  .image 
+                    img(src="./assets/images/Svg/dashboard.svg", alt="")
+                  
+                  .heder-category-item  Dashboard 
+            .col-lg-4.col-md-6.col-sm-6 
+              a.category-item(href="") 
+                
+                  .image 
+                    img(src="./assets/images/Svg/RoomInspection.svg", alt="")
+                  .heder-category-item  Room Inspection 
+            .col-lg-4.col-md-6.col-sm-6 
+              a.category-item(href="") 
+                
+                  .image 
+                    img(src="./assets/images/Svg/ServiceOrders.svg", alt="")
+
+                  .heder-category-item  Service Orders
+            .col-lg-4.col-md-6.col-sm-6 
+              a.category-item(href="") 
+                
+                  .image 
+                    img(src="./assets/images/Svg/StaffManagement.svg", alt="")
+
+                  .heder-category-item  Staff Management
+            .col-lg-4.col-md-6.col-sm-6 
+              a.category-item(href="") 
+                
+                  .image 
+                    img(src="./assets/images/Svg/Items.svg", alt="")
+
+                  .heder-category-item  Items
+            .col-lg-4.col-md-6.col-sm-6 
+              a.category-item(href="") 
+                
+                  .image 
+                    img(src="./assets/images/Svg/Settings.svg", alt="")
+
+                  .heder-category-item  Settings
+
+      //- End Content category hotel
+
+    include includes/script.pug 
+
+
+

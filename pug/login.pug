@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .login-page 
+      .container.container-up 
+        .row 
+          .col-lg-6.col-md-12.col-sm-12
+          .col-lg-6.col-md-12.col-sm-12
+            a(href="index.html") 
+              .image-main-logo
+                img.w-100(src="./assets/images/Logo.png", alt="Logo" )
+            h1.mb-1.text-center.fw-bold Welcome Back
+            p.text-center.mb-5 New Joined? 
+              a(href="signUp.html") Sign Up
+            form.form-content.px-5(action="")   
+              
+              .input-group.mb-3
+                span.input-group-text 
+                  i.fa-regular.fa-envelope
+                .form-floating
+                  input#floatingInput.form-control(type='email' placeholder='name@example.com')
+                  label(for='floatingInput') Email 
+              .input-group.mb-3
+                span.input-group-text 
+                  i.fa-solid.fa-key
+                .form-floating
+                  input#floatingPassword.form-control(type='password' placeholder='Password')
+                  label(for='floatingPassword') Password
+              .row.justify-content-between.mb-3 
+                .mb-3.form-check.col-lg-6.col-md-6.col-sm-12.ps-5
+                  input#exampleCheck1.form-check-input(type='checkbox')
+                  label.form-check-label(for='exampleCheck1') Remember me
+                .forget.col-lg-6.col-md-6.col-sm-12.text-end
+                  a(href="ForgetPassword.html") Forget Password?
+                
+              a.btn.btn-dark.w-100.d-block(href="CategoryHotel.html") Sign In
+    
+
+    include includes/script.pug 
+

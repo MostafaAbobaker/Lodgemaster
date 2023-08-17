@@ -1,0 +1,356 @@
+- var titlePage = 'Items';
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .Dashboard-home
+      include includes/headerNavBar.pug
+      include includes/asideBar.pug
+      //- start Content category hotel
+      section.content-category-hotel 
+        //- Start Filter
+        include includes/FilterDashboard.pug
+        //- End Filter
+        //- Start Load Master page 
+        #pageMasterLoad
+          .HomeDashboard
+            .container-fluid 
+              .row           
+                .col-lg-12.mb-4
+                  .overview-Orders
+                    .header-overview.mb-3.justify-content-start 
+                      .title-head.mb-0 Items Management
+                    .filter-table.mb-4
+                      .container-fluid 
+                        .row 
+                          .col-lg-3.col-md-6.col-sm-12.mb-3
+                            .form-group
+                              label.mb-2(for='exampleFormControlSelect1') Departments
+                              select#exampleFormControlSelect1.form-select.rounded-pill
+                                option All
+                                option Maintenance (23)
+                                option House Keeping (25)
+                                option Management (35)
+                          .col-lg-3.col-md-6.col-sm-12.mb-3
+                            .from-group 
+                              label.mb-2(for="") Availability
+                              .d-flex
+                                .form-check.me-4
+                                  input#InStock.form-check-input(type='checkbox', value='')
+                                  label.form-check-label(for='InStock')
+                                    | In Stock
+                                .form-check
+                                  input#OutStock.form-check-input(type='checkbox', value='')
+                                  label.form-check-label(for='OutStock')
+                                    | Out of stock
+                          .col-lg-3.col-md-6.col-sm-12.mb-3
+                            .form-group
+                              label.mb-2(for='exampleFormControlSelect1') Staff
+                              select#exampleFormControlSelect1.form-select.rounded-pill
+                                option Select Employee
+                                option Katef (13)
+                                option Muthna (35)
+                                option Abdullah (15)
+                          .col-lg-3.col-md-6.col-sm-12.mb-3.text-center
+                            .from-group 
+                              label.mb-2(for="") &nbsp;
+                            button.rounded-pill.px-4.btn.btn-dark( data-bs-toggle="modal" data-bs-target="#AddItem") 
+                              i.fa-solid.fa-plus.me-2
+                              | Add Item
+                    
+                    .d-flex.align-items-center.mb-4.justify-content-between
+                      .d-flex.align-items-center
+                        .statue.me-3.fst-italic.text-primary 321 items has been enlisted
+                        button.btn.btn-outline-dark.rounded-pill Download
+                          i.fa-solid.fa-download.ms-2
+                      .view-table-mobile 
+                        span.scroll-table.mx-2
+                          i.fa-solid.fa-list.fa-fw
+                        span.list-table.mx-2
+                          i.fa-solid.fa-grip-vertical.fa-fw
+
+
+  
+                    table.table.table-hover.table-responsive-scroll
+                      thead
+                        tr
+                          th(scope='col') English name
+                          th(scope='col') Arabic Name
+                          th(scope='col') Department
+                          th(scope='col') Assignee
+                          th(scope='col') Availability
+                          th(scope='col') &nbsp;
+                      tbody
+                        tr
+                          td(data-label="English name") Ash tray
+                          td(data-label="Arabic Name") مرمدة
+                          td(data-label="Department") 
+                            a.badge.bg-open.text-dark.rounded-pill(href="informationRowTable.html") Housekeeping
+                          td(data-label="Assignee") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/photoUser.png", alt="" width="25")
+                              .text Katef
+                          td(data-label="Availability") 
+                            .Availability 
+                              i.fa-solid.fa-circle-check.text-success.me-2
+                              | In Stock
+
+                          td(data-label="") 
+                            a(href="") 
+                              i.fa-regular.fa-pen-to-square
+                            a.text-danger(href="") 
+                              i.fa-solid.fa-trash-can
+                        tr
+                          td(data-label="English name") Ash tray
+                          td(data-label="Arabic Name") مرمدة
+                          td(data-label="Department") 
+                            a.badge.bg-Completed.text-dark.rounded-pill(href="informationRowTable.html") Maintenance
+                          td(data-label="Assignee") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/photoUser.png", alt="" width="25")
+                              .text Katef
+                          td(data-label="Availability") 
+                            .Availability 
+                              i.fa-solid.fa-circle-exclamation.text-warning.me-2
+                              | Out of Stock
+
+                          td(data-label="") 
+                            a(href="") 
+                              i.fa-regular.fa-pen-to-square
+                            a.text-danger(href="") 
+                              i.fa-solid.fa-trash-can
+                        tr
+                          td(data-label="English name") Ash tray
+                          td(data-label="Arabic Name") مرمدة
+                          td(data-label="Department") 
+                            a.badge.bg-process.text-dark.rounded-pill(href="informationRowTable.html") Management
+                          td(data-label="Assignee") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/Abdul.png", alt="" width="25")
+                              .text Abdul
+                          td(data-label="Availability") 
+                            .Availability 
+                              i.fa-solid.fa-circle-check.text-success.me-2
+                              | In Stock
+
+                          td(data-label="") 
+                            a(href="") 
+                              i.fa-regular.fa-pen-to-square
+                            a.text-danger(href="") 
+                              i.fa-solid.fa-trash-can
+                        tr
+                          td(data-label="English name") Ash tray
+                          td(data-label="Arabic Name") مرمدة
+                          td(data-label="Department") 
+                            a.badge.bg-open.text-dark.rounded-pill(href="informationRowTable.html") Housekeeping
+                          td(data-label="Assignee") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/photoUser.png", alt="" width="25")
+                              .text Katef
+                          td(data-label="Availability") 
+                            .Availability 
+                              i.fa-solid.fa-circle-check.text-success.me-2
+                              | In Stock
+
+                          td(data-label="") 
+                            a(href="") 
+                              i.fa-regular.fa-pen-to-square
+                            a.text-danger(href="") 
+                              i.fa-solid.fa-trash-can
+                        tr
+                          td(data-label="English name") Ash tray
+                          td(data-label="Arabic Name") مرمدة
+                          td(data-label="Department") 
+                            a.badge.bg-Completed.text-dark.rounded-pill(href="informationRowTable.html") Maintenance
+                          td(data-label="Assignee") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/photoUser.png", alt="" width="25")
+                              .text Katef
+                          td(data-label="Availability") 
+                            .Availability 
+                              i.fa-solid.fa-circle-exclamation.text-warning.me-2
+                              | Out of Stock
+
+                          td(data-label="") 
+                            a(href="") 
+                              i.fa-regular.fa-pen-to-square
+                            a.text-danger(href="") 
+                              i.fa-solid.fa-trash-can
+                        tr
+                          td(data-label="English name") Ash tray
+                          td(data-label="Arabic Name") مرمدة
+                          td(data-label="Department") 
+                            a.badge.bg-process.text-dark.rounded-pill(href="informationRowTable.html") Management
+                          td(data-label="Assignee") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/Abdul.png", alt="" width="25")
+                              .text Abdul
+                          td(data-label="Availability") 
+                            .Availability 
+                              i.fa-solid.fa-circle-check.text-success.me-2
+                              | In Stock
+
+                          td(data-label="") 
+                            a(href="") 
+                              i.fa-regular.fa-pen-to-square
+                            a.text-danger(href="") 
+                              i.fa-solid.fa-trash-can
+                        tr
+                          td(data-label="English name") Ash tray
+                          td(data-label="Arabic Name") مرمدة
+                          td(data-label="Department") 
+                            a.badge.bg-open.text-dark.rounded-pill(href="informationRowTable.html") Housekeeping
+                          td(data-label="Assignee") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/photoUser.png", alt="" width="25")
+                              .text Katef
+                          td(data-label="Availability") 
+                            .Availability 
+                              i.fa-solid.fa-circle-check.text-success.me-2
+                              | In Stock
+
+                          td(data-label="") 
+                            a(href="") 
+                              i.fa-regular.fa-pen-to-square
+                            a.text-danger(href="") 
+                              i.fa-solid.fa-trash-can
+                        tr
+                          td(data-label="English name") Ash tray
+                          td(data-label="Arabic Name") مرمدة
+                          td(data-label="Department") 
+                            a.badge.bg-Completed.text-dark.rounded-pill(href="informationRowTable.html") Maintenance
+                          td(data-label="Assignee") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/photoUser.png", alt="" width="25")
+                              .text Katef
+                          td(data-label="Availability") 
+                            .Availability 
+                              i.fa-solid.fa-circle-exclamation.text-warning.me-2
+                              | Out of Stock
+
+                          td(data-label="") 
+                            a(href="") 
+                              i.fa-regular.fa-pen-to-square
+                            a.text-danger(href="") 
+                              i.fa-solid.fa-trash-can
+                        tr
+                          td(data-label="English name") Ash tray
+                          td(data-label="Arabic Name") مرمدة
+                          td(data-label="Department") 
+                            a.badge.bg-process.text-dark.rounded-pill(href="informationRowTable.html") Management
+                          td(data-label="Assignee") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/Abdul.png", alt="" width="25")
+                              .text Abdul
+                          td(data-label="Availability") 
+                            .Availability 
+                              i.fa-solid.fa-circle-check.text-success.me-2
+                              | In Stock
+
+                          td(data-label="") 
+                            a(href="") 
+                              i.fa-regular.fa-pen-to-square
+                            a.text-danger(href="") 
+                              i.fa-solid.fa-trash-can
+                        tr
+                          td(data-label="English name") Ash tray
+                          td(data-label="Arabic Name") مرمدة
+                          td(data-label="Department") 
+                            a.badge.bg-open.text-dark.rounded-pill(href="informationRowTable.html") Housekeeping
+                          td(data-label="Assignee") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/photoUser.png", alt="" width="25")
+                              .text Katef
+                          td(data-label="Availability") 
+                            .Availability 
+                              i.fa-solid.fa-circle-check.text-success.me-2
+                              | In Stock
+
+                          td(data-label="") 
+                            a(href="") 
+                              i.fa-regular.fa-pen-to-square
+                            a.text-danger(href="") 
+                              i.fa-solid.fa-trash-can
+                        tr
+                          td(data-label="English name") Ash tray
+                          td(data-label="Arabic Name") مرمدة
+                          td(data-label="Department") 
+                            a.badge.bg-Completed.text-dark.rounded-pill(href="informationRowTable.html") Maintenance
+                          td(data-label="Assignee") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/photoUser.png", alt="" width="25")
+                              .text Katef
+                          td(data-label="Availability") 
+                            .Availability 
+                              i.fa-solid.fa-circle-exclamation.text-warning.me-2
+                              | Out of Stock
+
+                          td(data-label="") 
+                            a(href="") 
+                              i.fa-regular.fa-pen-to-square
+                            a.text-danger(href="") 
+                              i.fa-solid.fa-trash-can
+                        tr
+                          td(data-label="English name") Ash tray
+                          td(data-label="Arabic Name") مرمدة
+                          td(data-label="Department") 
+                            a.badge.bg-process.text-dark.rounded-pill(href="informationRowTable.html") Management
+                          td(data-label="Assignee") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/Abdul.png", alt="" width="25")
+                              .text Abdul
+                          td(data-label="Availability") 
+                            .Availability 
+                              i.fa-solid.fa-circle-check.text-success.me-2
+                              | In Stock
+
+                          td(data-label="") 
+                            a(href="") 
+                              i.fa-regular.fa-pen-to-square
+                            a.text-danger(href="") 
+                              i.fa-solid.fa-trash-can
+
+                       
+                    
+                    .d-flex.justify-content-center 
+                      nav.pagination-nav(aria-label='...')
+                        ul.pagination
+                          li.page-item.disabled
+                            span.page-link 
+                              i.fa-solid.fa-chevron-left
+                          li.page-item
+                            a.page-link(href='#') 1
+                          li.page-item.active(aria-current='page')
+                            span.page-link 2
+                          li.page-item
+                            a.page-link(href='#') 3
+                          li.page-item
+                            a.page-link(href='#') 
+                              i.fa-solid.fa-chevron-right
+
+            
+
+
+      //- End Content category hotel
+    //- Start Modal
+    include includes/modal.pug 
+    include includes/script.pug
+    script(src="../assets/js/ajaxLoad.js") 
+    
+      
+
+
+

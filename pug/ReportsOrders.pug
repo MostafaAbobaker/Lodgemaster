@@ -1,0 +1,177 @@
+- var titlePage = 'Reports';
+- var titlesPage = 'Reports Orders';
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .Dashboard-home
+      include includes/headerNavBar.pug
+      include includes/asideBar.pug
+      //- start Content category hotel
+      section.content-category-hotel 
+        //- Start Filter
+        .container-fluid 
+          .row
+            .col-lg-12 
+              
+            .col-lg-12.pt-3
+              header.header-filter.flex-column
+                h4.fw-bold Reports
+                .container-fluid
+                  .row
+                    .col-lg-3.col-md-6.col-sm-12.mb-3
+                      .form-group
+                        label.mb-2(for='exampleFormControlSelect1') Period Date
+                        input.form-control.rounded-pill(type="date" )
+                    .col-lg-3.col-md-6.col-sm-12.mb-3
+                      .form-group
+                        label.mb-2(for='exampleFormControlSelect1') From Date
+                        input.form-control.rounded-pill(type="date" )
+                    .col-lg-3.col-md-6.col-sm-12.mb-3
+                      .form-group
+                        label.mb-2(for='exampleFormControlSelect1') To Date
+                        input.form-control.rounded-pill(type="date" )
+                    .col-lg-3.col-md-6.col-sm-12.mb-3
+                      label.mb-2(for='exampleFormControlSelect1')  &nbsp;
+                      .d-flex.justify-content-around
+                        a.btn.btn-master.d-flex.align-items-center.rounded-pill.btn-Create-Order(href='CreateOrderGeneral.html') 
+                          | Apply Filter
+                        button.btn.btn-outline-dark.rounded-pill Export
+                            i.fa-solid.fa-cloud-arrow-down.ms-2.fa-fw
+                  //- a.btn.btn-master.d-flex.align-items-center.rounded-pill.btn-Create-Order(href='CreateOrderGeneral.html') 
+                  //-   i.fa-solid.fa-plus.me-2
+                  //-   | Create Order
+        //- End Filter
+        //- Start Load Master page 
+        #pageMasterLoad
+          .HomeDashboard
+            .container-fluid 
+              .row           
+                .col-lg-12.mb-4
+                  .overview-Orders
+                    .header-overview.mb-3.justify-content-start 
+                      .title-head.mb-0  Orders
+                    
+  
+                    table.table.table-hover.table-responsive
+                      thead
+                        tr
+                          th(scope='col') Order no.
+                          th(scope='col') Location
+                          th(scope='col') Guest name
+                          th(scope='col') Accessories
+                          th(scope='col') Assigned to
+                          th(scope='col') Run time
+                          th(scope='col') Status
+                      tbody
+                        tr
+                          td(data-label="Order no.") 527
+                          td(data-label="Location") Room 101
+                          td(data-label="Guest name") Hussain Abad Ali
+                          td(data-label="Accessories") Water, Blanket
+                          td(data-label="Assigned to") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/photoUser.png", alt="" width="25")
+                              .text Katef
+                          td(data-label="Run time") 8h
+                          td(data-label="Status") 
+                            a.badge.bg-open.text-dark.rounded-pill(href="informationRowTable.html") Open
+                        tr
+                          td(data-label="Order no.") 527
+                          td(data-label="Location") Room 101
+                          td(data-label="Guest name") Hussain Abad Ali
+                          td(data-label="Accessories") Water, Blanket
+                          td(data-label="Assigned to") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/photoUser.png", alt="" width="25")
+                              .text Katef
+                          td(data-label="Run time") 8h
+                          td(data-label="Status") 
+                            span.badge.bg-Hold.text-dark.rounded-pill Hold
+                        tr
+                          td(data-label="Order no.") 527
+                          td(data-label="Location") Room 101
+                          td(data-label="Guest name") Hussain Abad Ali
+                          td(data-label="Accessories") Water, Blanket
+                          td(data-label="Assigned to") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/photoUser.png", alt="" width="25")
+                              .text Katef
+                          td(data-label="Run time") 8h
+                          td(data-label="Status") 
+                            span.badge.bg-Closed.text-dark.rounded-pill Closed
+                        tr
+                          td(data-label="Order no.") 527
+                          td(data-label="Location") Room 101
+                          td(data-label="Guest name") Hussain Abad Ali
+                          td(data-label="Accessories") Water, Blanket
+                          td(data-label="Assigned to") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/photoUser.png", alt="" width="25")
+                              .text Katef
+                          td(data-label="Run time") 8h
+                          td(data-label="Status") 
+                            span.badge.bg-process.text-dark.rounded-pill In process
+                        tr
+                          td(data-label="Order no.") 527
+                          td(data-label="Location") Room 101
+                          td(data-label="Guest name") Hussain Abad Ali
+                          td(data-label="Accessories") Water, Blanket
+                          td(data-label="Assigned to") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/photoUser.png", alt="" width="25")
+                              .text Katef
+                          td(data-label="Run time") 8h
+                          td(data-label="Status") 
+                            span.badge.bg-Completed.text-dark.rounded-pill Completed
+                        tr
+                          td(data-label="Order no.") 527
+                          td(data-label="Location") Room 101
+                          td(data-label="Guest name") Hussain Abad Ali
+                          td(data-label="Accessories") Water, Blanket
+                          td(data-label="Assigned to") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/photoUser.png", alt="" width="25")
+                              .text Katef
+                          td(data-label="Run time") 8h
+                          td(data-label="Status") 
+                            span.badge.bg-Completed.text-dark.rounded-pill Open
+      
+         
+                    
+                    .d-flex.justify-content-center 
+                      nav.pagination-nav(aria-label='...')
+                        ul.pagination
+                          li.page-item.disabled
+                            span.page-link 
+                              i.fa-solid.fa-chevron-left
+                          li.page-item
+                            a.page-link(href='#') 1
+                          li.page-item.active(aria-current='page')
+                            span.page-link 2
+                          li.page-item
+                            a.page-link(href='#') 3
+                          li.page-item
+                            a.page-link(href='#') 
+                              i.fa-solid.fa-chevron-right
+
+            
+
+
+      //- End Content category hotel
+    //- Start Modal
+    include includes/modal.pug 
+    include includes/script.pug
+    script(src="../assets/js/ajaxLoad.js") 
+    
+      
+
+
+

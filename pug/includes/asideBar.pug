@@ -1,0 +1,57 @@
+//- Start Aside Bar
+aside.aside-bar 
+  .header 
+    a.image(href="CategoryHotel.html")  
+      img.large-logo(src="./assets/images/logoWhite.png", alt="")
+      img.small-logo(src="./assets/images/main-logo.png", alt="")
+  .body-aside-bar
+    ul
+      li(class=titlePage == 'Dashboard' ? "active" : " ")
+        a(href="LayoutDashboard.html")
+          .icon 
+            include ../../assets/images/Svg/OverView.svg
+          span.text  Dashboard
+      li(class=titlePage == 'Service Orders' ? "active" : " ")
+        a(href="ServiceOrders.html")
+          .icon 
+            include ../../assets/images/Svg/ServiceOrdersAside.svg
+          span.text Service Orders
+      li(class=titlePage == 'Items' ? "active" : " ")
+        a(href="Items.html")
+          .icon 
+            include ../../assets/images/Svg/ItemAside.svg
+          span.text Items
+      li(class=titlePage == 'Reports' ? "active dropdown" : " dropdown ")
+        a(href="#")
+          .icon 
+            include ../../assets/images/Svg/Reports.svg
+          span.text Reports
+        ul 
+          li(class=titlesPage == 'Reports Orders' ? "active " : "  ") 
+            
+            a(href="ReportsOrders.html") 
+              .icon 
+                i.fa-solid.fa-minus  
+              span.text  Reports Orders
+          li(class=titlesPage == 'Items Management' ? "active " : "  ") 
+            a(href="ItemsManagement.html") 
+              .icon 
+                i.fa-solid.fa-minus
+              span.text Items Management
+      li(class=titlePage == 'Rooms Inspection' ? "active" : " ")
+        a(href="#")
+          .icon
+            include ../../assets/images/Svg/RoomsInspection.svg
+          span.text Rooms Inspection
+      li(class=titlePage == 'Notifications' ? "active" : " ")
+        a(href="Notifications.html")
+          .icon 
+            include ../../assets/images/Svg/Notifications.svg
+          span.text Notifications
+          span.Notifi 9
+      li(class=titlePage == 'Staff Management' ? "active" : " ")
+        a(href="#")
+          .icon
+            include ../../assets/images/Svg/StaffManagementAside.svg 
+          span.text Staff Management
+      //- End Aside Bar  

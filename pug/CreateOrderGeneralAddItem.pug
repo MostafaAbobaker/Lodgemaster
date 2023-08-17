@@ -1,0 +1,120 @@
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .Dashboard-home
+      include includes/headerNavBar.pug
+      include includes/asideBar.pug
+      //- start Content category hotel
+      section.content-category-hotel 
+        //- Start Filter
+        include includes/FilterDashboard.pug
+        //- End Filter
+        //- Start Load Master page 
+        #pageMasterLoad
+          //- Start Create Order
+          .Create-Order
+            .container-fluid 
+              .row 
+                .col-lg-12 
+                  //- Start Create Order
+                  .Create-Order
+                    .container-fluid 
+                      .row 
+                        .col-lg-12 
+                          .card-master
+                            .title-card.position-relative.text-center
+                              a.position-absolute.top-0.start-0(href="CreateOrderGeneralRoom.html")
+                                i.fa-solid.fa-arrow-left-long
+                              h4.mb-4 Select Item
+                            .body-card
+                              .container-fluid 
+                                .row.justify-content-center 
+                                  .col-lg-9.col-md-10.col-sm-12
+                                    .add-item-order.mb-4 
+                                      .d-flex.mb-3.select-item.flex-wrap 
+                                        .form-group
+                                          select.form-select.form-control-lg
+                                            option Cold Drinks
+                                            option Cold Tea
+                                            option Cold Can
+                                            option Add New
+                                        .btn Add New
+                                      .d-flex.mb-3.increment-item.align-items-center.flex-wrap   
+                                        .input-group
+                                          button.btn.btn-outline-master.btn-decrease(type='button') 
+                                            i.fa-solid.fa-minus
+                                          input.form-control(type='text', placeholder='1', min="1", max="99")
+                                          button.btn.btn-outline-master.btn-increase(type='button') 
+                                            i.fa-solid.fa-plus
+                                        button.btn.btn-master Add
+                                      .mb-3
+                                        textarea#exampleFormControlTextarea1.form-control(rows='3' placeholder='Notes')
+                                    h5.mb-4 Selected Items: 
+                                    .d-flex.flex-wrap.mb-4 
+                                      span.badge-item.mx-2.mb-3
+                                        | Blanket 
+                                        span.badge-number 1
+                                        span.icon-exit
+                                          i.fa-solid.fa-xmark.fa-fw
+                                      span.badge-item.mx-2.mb-3
+                                        | Water Bottles 
+                                        span.badge-number 3
+                                        span.icon-exit
+                                          i.fa-solid.fa-xmark.fa-fw
+                                      span.badge-item.mx-2.mb-3
+                                        | Cold Drinks 
+                                        span.badge-number 2
+                                        span.icon-exit
+                                          i.fa-solid.fa-xmark.fa-fw
+                                      span.badge-item.mx-2.mb-3
+                                        | Blanket 
+                                        span.badge-number 1
+                                        span.icon-exit
+                                          i.fa-solid.fa-xmark.fa-fw
+                                      span.badge-item.mx-2.mb-3
+                                        | Blanket 
+                                        span.badge-number 1
+                                        span.icon-exit
+                                          i.fa-solid.fa-xmark.fa-fw
+                                      span.badge-item.mx-2.mb-3
+                                        | Water Bottles 
+                                        span.badge-number 3
+                                        span.icon-exit
+                                          i.fa-solid.fa-xmark.fa-fw
+                                      span.badge-item.mx-2.mb-3
+                                        | Cold Drinks 
+                                        span.badge-number 2
+                                        span.icon-exit
+                                          i.fa-solid.fa-xmark.fa-fw
+                                      span.badge-item.mx-2.mb-3
+                                        | Blanket 
+                                        span.badge-number 1
+                                        span.icon-exit
+                                          i.fa-solid.fa-xmark.fa-fw
+                                    a.btn.btn-dark.d-block.w-100.p-3(href='CreateOrderGeneralAddItemReviewOrder.html') Next
+
+        
+
+
+
+                    //- End Create Order
+                  
+   
+            
+
+
+                    //- End Content category hotel
+    //- Start Modal
+    include includes/modal.pug 
+    include includes/script.pug
+    script(src="../assets/js/ajaxLoad.js") 
+    
+      
+
+
+
+     
+//- End Create Order
+

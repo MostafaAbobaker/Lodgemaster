@@ -1,0 +1,57 @@
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .master-home
+      //- Start Nav Bar
+      nav.navbar.navbar-expand-lg
+        .container
+          a.navbar-brand(href='#') 
+            img(src="./assets/images/Logo.png", alt="logo")
+          button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+          #navbarSupportedContent.collapse.navbar-collapse
+            ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+              li.nav-item
+                a.nav-link.active(aria-current='page' href='#') Home
+              li.nav-item
+                a.nav-link(href='#') Services
+              li.nav-item
+                a.nav-link(href='#') Contact
+              li.nav-item
+                a.nav-link(href='#' data-bs-toggle="modal" data-bs-target="#exampleModal") Login
+          
+
+      //- End Nav Bar      
+      .content-master-page 
+        .text-title Experience 
+          span.color indulgent luxury 
+          | At our 5-star hotel
+        a(href="")   Explore our Services
+    //- Start Model
+    #exampleModal.modal.fade.model-login(tabindex='-1', aria-labelledby='exampleModalLabel', aria-hidden='true')
+      .modal-dialog.modal-dialog-centered
+        .modal-content
+          .modal-header
+            h1#exampleModalLabel.modal-title.fs-5.d-flex.justify-content-center.w-100
+              .icon.me-2
+                i.fa-solid.fa-user-plus
+              .text Sign In
+           
+          .modal-body.d-flex
+            .col-6
+              .card-sign
+                .image 
+                  img(src="./assets/images/Svg/Admin.svg", alt="")
+                a(href="login.html") Admin
+
+            .col-6
+              .card-sign
+                .image 
+                  img(src="./assets/images/Svg/employe.svg", alt="")
+                a(href="login.html") Employ
+          
+
+    include includes/script.pug 
+

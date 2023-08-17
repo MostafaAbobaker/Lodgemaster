@@ -1,0 +1,189 @@
+.HomeDashboard
+  .container-fluid 
+    .row           
+      .col-lg-12.mb-4
+        .overview-Orders
+          .header-overview.mb-3 
+            .title-head.col-lg-4.col-md-3.col-sm-12 Recent Orders
+            .group-overview.col-lg-8.col-md-9.col-sm-12 
+              ul
+                li.bg-open  
+                  .number 21
+                  .label
+                    .icon 
+                      i.fa-regular.fa-circle-play
+                    .text Open
+
+                li.bg-process
+                  .number 15
+                  .label
+                    .icon 
+                      i.fa-regular.fa-clock
+                    .text In process
+
+                li.bg-Completed 
+                  .number 24
+                  .label
+                    .icon 
+                      i.fa-regular.fa-circle-check
+                    .text Completed
+
+                li.bg-Hold
+                  .number 09
+                  .label
+                    .icon 
+                      i.fa-regular.fa-circle-pause
+                    .text Hold
+
+                li.bg-Closed 
+                  .number 125
+                  .label
+                    .icon 
+                      i.fa-solid.fa-lock
+                    .text Closed
+          table.table.table-hover.table-responsive
+            thead
+              tr
+                th(scope='col') Order no.
+                th(scope='col') Location
+                th(scope='col') Guest name
+                th(scope='col') Accessories
+                th(scope='col') Assigned to
+                th(scope='col') Run time
+                th(scope='col') Status
+            tbody
+              tr
+                td(data-label="Order no.") 527
+                td(data-label="Location") Room 101
+                td(data-label="Guest name") Hussain Abad Ali
+                td(data-label="Accessories") Water, Blanket
+                td(data-label="Assigned to") 
+                  .user-card.d-flex.align-items-center 
+                    .image.me-1
+                      img(src="./assets/images/photoUser.png", alt="" width="25")
+                    .text Katef
+                td(data-label="Run time") 8h
+                td(data-label="Status") 
+                  a.badge.bg-open.text-dark.rounded-pill(href="informationRowTable.html") Open
+              tr
+                td(data-label="Order no.") 527
+                td(data-label="Location") Room 101
+                td(data-label="Guest name") Hussain Abad Ali
+                td(data-label="Accessories") Water, Blanket
+                td(data-label="Assigned to") 
+                  .user-card.d-flex.align-items-center 
+                    .image.me-1
+                      img(src="./assets/images/photoUser.png", alt="" width="25")
+                    .text Katef
+                td(data-label="Run time") 8h
+                td(data-label="Status") 
+                  span.badge.bg-Hold.text-dark.rounded-pill Hold
+              tr
+                td(data-label="Order no.") 527
+                td(data-label="Location") Room 101
+                td(data-label="Guest name") Hussain Abad Ali
+                td(data-label="Accessories") Water, Blanket
+                td(data-label="Assigned to") 
+                  .user-card.d-flex.align-items-center 
+                    .image.me-1
+                      img(src="./assets/images/photoUser.png", alt="" width="25")
+                    .text Katef
+                td(data-label="Run time") 8h
+                td(data-label="Status") 
+                  span.badge.bg-Closed.text-dark.rounded-pill Closed
+              tr
+                td(data-label="Order no.") 527
+                td(data-label="Location") Room 101
+                td(data-label="Guest name") Hussain Abad Ali
+                td(data-label="Accessories") Water, Blanket
+                td(data-label="Assigned to") 
+                  .user-card.d-flex.align-items-center 
+                    .image.me-1
+                      img(src="./assets/images/photoUser.png", alt="" width="25")
+                    .text Katef
+                td(data-label="Run time") 8h
+                td(data-label="Status") 
+                  span.badge.bg-process.text-dark.rounded-pill In process
+              tr
+                td(data-label="Order no.") 527
+                td(data-label="Location") Room 101
+                td(data-label="Guest name") Hussain Abad Ali
+                td(data-label="Accessories") Water, Blanket
+                td(data-label="Assigned to") 
+                  .user-card.d-flex.align-items-center 
+                    .image.me-1
+                      img(src="./assets/images/photoUser.png", alt="" width="25")
+                    .text Katef
+                td(data-label="Run time") 8h
+                td(data-label="Status") 
+                  span.badge.bg-Completed.text-dark.rounded-pill Completed
+              tr
+                td(data-label="Order no.") 527
+                td(data-label="Location") Room 101
+                td(data-label="Guest name") Hussain Abad Ali
+                td(data-label="Accessories") Water, Blanket
+                td(data-label="Assigned to") 
+                  .user-card.d-flex.align-items-center 
+                    .image.me-1
+                      img(src="./assets/images/photoUser.png", alt="" width="25")
+                    .text Katef
+                td(data-label="Run time") 8h
+                td(data-label="Status") 
+                  span.badge.bg-Completed.text-dark.rounded-pill Open
+      
+      
+      .col-lg-6.mb-4
+        .card.border-0
+          .card-header.p-3.mx-2.fw-bold Run time Analytics
+          .card-body
+            .d-flex 
+              .col-6
+                .form-group.mx-2
+                  label(for='exampleFormControlSelect1') Filters
+                  select#exampleFormControlSelect1.form-select
+                    option Inprogress
+                    option Open
+                    option Hold
+                    option Closed
+                    option Completed
+              .col-6
+                .form-group.mx-2
+                  label(for='exampleFormControlSelect1') 
+                  select#exampleFormControlSelect1.form-select
+                    option Last 7 Days
+                    option Last Month
+                    option Last Year
+            #chart 
+      .col-lg-6.mb-4
+        .card.border-0
+          .card-header.p-3.d-flex.justify-content-between.mx-2
+            .title.fw-bold Notifications
+            span.badge.bg-primary.rounded-pill 9
+          .card-body.p-0             
+            .list-group
+              a.list-group-item.list-group-item-action.active(href='#', aria-current='true')
+                .title.d-flex.w-100.justify-content-between
+                  h5.mb-1 Katef Assigned you task
+                  small 20 mins ago
+                small Order 455, Room 201
+                p.mb-1 Please check the task for details.
+              a.list-group-item.list-group-item-action(href='#')
+                .title.d-flex.w-100.justify-content-between
+                  h5.mb-1 Muthna completed the task
+                  small.text-body-secondary 3 hours ago
+                small.text-body-secondary Order 345, Room: 102
+                p.mb-1 Muthna Added notes, please check.
+              a.list-group-item.list-group-item-action(href='#')
+                .title.d-flex.w-100.justify-content-between
+                  h5.mb-1 Muthna completed the task
+                  small.text-body-secondary 3 hours ago
+                small.text-body-secondary Order 345, Room: 102
+                p.mb-1 Muthna Added notes, please check.
+              a.list-group-item.list-group-item-action(href='#')
+                .title.d-flex.w-100.justify-content-between
+                  h5.mb-1 Muthna completed the task
+                  small.text-body-secondary 3 hours ago
+                small.text-body-secondary Order 345, Room: 102
+                p.mb-1 Muthna Added notes, please check.
+              
+

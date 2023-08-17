@@ -1,0 +1,140 @@
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .Dashboard-home
+      include includes/headerNavBar.pug
+      include includes/asideBar.pug
+      //- start Content category hotel
+      section.content-category-hotel 
+        //- Start Filter
+        include includes/FilterDashboard.pug
+        //- End Filter
+        //- Start Load Master page 
+        #pageMasterLoad
+          //- Start Create Order
+          .Create-Order
+            .container-fluid 
+              .row 
+                .col-lg-12 
+                  //- Start Create Order
+                  .Create-Order
+                    .container-fluid 
+                      .row 
+                        .col-lg-12 
+                          .card-master.mb-4
+                            .title-card.position-relative.text-center
+                              a.position-absolute.top-0.start-0(href="CreateOrderGeneralAddItemReviewOrder.html")
+                                i.fa-solid.fa-arrow-left-long
+                              h4.mb-4 Assignees
+                            .body-card
+                              .d-flex.justify-content-between 
+                                h4 Blanket
+                                .group-icon.d-flex
+                                  button.btn.btn-outline-primary(type='button').mx-2 
+                                    i.fa-solid.fa-pencil.fa-fw.me-2  
+                                    | Edit
+                                  button.btn.btn-outline-danger(type='button').mx-2 
+                                    i.fa-regular.fa-trash-can.fa-fw.me-2 
+                                    | Remove
+                              .container-fluid
+                                .row
+                                  .col-lg-8.col-md-12.col-sm-12.mb-4.p-0 
+                                    h5.mb-4 Department
+                                    .group-button 
+                                      span.btn.mx-2.rounded-pill.btn-outline-master.mb-3.active Maintenance
+                                      span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Reception
+                                      span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Delivery
+                                      span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Procurement
+                                  .col-lg-4.col-md-12.col-sm-12.mb-4 
+                                    h5.mb-4 Assignee
+                                    .label-Assignee
+                                      .icon 
+                                        span K
+                                      .text Katef
+                                  
+                                
+                          .card-master.mb-4
+                            
+                            .body-card
+                              .d-flex.justify-content-between 
+                                h4 Water Bottles
+                                .group-icon.d-flex
+                                  button.btn.btn-outline-primary(type='button').mx-2 
+                                    i.fa-solid.fa-pencil.fa-fw.me-2  
+                                    | Edit
+                                  button.btn.btn-outline-danger(type='button').mx-2 
+                                    i.fa-regular.fa-trash-can.fa-fw.me-2 
+                                    | Remove
+                              .container-fluid
+                                .row
+                                  .col-lg-8.col-md-12.col-sm-12.mb-4.p-0 
+                                    h5.mb-4 Department
+                                    .group-button 
+                                      span.btn.mx-2.rounded-pill.btn-outline-master.mb-3.active Maintenance
+                                      span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Reception
+                                      span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Delivery
+                                      span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Procurement
+                                  .col-lg-4.col-md-12.col-sm-12.mb-4 
+                                    h5.mb-4 Assignee
+                                    .label-Assignee
+                                      .icon 
+                                        span R
+                                      .text Rohana
+                                  
+                                
+                          .card-master.mb-4
+                            
+                            .body-card
+                              .d-flex.justify-content-between 
+                                h4 Cold Drinks
+                                .group-icon.d-flex
+                                  button.btn.btn-outline-primary(type='button').mx-2 
+                                    i.fa-solid.fa-pencil.fa-fw.me-2  
+                                    | Edit
+                                  button.btn.btn-outline-danger(type='button').mx-2 
+                                    i.fa-regular.fa-trash-can.fa-fw.me-2 
+                                    | Remove
+                              .container-fluid
+                                .row
+                                  .col-lg-8.col-md-12.col-sm-12.mb-4.p-0 
+                                    h5.mb-4 Department
+                                    .group-button 
+                                      span.btn.mx-2.rounded-pill.btn-outline-master.mb-3.active Maintenance
+                                      span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Reception
+                                      span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Delivery
+                                      span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Procurement
+                                  .col-lg-4.col-md-12.col-sm-12.mb-4 
+                                    h5.mb-4 Assignee
+                                    .label-Assignee
+                                      .icon 
+                                        span R
+                                      .text Rohana
+                                  
+                                
+                                  
+                          a.btn.btn-dark.d-block.w-100.mb-5.p-3(href='button' data-bs-toggle="modal" data-bs-target="#OrderPlaced") Place Order
+        
+
+
+
+                    //- End Create Order
+                  
+   
+            
+
+
+                    //- End Content category hotel
+    //- Start Modal
+    include includes/modal.pug 
+    include includes/script.pug
+    script(src="../assets/js/ajaxLoad.js") 
+    
+      
+
+
+
+     
+//- End Create Order
+

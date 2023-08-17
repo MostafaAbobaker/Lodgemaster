@@ -1,0 +1,63 @@
+- var titlePage = 'Notifications';
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .Dashboard-home
+      include includes/headerNavBar.pug
+      include includes/asideBar.pug
+      //- start Content category hotel
+      section.content-category-hotel 
+        
+        //- Start Load Master page 
+        #pageMasterLoad
+          .container-fluid.pt-3 
+            .row 
+              .col-lg-12
+                .card.border-0.shadow-sm
+                  .card-header.p-3.d-flex.justify-content-between.mx-2
+                    .title.fw-bold Notifications
+                    span.badge.bg-primary.rounded-pill 9
+                  .card-body.p-0             
+                  .list-group
+                    a.list-group-item.list-group-item-action.active(href='#', aria-current='true')
+                      .title.d-flex.w-100.justify-content-between
+                        h5.mb-1 Katef Assigned you task
+                        small 20 mins ago
+                      small Order 455, Room 201
+                      p.mb-1 Please check the task for details.
+                    a.list-group-item.list-group-item-action(href='#')
+                      .title.d-flex.w-100.justify-content-between
+                        h5.mb-1 Muthna completed the task
+                        small.text-body-secondary 3 hours ago
+                      small.text-body-secondary Order 345, Room: 102
+                      p.mb-1 Muthna Added notes, please check.
+                    a.list-group-item.list-group-item-action(href='#')
+                      .title.d-flex.w-100.justify-content-between
+                        h5.mb-1 Muthna completed the task
+                        small.text-body-secondary 3 hours ago
+                      small.text-body-secondary Order 345, Room: 102
+                      p.mb-1 Muthna Added notes, please check.
+                    a.list-group-item.list-group-item-action(href='#')
+                      .title.d-flex.w-100.justify-content-between
+                        h5.mb-1 Muthna completed the task
+                        small.text-body-secondary 3 hours ago
+                      small.text-body-secondary Order 345, Room: 102
+                      p.mb-1 Muthna Added notes, please check.
+                    
+
+          //- include ./CreateOrder.pug
+            
+
+
+      //- End Content category hotel
+    //- Start Modal
+    include includes/modal.pug 
+    include includes/script.pug
+    script(src="../assets/js/ajaxLoad.js") 
+    
+      
+
+
+

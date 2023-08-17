@@ -1,0 +1,47 @@
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .Dashboard-home
+      include includes/headerNavBar.pug
+      include includes/asideBar.pug
+      //- start Content category hotel
+      section.content-category-hotel 
+        //- Start Filter
+        include includes/FilterDashboard.pug
+        //- End Filter
+        //- Start Load Master page 
+        #pageMasterLoad
+          //- Start Create Order
+          .Create-Order
+            .container-fluid 
+              .row 
+                .col-lg-12 
+                  .button-general.card-master
+                    .title-card.position-relative.text-center
+                      a.position-absolute.top-0.start-0(href="LayoutDashboard.html")
+                        i.fa-solid.fa-arrow-left-long
+                      h4.mb-5 Select Location
+                    .body-card
+                      .group-button.d-flex.justify-content-center.mb-5.flex-wrap
+                        a.btn-outline-master.btn.rounded-pill.col-lg-2.col-md-4.col-sm-6.mb-3.mx-2(href="CreateOrderGeneralRoom.html") General
+                        a.btn-outline-master.btn.rounded-pill.col-lg-2.col-md-4.col-sm-6.mb-3.mx-2(href="CreateOrderGeneralRoom.html") Room
+                  
+                  
+   
+            
+
+
+      //- End Content category hotel
+    //- Start Modal
+    include includes/modal.pug 
+    include includes/script.pug
+    script(src="../assets/js/ajaxLoad.js") 
+    
+      
+
+
+
+     
+//- End Create Order

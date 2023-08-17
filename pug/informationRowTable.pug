@@ -1,0 +1,177 @@
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .Dashboard-home
+      include includes/headerNavBar.pug
+      include includes/asideBar.pug
+      //- start Content category hotel
+      section.content-category-hotel 
+        //- Start Filter
+        include includes/FilterDashboard.pug
+        //- End Filter
+        //- Start Load Master page 
+        #pageMasterLoad
+          //- Start Create Order
+          .information-Row-Table
+            .container-fluid 
+              .row 
+                .col-lg-12 
+                  .card-master.card-information-Table.mb-5.p-0
+                    .p-4.title-information-Table.d-flex.flex-wrap.align-items-center.border-bottom.justify-content-between 
+                      .d-flex.flex-wrap.align-items-center
+                        .bg-open.text-dark.rounded-pill.px-4.py-1.mb-2 Open
+                        .inputs-group.mx-3.mb-2 
+                          .label Order Created
+                          .input-value.d-flex.algin-items-center 
+                            span.icon.me-2.text-primary 
+                              i.fa-solid.fa-calendar-days.fa-fw
+                            span.text 15 May, 2023
+                        .inputs-group.mx-3.mb-2 
+                          .label &nbsp;
+                          .input-value.d-flex.algin-items-center 
+                            span.icon.me-2.text-primary 
+                              i.fa-regular.fa-clock.fa-fw
+                            span.text 2:00PM
+                        .inputs-group.mx-3.mb-2 
+                          .label Run time
+                          .input-value.d-flex.algin-items-center 
+                            span.icon.me-2.text-primary 
+                              i.fa-solid.fa-hourglass.fa-fw
+                            span.text 02h: 05minutes
+                      a(href="LayoutDashboard.html")
+                        i.fa-solid.fa-arrow-right-long
+                    .information-Table-body.p-0
+                      .container-fluid 
+                        .row 
+                          .col-lg-7.col-md-12.col-sm-12
+                            span.badge-item.my-2.d-inline-block.rounded-pill.p-2.px-4.text-primary Order number: 253
+                            h3.fw-bold.my-2 Room 101
+                            .row.my-3.users-image 
+                              .col-lg-6.col-md-6.col-sm-6
+                                h5.label Created by
+                                .created.d-flex.align-items-center
+                                  .icon.me-2
+                                    img(src="./assets/images/user1.png", alt="")
+                                  .text.text-primary Hassan
+                              .col-lg-6.col-md-6.col-sm-6
+                                h5.label Assigned to
+                                .created.d-flex.align-items-center
+                                  .icon.me-2
+                                    img(src="./assets/images/user2.png", alt="")
+                                  .text.text-primary Kattef
+                            .d-flex.justify-content-between 
+                              .label Order completion
+                              .count 1/3
+                            .progress(role='progressbar', aria-label='Warning example', aria-valuenow='35', aria-valuemin='0', aria-valuemax='100')
+                              .progress-bar.bg-warning(style='width: 35%')
+                            .table-Assignees  
+                              table.table.table-responsive-scroll
+                                thead
+                                  tr
+                                    th(scope='col') Products
+                                    th(scope='col') Assignees
+                                    th(scope='col') Message
+                                tbody
+                                  tr
+                                    td 
+                                      .form-check
+                                        input#flexCheckDefault1.form-check-input(type='checkbox', value='', checked)
+                                        label.form-check-label(for='flexCheckDefault1')
+                                          | Water bottles (02)
+
+                                    td 
+                                      .label-table.d-flex
+                                        .icon
+                                          span K
+                                        .text Katef
+
+                                    td 
+                                      a(href="OrderSMS.html")  Sent
+                                  tr
+                                    td 
+                                      .form-check
+                                        input#flexCheckDefault2.form-check-input(type='checkbox', value='')
+                                        label.form-check-label(for='flexCheckDefault2')
+                                          | Blanket (01)
+
+                                    td 
+                                      .label-table.d-flex
+                                        .icon
+                                          span R
+                                        .text Rohana
+
+                                    td 
+                                      a(href="OrderSMS.html")  Sent
+                                  tr
+                                    td 
+                                      .form-check
+                                        input#flexCheckDefault3.form-check-input(type='checkbox', value='')
+                                        label.form-check-label(for='flexCheckDefault3')
+                                          | Cold drinks (03)
+
+                                    td 
+                                      .label-table.d-flex
+                                        .icon
+                                          span W
+                                        .text Waleed
+
+                                    td 
+                                      a(href="OrderSMS.html")  Sent
+                              .d-flex.justify-content-center 
+                                a.rounded-pill.p-2.px-4.btn-outline-master(href="CreateOrderGeneralAddItemReviewOrder.html")   
+                                  i.fa-solid.fa-plus.fa-fw
+                                  | Add new product
+                            footer.footer.mb-4.px-4
+                              h6 Attachments
+                              span.fst-italic No Attachments
+                          .col-lg-5.col-md-12.col-sm-12.p-0
+                            .Recent-part.p-3 
+                              h5.title Recent Activity
+                              .list-group
+                                .list-group-item.list-group-item-action
+                                  .d-flex.w-100.justify-content-between
+                                    h5.mb-1.title Hassan Task Created
+                                    small 20 min ago
+                                  small.note Created at 15/05/202 - 2:00PM
+                                .list-group-item.list-group-item-action
+                                  .d-flex.w-100.justify-content-between
+                                    h5.mb-1.title Hassan Added Products
+                                    small 25 min ago
+                                  small.note Added at 15/05/202 - 2:00PM
+                                .list-group-item.list-group-item-action
+                                  .d-flex.w-100.justify-content-between
+                                    h5.mb-1.title Hassan Assigned to Kattef
+                                    small 35 min ago
+                                  small.note Assigned at 15/05/202 - 2:00PM
+                                .list-group-item.list-group-item-action
+                                  .d-flex.w-100.justify-content-between
+                                    h5.mb-1.title Hassan Assigned to Kattef
+                                    small 35 min ago
+                                  small.note Added at 15/05/202 - 2:00PM
+                                .list-group-item.list-group-item-action
+                                  .d-flex.w-100.justify-content-between
+                                    h5.mb-1.title Kattef Completed Order
+                                    small 35 min ago
+                                  small.note Added at 15/05/202 - 2:00PM
+                                .list-group-item.list-group-item-action
+                                  .d-flex.w-100.justify-content-between
+                                    h5.mb-1.title Hassan Marked as finished
+                                    small 35 min ago
+                                  small.note Added at 15/05/202 - 2:00PM
+                                
+
+
+      //- End Content category hotel
+    //- Start Modal
+    include includes/modal.pug 
+    include includes/script.pug
+    script(src="../assets/js/ajaxLoad.js") 
+    
+      
+
+
+
+     
+//- End Create Order

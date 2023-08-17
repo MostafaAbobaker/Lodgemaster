@@ -1,0 +1,125 @@
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .Dashboard-home
+      include includes/headerNavBar.pug
+      include includes/asideBar.pug
+      //- start Content category hotel
+      section.content-category-hotel 
+        //- Start Filter
+        include includes/FilterDashboard.pug
+        //- End Filter
+        //- Start Load Master page 
+        #pageMasterLoad
+          //- Start Create Order
+          .Create-Order
+            .container-fluid 
+              .row 
+                .col-lg-12 
+                  //- Start Create Order
+                  .Create-Order
+                    .container-fluid 
+                      .row 
+                        .col-lg-12 
+                          .card-master
+                            .title-card.position-relative.text-center
+                              a.position-absolute.top-0.start-0(href="CreateOrderGeneralAddItem.html")
+                                i.fa-solid.fa-arrow-left-long
+                              h4.mb-4 Review Order
+                            .body-card
+                              .container-fluid 
+                                .row.justify-content-center 
+                                  .col-lg-9.col-md-10.col-sm-12
+                                    .row 
+                                      .col-lg-6.col-md-6.col-sm-12.mb-4
+                                        .form-group
+                                          label(for='exampleFormControlSelect1') Location
+                                          select#exampleFormControlSelect1.form-select
+                                            option General
+                                            option Room
+                                            
+
+                                      .col-lg-6.col-md-6.col-sm-12.mb-4
+                                        .form-group
+                                          label(for='exampleFormControlSelect1') Room number
+                                          select#exampleFormControlSelect1.form-select
+                                            option Room 101
+                                            option Room 102
+                                            option Room 103
+                                            option Room 104
+                                            option Room 105
+                                            option Room 106
+                                            option Room 107
+                                            option Room 108
+                                            option Room 109
+                                            option Room 1010
+
+                                    h5.mb-4 Selected Items: 
+                                    .d-flex.flex-wrap.mb-4 
+                                      span.badge-item.mx-2.mb-3
+                                        | Blanket 
+                                        span.badge-number 1
+                                        span.icon-exit
+                                          i.fa-solid.fa-xmark.fa-fw
+                                      span.badge-item.mx-2.mb-3
+                                        | Water Bottles 
+                                        span.badge-number 3
+                                        span.icon-exit
+                                          i.fa-solid.fa-xmark.fa-fw
+                                      span.badge-item.mx-2.mb-3
+                                        | Cold Drinks 
+                                        span.badge-number 2
+                                        span.icon-exit
+                                          i.fa-solid.fa-xmark.fa-fw
+                                      span.badge-item.mx-2.mb-3
+                                        | Blanket 
+                                        span.badge-number 1
+                                        span.icon-exit
+                                          i.fa-solid.fa-xmark.fa-fw
+                                      span.badge-item.mx-2.mb-3
+                                        | Blanket 
+                                        span.badge-number 1
+                                        span.icon-exit
+                                          i.fa-solid.fa-xmark.fa-fw
+                                      span.badge-item.mx-2.mb-3
+                                        | Water Bottles 
+                                        span.badge-number 3
+                                        span.icon-exit
+                                          i.fa-solid.fa-xmark.fa-fw
+                                      span.badge-item.mx-2.mb-3
+                                        | Cold Drinks 
+                                        span.badge-number 2
+                                        span.icon-exit
+                                          i.fa-solid.fa-xmark.fa-fw
+                                      span.badge-item.mx-2.mb-3
+                                        | Blanket 
+                                        span.badge-number 1
+                                        span.icon-exit
+                                          i.fa-solid.fa-xmark.fa-fw
+                                    a.btn.btn-dark.d-block.w-100.p-3(href='CreateOrderGeneralAssignees.html') Next
+
+        
+
+
+
+                    //- End Create Order
+                  
+   
+            
+
+
+                    //- End Content category hotel
+    //- Start Modal
+    include includes/modal.pug 
+    include includes/script.pug
+    script(src="../assets/js/ajaxLoad.js") 
+    
+      
+
+
+
+     
+//- End Create Order
+
