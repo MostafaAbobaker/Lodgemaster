@@ -661,6 +661,7 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
     width: 90%;
     inset-inline-start: 50%;
     transform: translateX(-50%);
+    z-index: 9;
   }
 }
 .master-home nav.navbar ul.navbar-nav li.nav-item {
@@ -685,7 +686,7 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
     height: 40px;
   }
   .master-home nav.navbar ul.navbar-nav {
-    border-radius: 0;
+    border-radius: 15px;
   }
 }
 .master-home .content-master-page {
