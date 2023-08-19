@@ -1,4 +1,20 @@
 $(document).ready(function () {
+  $("#AddOrder").click(function () {
+    var SelectItem = $("#selectItem").val();
+    var Count = $("#inputCount").val();
+    $("#contentValue").append(`
+    <span class="badge-item mx-2 mb-3">
+    ${SelectItem}
+    <span class="badge-number">${Count}</span>
+    <span class="icon-exit ">
+    <i class="fa-solid fa-xmark fa-fw"></i>
+    </span>
+    `);
+    var Count = $("#inputCount").val(1);
+  });
+  $(".icon-exit").click(function () {
+    $(this).parents(".badge-item").remove();
+  });
   $("aside.aside-bar ul li").click(function () {
     $(this).addClass("active").siblings().removeClass("active");
   });
@@ -33,57 +49,15 @@ $(document).ready(function () {
   $(".show-aside").click(function () {
     $("aside.aside-bar").toggleClass("show-aside");
   });
-  var x = 1;
-  $(".increment-item .form-control").attr("value", x);
-  $(".increment-item .btn-increase").click(function () {
-    var inputValue = $(".increment-item .form-control").attr("value");
-    if (inputValue < 99) {
-      $(".increment-item .form-control").attr("value", ++x);
+
+  $("#incrementButton").click(function () {
+    if ($("#inputCount").val() < 99) {
+      $("#inputCount").val(parseInt($("#inputCount").val()) + 1);
     }
   });
-  $(".increment-item .btn-decrease").click(function () {
-    var inputValue = $(".increment-item .form-control").attr("value");
-    if (inputValue > 0) {
-      $(".increment-item .form-control").attr("value", --x);
+  $("#decrementButton").click(function () {
+    if ($("#inputCount").val() > 1) {
+      $("#inputCount").val(parseInt($("#inputCount").val()) - 1);
     }
   });
 });
-
-// Chart
-var options = {
-  series: [
-    {
-      name: "Desktops",
-      data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
-    },
-  ],
-  chart: {
-    height: 250,
-    type: "line",
-    zoom: {
-      enabled: false,
-    },
-    toolbar: {
-      show: false,
-    },
-  },
-  dataLabels: {
-    enabled: false,
-  },
-  stroke: {
-    curve: "straight",
-  },
-
-  grid: {
-    row: {
-      colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
-      opacity: 0.5,
-    },
-  },
-  xaxis: {
-    categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
-  },
-};
-
-var chart = new ApexCharts(document.querySelector("#chart"), options);
-chart.render();

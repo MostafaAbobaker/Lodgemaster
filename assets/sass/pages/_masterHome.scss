@@ -132,7 +132,7 @@
           font-size: 18px;
         }
         @media (max-width: 575.98px) {
-          font-size: 14px;
+          font-size: 12px;
         }
       }
       &:hover {
@@ -236,3 +236,33 @@
   }
 }
 /* End Master Home */
+.GeneralAddItem {
+  .card-master {
+    .body-card {
+      @media (max-width: 576px) {
+        .container-fluid  {
+          padding: 0;
+          .col-sm-12 {
+             padding: 0;
+             .select-item {
+               .form-group {
+                width: 68%;
+               }
+                .btn {
+                  width: 30%;
+                }    
+             }
+             .increment-item {
+              .input-group {
+                width: 68%;
+              }
+              .btn.btn-master {
+                width:  30%;
+              }
+             }
+          }
+        }
+      }
+    }
+  }
+}

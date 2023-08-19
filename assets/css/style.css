@@ -133,6 +133,13 @@ aside.aside-bar .body-aside-bar ul li.dropdown ul {
   list-style-type: none;
   transition: all 0.5s ease-in-out;
 }
+@media (max-width: 575.98px) {
+  aside.aside-bar .body-aside-bar ul li.dropdown ul {
+    transform: scaleY(1);
+    opacity: 1;
+    position: relative;
+  }
+}
 aside.aside-bar .body-aside-bar ul li.dropdown ul li {
   display: flex;
   align-items: center;
@@ -767,7 +774,7 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
 }
 @media (max-width: 575.98px) {
   .master-home .content-category-hotel .category-item .heder-category-item {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .master-home .content-category-hotel .category-item:hover {
@@ -866,6 +873,27 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
 }
 
 /* End Master Home */
+@media (max-width: 576px) {
+  .GeneralAddItem .card-master .body-card .container-fluid {
+    padding: 0;
+  }
+  .GeneralAddItem .card-master .body-card .container-fluid .col-sm-12 {
+    padding: 0;
+  }
+  .GeneralAddItem .card-master .body-card .container-fluid .col-sm-12 .select-item .form-group {
+    width: 68%;
+  }
+  .GeneralAddItem .card-master .body-card .container-fluid .col-sm-12 .select-item .btn {
+    width: 30%;
+  }
+  .GeneralAddItem .card-master .body-card .container-fluid .col-sm-12 .increment-item .input-group {
+    width: 68%;
+  }
+  .GeneralAddItem .card-master .body-card .container-fluid .col-sm-12 .increment-item .btn.btn-master {
+    width: 30%;
+  }
+}
+
 /* Start Dashboard-home */
 .Dashboard-home {
   background-color: #f7f7f7;
