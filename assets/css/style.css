@@ -622,11 +622,6 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
     flex: 1 0 auto;
   }
 }
-@media (max-width: 576px) {
-  .step-app ul.step-steps li {
-    flex: 1 0 0;
-  }
-}
 .step-app ul.step-steps li .icon {
   background-color: #D9D9D9;
   width: 30px;

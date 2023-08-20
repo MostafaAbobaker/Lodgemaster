@@ -2,10 +2,14 @@
 const dropArea = document.querySelector("#dragArea"),
   dragText = dropArea.querySelector(".header"),
   button = dropArea.querySelector(".fileUpload"),
+  buttonCamera = dropArea.querySelector(".TakePhotos"),
   input = dropArea.querySelector("input");
 let file; //this is a global variable and we'll use it inside multiple functions
 
 button.onclick = () => {
+  input.click(); //if user click on the button then the input also clicked
+};
+buttonCamera.onclick = () => {
   input.click(); //if user click on the button then the input also clicked
 };
 
