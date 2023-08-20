@@ -698,6 +698,9 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
 .upload-content p .icon {
   margin-inline-end: 10px;
 }
+.upload-content #img {
+  display: none;
+}
 .upload-content img {
   height: 100%;
   width: 100%;
