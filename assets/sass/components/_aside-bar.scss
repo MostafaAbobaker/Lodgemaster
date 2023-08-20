@@ -72,7 +72,7 @@ aside.aside-bar {
         }
         &:not(.active, .dropdown):hover {
           // background-color: rgba($mColor, 0.05);
-          padding-inline-start: 20px;
+          padding-inline-start: 10px;
         }
 
         &.active {
@@ -158,6 +158,9 @@ aside.aside-bar {
           &.active {
             ul {
               display: block;
+              transform: scaleY(1);
+            opacity: 2;
+            position: relative;
               @media (max-width: 1199.98px) {
                 position: absolute;
                 background-color: #fff;

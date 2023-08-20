@@ -15,6 +15,15 @@ $(document).ready(function () {
   $(".icon-exit").click(function () {
     $(this).parents(".badge-item").remove();
   });
+  $("#demo .step-content .step-tab-panel button").click(function () {
+    $(this)
+      .parents(".step-tab-panel")
+      .next()
+      .addClass("active")
+      .siblings()
+      .removeClass("active");
+    $("#demo .step-steps li.active").next().addClass("active");
+  });
   $("aside.aside-bar ul li").click(function () {
     $(this).addClass("active").siblings().removeClass("active");
   });

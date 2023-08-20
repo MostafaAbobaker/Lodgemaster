@@ -216,7 +216,7 @@
 
 //- End Model 
 //- Start Model Order Placed
-// Modal
+//- Modal
 #ConfirmAddItem.modal.fade(tabindex='-1', aria-labelledby='OrderSMSLabel', aria-hidden='true')
   .modal-dialog.modal-dialog-centered
     .modal-content
@@ -228,6 +228,21 @@
           h3.mb-3.fw-bold  Item Added
           p.mb-3  Your item has been added successfully.
           a.btn.btn-master.px-5.rounded-pill.btn-Create-Order(href='Items.html') Continue
+      
+
+//- End Model 
+//- Modal
+#ConfirmSteps.modal.fade(tabindex='-1', aria-labelledby='ConfirmStepsLabel', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered
+    .modal-content
+      
+      .modal-body.text-center.p-5
+        
+          .icon.mb-3.text-primary 
+            i.fa-solid.fa-circle-check.fa-fw.fa-9x 
+          h3.mb-3.fw-bold  Inspection submitted
+          p.mb-3  Your inspection has been submitted. Thank you so much
+          a.btn.btn-master.px-5.rounded-pill.btn-Create-Order(href='LayoutDashboard.html') Continue
       
 
 //- End Model 

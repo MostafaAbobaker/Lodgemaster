@@ -24,6 +24,7 @@ $liteColor: #ebf5ff;
 @import "./components/button";
 @import "./components/modal";
 @import "./components/layout";
+@import "./components/steps";
 
 // pages Hotel
 @import "./pages/login";
@@ -90,6 +91,10 @@ a {
       }
     }
   }
+}
+.btn-primary {
+  background-color: $mColor;
+  border-color: $mColor;
 }
 /* Start Table Responsive */
 @media (max-width: 767.98px) {

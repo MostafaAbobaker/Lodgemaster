@@ -1,0 +1,141 @@
+- var titlePage = 'Inspection';
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+    //- link(rel="stylesheet", href="../assets/css/jquery-steps.css")
+  body 
+    .Dashboard-home
+      include includes/headerNavBar.pug
+      include includes/asideBar.pug
+      //- start Content category hotel
+      section.content-category-hotel 
+        //- Start Filter
+        include includes/FilterDashboard.pug
+        //- End Filter
+        //- Start Load Master page 
+        #pageMasterLoad
+          //- Start Create Order
+          .Create-Order
+            .container-fluid 
+              .row 
+                .col-lg-12 
+                  //- Start Create Order
+                  .Create-Order
+                    .container-fluid 
+                      .row 
+                        .col-lg-12 
+                          .button-room.card-master
+                            #demo.step-app.mb-5
+                              ul.step-steps.mb-5
+                                li.active(data-step-target='step1')
+                                  span.icon 01 
+                                  span General
+                                li(data-step-target='step2')
+                                  span.icon 02
+                                  span Bathroom 1 
+                                li(data-step-target='step3')
+                                  span.icon 03
+                                  span Bathroom 2
+                                li(data-step-target='step4')
+                                  span.icon 04
+                                  span Bathroom 3
+                                li(data-step-target='step5')
+                                  span.icon 05
+                                  span Bathroom 4
+                                li(data-step-target='step6')
+                                  span.icon 06
+                                  span Submit
+                              .step-content
+                                .step-tab-panel.active(data-step='step1')
+                                  h3.text-center.text-primary.mb-4 General Cleanliness
+                                  h1.text-center.mb-5 1. Is the floor Clean?
+                                  .d-flex.justify-content-center 
+                                    button.btn.mx-2.btn-primary.p-2.px-5.rounded-pill Yes
+                                    button.btn.mx-2.btn-outline-master.p-2.px-5.rounded-pill No
+
+                                .step-tab-panel(data-step='step2')
+                                  h3.text-center.text-primary.mb-4 General Cleanliness
+                                  h1.text-center.mb-5 2. Are the windows and mirrors clean?
+                                  .d-flex.justify-content-center 
+                                    button.btn.mx-2.btn-primary.p-2.px-5.rounded-pill Yes
+                                    button.btn.mx-2.btn-outline-master.p-2.px-5.rounded-pill No
+                                .step-tab-panel(data-step='step3')
+                                  h3.text-center.text-primary.mb-4 General Cleanliness
+                                  h1.text-center.mb-5 3. Is the furniture clean?
+                                  .d-flex.justify-content-center 
+                                    button.btn.mx-2.btn-primary.p-2.px-5.rounded-pill Yes
+                                    button.btn.mx-2.btn-outline-master.p-2.px-5.rounded-pill No
+                                .step-tab-panel(data-step='step4')
+                                  h3.text-center.text-primary.mb-4 General Cleanliness
+                                  h1.text-center.mb-5 4. Are the trash cans are empty and clean?
+                                  .d-flex.justify-content-center 
+                                    button.btn.mx-2.btn-primary.p-2.px-5.rounded-pill Yes
+                                    button.btn.mx-2.btn-outline-master.p-2.px-5.rounded-pill No
+                                .step-tab-panel(data-step='step5')
+                                  h3.text-center.text-primary.mb-4 General Cleanliness
+                                  h1.text-center.mb-5 5. Are the trash cans are empty and clean? 
+                                  .d-flex.justify-content-center 
+                                    button.btn.mx-2.btn-primary.p-2.px-5.rounded-pill Yes
+                                    button.btn.mx-2.btn-outline-master.p-2.px-5.rounded-pill No
+                                .step-tab-panel(data-step='step6')
+                                  h3.text-center.text-primary.mb-4 Submit
+                                  h1.text-center.mb-5 Submit your inspection 
+                                  .d-flex.justify-content-center 
+                                    a.btn.mx-2.btn-primary.p-2.px-5.rounded-pill(data-bs-toggle="modal" data-bs-target="#ConfirmSteps") Submit
+                                    button.btn.mx-2.btn-outline-master.p-2.px-5.rounded-pill Cancel
+                              //- .step-footer
+                              //-   button.step-btn(data-step-action='prev') Previous
+                              //-   button.step-btn(data-step-action='next') Next
+                              //-   button.step-btn(data-step-action='finish') Finish
+                            .row 
+
+                              .col-lg-6
+                                .form-group
+                                  label(for='exampleFormControlTextarea1') Comments
+                                  textarea#exampleFormControlTextarea1.form-control.form-Textarea(rows='5')
+                              .col-lg-6
+                                .form-group
+                                  label(for='exampleFormControlTextarea1') Photos Attachment (You much attach the photos)
+                                  #dragArea.upload-content
+                                    p.header
+                                      span.icon 
+                                        svg(width='49', height='49', viewbox='0 0 49 49', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                          path(d='M39.8947 20.9473V16.2105C39.8947 14.9542 39.3956 13.7494 38.5073 12.861C37.619 11.9727 36.4141 11.4736 35.1578 11.4736H16.2105C14.9542 11.4736 13.7494 11.9727 12.861 12.861C11.9727 13.7494 11.4736 14.9542 11.4736 16.2105V35.1578C11.4736 36.4141 11.9727 37.619 12.861 38.5073C13.7494 39.3956 14.9542 39.8947 16.2105 39.8947H20.9473', stroke='#005DAA', stroke-width='3', stroke-linecap='round', stroke-linejoin='round')
+                                          path(d='M2 2V2.02368M11.4737 2V2.02368M20.9474 2V2.02368M30.4211 2V2.02368M2 11.4737V11.4974M2 20.9474V20.9711M2 30.4211V30.4447M25.6842 25.6842L47 32.7895L37.5263 37.5263L32.7895 47L25.6842 25.6842Z', stroke='#005DAA', stroke-width='3', stroke-linecap='round', stroke-linejoin='round')
+
+                                      | Please Drag the photos here or click on upload the photos or Take Photos
+                                    .d-flex.justify-content-center 
+                                      input(type="file", name="" , hidden)
+                                      button.btn.btn-dark.mx-2.fileUpload Upload  
+                                      input#capture(type="file", name="", accept="image/*" , hidden)
+                                      button.btn.btn-outline-dark.mx-2 Take Photos  
+
+
+                                
+          //- End Create Order
+                  
+   
+            
+
+
+      //- End Content category hotel
+    //- Start Modal
+    include includes/modal.pug 
+    include includes/script.pug
+    script(src="../assets/js/DragFile.js") 
+    script(src="../assets/js/tackPhoto.js") 
+    //- script(src="../assets/js/jquery-steps.js") 
+    //- script.
+    //-   $('#demo').steps({
+    //-     onFinish: function () { alert('complete'); }
+    //-   });
+
+    
+      
+
+
+
+     
+//- End Create Order
+
