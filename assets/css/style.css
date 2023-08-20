@@ -619,6 +619,11 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
 @media (max-width: 767.98px) {
   .step-app ul.step-steps li {
     margin-bottom: 20px;
+    flex: 1 0 auto;
+  }
+}
+@media (max-width: 576px) {
+  .step-app ul.step-steps li {
     flex: 1 0 0;
   }
 }

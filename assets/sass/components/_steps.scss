@@ -25,6 +25,9 @@
        transition: all 0.4s ease-in-out;
        @media (max-width: 767.98px)  {
                 margin-bottom: 20px;
+                flex: 1 0 auto;
+              }
+              @media (max-width: 576px)  {
                 flex: 1 0 0;
               }
       .icon {
