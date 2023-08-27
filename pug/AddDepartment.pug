@@ -1,0 +1,52 @@
+- var titlePage = 'Staff Management';
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .Dashboard-home
+      include includes/headerNavBar.pug
+      include includes/asideBar.pug
+      //- start Content category hotel
+      section.content-category-hotel 
+        //- Start Filter
+        include includes/FilterDashboard.pug
+        //- End Filter
+        //- Start Load Master page 
+        #pageMasterLoad
+          .HomeDashboard
+            .container-fluid 
+              .row           
+                .col-lg-12.mb-4
+                  .overview-Orders
+                    h1.text-center.mb-3 Add new Department
+                    .container-fluid 
+                      .row.justify-content-center
+                        .col-lg-10.col-md-12.col-sm-12.mb-3 
+                          .form-group
+                            label(for='') Department name
+                            input#exampleInputEmail1.form-control(type='text')
+                        
+                        .col-lg-10.col-md-12.col-sm-12.mb-2
+                          h4 Added Departments
+                          .group-button 
+                            span.btn.mx-2.rounded-pill.btn-outline-master.mb-3.active Maintenance
+                            span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Reception
+                            span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Delivery
+                            span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Procurement
+                        .col-lg-10.col-md-12.col-sm-12.d-flex.mb-2 
+                          a.btn.btn-primary.w-100.rounded-pill(href="" data-bs-toggle="modal" data-bs-target="#AddDepartment")  Add
+                    
+
+  
+                  
+      //- End Content category hotel
+    //- Start Modal
+    include includes/modal.pug 
+    include includes/script.pug
+    script(src="../assets/js/ajaxLoad.js") 
+    
+      
+
+
+

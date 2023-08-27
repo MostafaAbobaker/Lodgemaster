@@ -251,3 +251,128 @@
     </div>
   </div>
 </div>
+<div class="modal fade" id="PublishSetupRoom" tabindex="-1" aria-labelledby="PublishSetupRoomLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center p-5">
+        <div class="icon mb-3 text-primary"> <i class="fa-solid fa-circle-check fa-fw fa-9x"> </i></div>
+        <h3 class="mb-3 fw-bold"> Inspection form Published</h3>
+        <p class="mb-3"> Your inspection has been published.</p><a class="btn btn-master px-5 rounded-pill btn-Create-Order" href="Inspection.html">Continue</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="AddUser" tabindex="-1" aria-labelledby="AddUserLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center p-5">
+        <div class="icon mb-3 text-primary"> <i class="fa-solid fa-circle-check fa-fw fa-9x"> </i></div>
+        <h3 class="mb-3 fw-bold"> User Added</h3>
+        <p class="mb-3"> We have sent email to added email address to login.</p><a class="btn btn-master px-5 rounded-pill btn-Create-Order" href="LayoutDashboard.html">Continue</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="AddDepartment" tabindex="-1" aria-labelledby="AddDepartmentLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center p-5">
+        <div class="icon mb-3 text-primary"> <i class="fa-solid fa-circle-check fa-fw fa-9x"> </i></div>
+        <h3 class="mb-3 fw-bold"> Department Added</h3>
+        <p class="mb-3"> We have sent email to added email address to login.</p><a class="btn btn-master px-5 rounded-pill btn-Create-Order" href="LayoutDashboard.html">Continue</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="PasswordChanged" tabindex="-1" aria-labelledby="PasswordChangedLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center p-5">
+        <div class="icon mb-3 text-primary"> <i class="fa-solid fa-circle-check fa-fw fa-9x"> </i></div>
+        <h3 class="mb-3 fw-bold">Password has been changed.</h3><a class="btn btn-master px-5 rounded-pill btn-Create-Order" href="ProfileSettings.html">Continue</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="AddPhone" tabindex="-1" aria-labelledby="AddPhoneLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center p-5">
+        <h3 class="mb-3 fw-bold text-primary">Add new mobile number</h3>
+        <p class="mb-3"> Please add your mobile number here, we will be verifying the mobile number by sending 4 digit OTP</p>
+        <div class="mb-3">
+          <input class="form-control" id="exampleFormControlInput1" type="text" placeholder="+966 55 176 6662"/>
+        </div><a class="btn btn-master px-5 rounded-pill btn-Create-Order" href="#" data-bs-toggle="modal" data-bs-target="#PasswordOTP">Submit</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="AddEmail" tabindex="-1" aria-labelledby="AddEmailLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center p-5">
+        <h3 class="mb-3 fw-bold text-primary">Add email address</h3>
+        <p class="mb-3"> Please add your email address here, we will be verifying the email by sending 4 digit OTP</p>
+        <div class="mb-3">
+          <input class="form-control" id="exampleFormControlInput1" type="email" placeholder="name@example.com"/>
+        </div><a class="btn btn-master px-5 rounded-pill btn-Create-Order" href="#" data-bs-toggle="modal" data-bs-target="#EmailOTP">Submit</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="EmailOTP" tabindex="-1" aria-labelledby="EmailOTPLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center p-5">
+        <h3 class="mb-3 fw-bold text-primary">Email OTP Verification</h3>
+        <p class="mb-3"> Please type OTP as shared on your email address</p>
+        <div class="inputs-otp">
+          <input class="input-otp" type="number"/>
+          <input class="input-otp" type="number" disabled=""/>
+          <input class="input-otp" type="number" disabled=""/>
+          <input class="input-otp" type="number" disabled=""/>
+        </div>
+        <p>OTP not recieved? <a href="#">RESEND</a></p><a class="btn btn-primary px-5 rounded-pill Verify" href="#" disabled="disabled" data-bs-toggle="modal" data-bs-target="#VerifyEmail">Verify</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="VerifyEmail" tabindex="-1" aria-labelledby="VerifyEmailLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center p-5">
+        <div class="icon mb-3 text-primary"> <i class="fa-solid fa-circle-check fa-fw fa-9x"> </i></div>
+        <h3 class="mb-3 fw-bold">Verification Complete</h3>
+        <p class="mb-3">Thank you for verifying the email address. Your new email has been added.</p><a class="btn btn-master px-5 rounded-pill btn-Create-Order" href="ProfileSettings.html">Continue</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="PasswordOTP" tabindex="-1" aria-labelledby="PasswordOTPLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center p-5">
+        <h3 class="mb-3 fw-bold text-primary">Mobile number verification</h3>
+        <p class="mb-3"> Please type OTP as shared on your mobile number +966 55 176 6662</p>
+        <div class="inputs-otp">
+          <input class="input-otp" type="number"/>
+          <input class="input-otp" type="number" disabled=""/>
+          <input class="input-otp" type="number" disabled=""/>
+          <input class="input-otp" type="number" disabled=""/>
+        </div>
+        <p>OTP not recieved? <a href="#">RESEND</a></p><a class="btn btn-primary px-5 rounded-pill Verify" href="#" disabled="disabled" data-bs-toggle="modal" data-bs-target="#VerifyPassword">Verify</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="VerifyPassword" tabindex="-1" aria-labelledby="VerifyPasswordLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center p-5">
+        <div class="icon mb-3 text-primary"> <i class="fa-solid fa-circle-check fa-fw fa-9x"> </i></div>
+        <h3 class="mb-3 fw-bold">Verification Complete</h3>
+        <p class="mb-3">Thank you for verifying the number. Your new mobile number has been added.</p><a class="btn btn-master px-5 rounded-pill btn-Create-Order" href="ProfileSettings.html">Continue</a>
+      </div>
+    </div>
+  </div>
+</div>

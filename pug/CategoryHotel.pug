@@ -9,21 +9,12 @@ html(lang="en")
         .container
           a.navbar-brand(href='#') 
             img(src="./assets/images/Logo.png", alt="logo")
-          //- button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
-          //-   span.navbar-toggler-icon
-          //- #navbarSupportedContent.collapse.navbar-collapse
-          //-   ul.navbar-nav.ms-auto.mb-2.mb-lg-0
-          //-     li.nav-item
-          //-       a.nav-link.active(aria-current='page' href='#') Home
-          //-     li.nav-item
-          //-       a.nav-link(href='#') Services
-          //-     li.nav-item
-          //-       a.nav-link(href='#') Contact
-          //-     li.nav-item
-          //-       a.nav-link(href='#' data-bs-toggle="modal" data-bs-target="#exampleModal") Login
+          
           nav.navbar-user.d-flex.align-items-center 
             .image.me-2 
               img(src="./assets/images/user.png", alt="" height='65')
+            a.user-settings(href="ProfileSettings.html")
+              i.fa-solid.fa-gear
             .body-navbar-user  
               .text.fw-bold Hassan
               a(href="login.html")  

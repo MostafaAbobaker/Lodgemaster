@@ -60,6 +60,29 @@
         border-radius: 15px;
       }
     }
+    .navbar-user {
+      position: relative;
+      .user-settings {
+        position: absolute;
+        background-color: #fff;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $mColor;
+        cursor: pointer;
+        border-radius: 50%;
+        box-shadow: 0 0 5px rgba(#000, 0.3);
+        top: 60%;
+        inset-inline-start: 0;
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
+      }
+      &:hover {
+        .user-settings {opacity: 1; }
+      }
+    }
   }
   .content-master-page {
     background-color: $mColor;

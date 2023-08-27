@@ -246,3 +246,168 @@
       
 
 //- End Model 
+//- Modal
+#PublishSetupRoom.modal.fade(tabindex='-1', aria-labelledby='PublishSetupRoomLabel', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered
+    .modal-content
+      
+      .modal-body.text-center.p-5
+        
+          .icon.mb-3.text-primary 
+            i.fa-solid.fa-circle-check.fa-fw.fa-9x 
+          h3.mb-3.fw-bold  Inspection form Published
+          p.mb-3  Your inspection has been published.
+          a.btn.btn-master.px-5.rounded-pill.btn-Create-Order(href='Inspection.html') Continue
+      
+
+//- End Model 
+//- Modal
+#AddUser.modal.fade(tabindex='-1', aria-labelledby='AddUserLabel', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered
+    .modal-content
+      
+      .modal-body.text-center.p-5
+        
+          .icon.mb-3.text-primary 
+            i.fa-solid.fa-circle-check.fa-fw.fa-9x 
+          h3.mb-3.fw-bold  User Added
+          p.mb-3  We have sent email to added email address to login.
+          a.btn.btn-master.px-5.rounded-pill.btn-Create-Order(href='LayoutDashboard.html') Continue
+      
+
+//- End Model 
+//- Modal
+#AddDepartment.modal.fade(tabindex='-1', aria-labelledby='AddDepartmentLabel', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered
+    .modal-content
+      
+      .modal-body.text-center.p-5
+        
+          .icon.mb-3.text-primary 
+            i.fa-solid.fa-circle-check.fa-fw.fa-9x 
+          h3.mb-3.fw-bold  Department Added
+          p.mb-3  We have sent email to added email address to login.
+          a.btn.btn-master.px-5.rounded-pill.btn-Create-Order(href='LayoutDashboard.html') Continue
+      
+
+//- End Model 
+//- Modal
+#PasswordChanged.modal.fade(tabindex='-1', aria-labelledby='PasswordChangedLabel', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered
+    .modal-content
+      
+      .modal-body.text-center.p-5
+        
+          .icon.mb-3.text-primary 
+            i.fa-solid.fa-circle-check.fa-fw.fa-9x 
+          h3.mb-3.fw-bold Password has been changed.
+          a.btn.btn-master.px-5.rounded-pill.btn-Create-Order(href='ProfileSettings.html') Continue
+      
+
+//- End Model 
+//- Modal Add Phone
+#AddPhone.modal.fade(tabindex='-1', aria-labelledby='AddPhoneLabel', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered
+    .modal-content
+      
+      .modal-body.text-center.p-5
+        
+          
+          h3.mb-3.fw-bold.text-primary Add new mobile number
+          p.mb-3  Please add your mobile number here, we will be verifying the mobile number by sending 4 digit OTP
+          .mb-3
+            input#exampleFormControlInput1.form-control(type='text', placeholder='+966 55 176 6662')
+          a.btn.btn-master.px-5.rounded-pill.btn-Create-Order(href='#' data-bs-toggle="modal" data-bs-target="#PasswordOTP") Submit
+      
+
+//- End Model 
+//- Modal Add Email
+#AddEmail.modal.fade(tabindex='-1', aria-labelledby='AddEmailLabel', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered
+    .modal-content
+      
+      .modal-body.text-center.p-5
+        
+          
+          h3.mb-3.fw-bold.text-primary Add email address
+          p.mb-3  Please add your email address here, we will be verifying the email by sending 4 digit OTP
+          .mb-3
+            input#exampleFormControlInput1.form-control(type='email', placeholder='name@example.com')
+          a.btn.btn-master.px-5.rounded-pill.btn-Create-Order(href='#' data-bs-toggle="modal" data-bs-target="#EmailOTP") Submit
+      
+
+//- End Model 
+//- Modal Add Email
+#EmailOTP.modal.fade(tabindex='-1', aria-labelledby='EmailOTPLabel', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered
+    .modal-content
+      
+      .modal-body.text-center.p-5
+        
+          
+          h3.mb-3.fw-bold.text-primary Email OTP Verification
+          p.mb-3  Please type OTP as shared on your email address
+          .inputs-otp
+            input.input-otp(type='number')
+            input.input-otp(type='number', disabled='')
+            input.input-otp(type='number', disabled='')
+            input.input-otp(type='number', disabled='')
+
+          p OTP not recieved? 
+            a(href="#") RESEND
+          a.btn.btn-primary.px-5.rounded-pill.Verify(href='#' disabled data-bs-toggle="modal" data-bs-target="#VerifyEmail") Verify
+      
+
+//- End Model 
+//- Modal
+#VerifyEmail.modal.fade(tabindex='-1', aria-labelledby='VerifyEmailLabel', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered
+    .modal-content
+      
+      .modal-body.text-center.p-5
+        
+          .icon.mb-3.text-primary 
+            i.fa-solid.fa-circle-check.fa-fw.fa-9x 
+          h3.mb-3.fw-bold Verification Complete
+          p.mb-3 Thank you for verifying the email address. Your new email has been added.
+          a.btn.btn-master.px-5.rounded-pill.btn-Create-Order(href='ProfileSettings.html') Continue
+      
+
+//- End Model 
+//- Modal Add Email
+#PasswordOTP.modal.fade(tabindex='-1', aria-labelledby='PasswordOTPLabel', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered
+    .modal-content
+      
+      .modal-body.text-center.p-5
+        
+          
+          h3.mb-3.fw-bold.text-primary Mobile number verification
+          p.mb-3  Please type OTP as shared on your mobile number +966 55 176 6662
+          .inputs-otp
+            input.input-otp(type='number')
+            input.input-otp(type='number', disabled='')
+            input.input-otp(type='number', disabled='')
+            input.input-otp(type='number', disabled='')
+
+          p OTP not recieved? 
+            a(href="#") RESEND
+          a.btn.btn-primary.px-5.rounded-pill.Verify(href='#' disabled data-bs-toggle="modal" data-bs-target="#VerifyPassword") Verify
+      
+
+//- End Model 
+//- Modal
+#VerifyPassword.modal.fade(tabindex='-1', aria-labelledby='VerifyPasswordLabel', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered
+    .modal-content
+      
+      .modal-body.text-center.p-5
+        
+          .icon.mb-3.text-primary 
+            i.fa-solid.fa-circle-check.fa-fw.fa-9x 
+          h3.mb-3.fw-bold Verification Complete
+          p.mb-3 Thank you for verifying the number. Your new mobile number has been added.
+          a.btn.btn-master.px-5.rounded-pill.btn-Create-Order(href='ProfileSettings.html') Continue
+      
+
+//- End Model 

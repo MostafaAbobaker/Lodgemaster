@@ -1,0 +1,94 @@
+- var titlePage = 'Inspection';
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+    //- link(rel="stylesheet", href="../assets/css/jquery-steps.css")
+  body 
+    .Dashboard-home
+      include includes/headerNavBar.pug
+      include includes/asideBar.pug
+      //- start Content category hotel
+      section.content-category-hotel 
+        //- Start Filter
+        include includes/FilterDashboard.pug
+        //- End Filter
+        //- Start Load Master page 
+        #pageMasterLoad
+          //- Start Create Order
+          .Create-Order
+            .container-fluid 
+              .row 
+                .col-lg-12 
+                  //- Start Create Order
+                  .Create-Order
+                    .container-fluid 
+                      .row 
+                        .col-lg-12 
+                          .button-room.card-master.setup-Room-page
+                            .container-fluid 
+                              .row 
+                                .col-lg-6.col-md-6.col-sm-12 
+                                  .room-information.mb-5
+                                    h5.mb-4 Locations
+                                    .room-name.mb-3 
+                                      .icon 
+                                        i.fa-solid.fa-pencil.fa-fw
+                                      .text Room
+                                    button.btn.d-flex
+                                      .icon.me-2 
+                                        i.fa-solid.fa-plus
+                                      .text Categories
+                                    
+
+                                .col-lg-4.col-md-6.col-sm-12.offset-lg-1
+                                  h4.text-center.mb-3 Add Categories for Rooms
+                                  .input-group.mb-3
+                                    input.form-control(type='text', placeholder="Add Categories")
+                                    span#basic-addon2.input-group-text.btn-outline-master 
+                                      i.fa-solid.fa-plus
+                                  ul.list-unstyled.list-categories.mb-3
+                                    li.d-flex 
+                                      .text General
+                                      .exit 
+                                        i.fa-solid.fa-xmark
+                                    li.d-flex 
+                                      .text Bathroom
+                                      .exit 
+                                        i.fa-solid.fa-xmark
+                                    li.d-flex 
+                                      .text Bathroom
+                                      .exit 
+                                        i.fa-solid.fa-xmark
+                                  a.btn.btn-master.d-flex.align-items-center.rounded-pill.btn-Create-Order(href="questionSetup.html") Continue
+
+                            
+
+
+                                
+          //- End Create Order
+                  
+   
+            
+
+
+      //- End Content category hotel
+    //- Start Modal
+    include includes/modal.pug 
+    include includes/script.pug
+    script(src="./assets/js/DragFile.js") 
+    //- script(src="./assets/js/tackPhoto.js") 
+    //- script(src="../assets/js/jquery-steps.js") 
+    //- script.
+    //-   $('#demo').steps({
+    //-     onFinish: function () { alert('complete'); }
+    //-   });
+
+    
+      
+
+
+
+     
+//- End Create Order
+

@@ -123,9 +123,9 @@ aside.aside-bar {
             list-style-type: none;
             transition: all 0.5s ease-in-out;
             @media (max-width: 575.98px) {
-               transform: scaleY(1);
-            opacity: 1;
-            position: relative;
+              transform: scaleY(1);
+              opacity: 1;
+              position: relative;
             }
             li {
               display: flex;
@@ -194,9 +194,9 @@ aside.aside-bar {
           }
           &:hover {
             ul {
-              position: relative;
-              transform: scaleY(1);
-              opacity: 1;
+              // position: relative;
+              // transform: scaleY(1);
+              // opacity: 1;
             }
           }
         }

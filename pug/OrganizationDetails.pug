@@ -1,0 +1,53 @@
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .master-home.category-hotel
+      //- Start Nav Bar
+      nav.navbar.navbar-expand-lg
+        .container
+          a.navbar-brand(href='#') 
+            img(src="./assets/images/Logo.png", alt="logo")
+          
+          nav.navbar-user.d-flex.align-items-center 
+            .image.me-2 
+              img(src="./assets/images/user.png", alt="" height='65')
+            a.user-settings(href="ProfileSettings.html")
+              i.fa-solid.fa-gear
+            .body-navbar-user  
+              .text.fw-bold Hassan
+              a(href="login.html")  
+                span.text-black Sign out
+                i.fa-solid.fa-right-from-bracket.ms-2.text-primary
+
+      //- End Nav Bar      
+      //- start Content category hotel
+      section.content-category-hotel 
+        .container 
+          h2.text-center.text-primary Organization Details
+          .row 
+            .col-lg-12.col-md-12.col-sm-12.mb-4.d-flex.justify-content-center
+              .col-lg-4.col-md-6.col-sm-12
+                .image-upload
+                  .avatar-upload
+                    .avatar-edit
+                      input#imageUpload(type='file', accept='.png, .jpg, .jpeg')
+                      label(for='imageUpload')
+                    .avatar-preview
+                      #imagePreview(style='background-image: url(./assets/images/userbg.jpg);')
+            .col-lg-12.col-md-12.col-sm-12.mb-4.d-flex.justify-content-center
+              .col-lg-4.col-md-6.col-sm-12
+                .form-group
+                  label(for='') Name
+                  input.form-control(type='text', aria-describedby=' ',  placeholder="Alhyatt Jeddah Continental Hotel")
+
+            .col-lg-12.col-md-12.col-sm-12.mb-4.d-flex.justify-content-center
+              .col-lg-4.col-md-6.col-sm-12
+                a.btn.btn-master.rounded-pill.d-block.w-100(href="StaffManagement.html" )  Save changes   
+      //- End Content category hotel
+
+    include includes/script.pug 
+
+
+

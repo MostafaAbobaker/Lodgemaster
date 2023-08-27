@@ -1,0 +1,211 @@
+- var titlePage = 'Staff Management';
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .Dashboard-home
+      include includes/headerNavBar.pug
+      include includes/asideBar.pug
+      //- start Content category hotel
+      section.content-category-hotel 
+        //- Start Filter
+        include includes/FilterDashboard.pug
+        //- End Filter
+        //- Start Load Master page 
+        #pageMasterLoad
+          .HomeDashboard
+            .container-fluid 
+              .row           
+                .col-lg-12.mb-4
+                  .overview-Orders
+                    .header-overview.mb-3.justify-content-between  
+                      .title-head.mb-0 Users
+                      a.rounded-pill.btn.btn-outline-master(href="AddUser.html")
+                        i.fa-solid.fa-plus.fa-fw
+                        | Add user
+                    
+
+  
+                    table.table.table-hover.table-responsive-scroll
+                      thead
+                        tr
+                          th(scope='col') Assignee
+                          th(scope='col') Department
+                          th(scope='col') Role
+                          th(scope='col') Email
+                          th(scope='col') &nbsp;
+                      tbody
+                        tr
+                          td(data-label="Assignee") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/photoUser.png", alt="" width="25")
+                              .text Katef
+                          td(data-label="Department") 
+                            a.badge.bg-open.text-dark.rounded-pill(href="informationRowTable.html") Housekeeping    
+                          td(data-label="Role") Admin
+                          td(data-label="Email") katef@gmail.com
+
+                          td(data-label="") 
+                            a(href="") 
+                              i.fa-regular.fa-pen-to-square
+                            a.text-danger(href="") 
+                              i.fa-solid.fa-trash-can
+                        tr
+                          td(data-label="Assignee") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/Abdul.png", alt="" width="25")
+                              .text Abdul
+                          td(data-label="Department") 
+                            a.badge.bg-Completed.text-dark.rounded-pill(href="informationRowTable.html") Maintenance    
+                          td(data-label="Role") Supervisor
+                          td(data-label="Email") katef@gmail.com
+
+                          td(data-label="") 
+                            a(href="") 
+                              i.fa-regular.fa-pen-to-square
+                            a.text-danger(href="") 
+                              i.fa-solid.fa-trash-can
+                        tr
+                          td(data-label="Assignee") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/photoUser.png", alt="" width="25")
+                              .text Katef
+                          td(data-label="Department") 
+                            a.badge.bg-open.text-dark.rounded-pill(href="informationRowTable.html") Management    
+                          td(data-label="Role") Employ
+                          td(data-label="Email") katef@gmail.com
+
+                          td(data-label="") 
+                            a(href="") 
+                              i.fa-regular.fa-pen-to-square
+                            a.text-danger(href="") 
+                              i.fa-solid.fa-trash-can
+                        tr
+                          td(data-label="Assignee") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/Abdul.png", alt="" width="25")
+                              .text Abdul
+                          td(data-label="Department") 
+                            a.badge.bg-process.text-dark.rounded-pill(href="informationRowTable.html") Maintenance    
+                          td(data-label="Role") Admin
+                          td(data-label="Email") katef@gmail.com
+
+                          td(data-label="") 
+                            a(href="") 
+                              i.fa-regular.fa-pen-to-square
+                            a.text-danger(href="") 
+                              i.fa-solid.fa-trash-can
+                        
+                        tr
+                          td(data-label="Assignee") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/photoUser.png", alt="" width="25")
+                              .text Katef
+                          td(data-label="Department") 
+                            a.badge.bg-open.text-dark.rounded-pill(href="informationRowTable.html") Housekeeping    
+                          td(data-label="Role") Admin
+                          td(data-label="Email") katef@gmail.com
+
+                          td(data-label="") 
+                            a(href="") 
+                              i.fa-regular.fa-pen-to-square
+                            a.text-danger(href="") 
+                              i.fa-solid.fa-trash-can
+                        tr
+                          td(data-label="Assignee") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/Abdul.png", alt="" width="25")
+                              .text Abdul
+                          td(data-label="Department") 
+                            a.badge.bg-Completed.text-dark.rounded-pill(href="informationRowTable.html") Maintenance    
+                          td(data-label="Role") Admin
+                          td(data-label="Email") katef@gmail.com
+
+                          td(data-label="") 
+                            a(href="") 
+                              i.fa-regular.fa-pen-to-square
+                            a.text-danger(href="") 
+                              i.fa-solid.fa-trash-can
+                        tr
+                          td(data-label="Assignee") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/photoUser.png", alt="" width="25")
+                              .text Katef
+                          td(data-label="Department") 
+                            a.badge.bg-open.text-dark.rounded-pill(href="informationRowTable.html") Management    
+                          td(data-label="Role") Admin
+                          td(data-label="Email") katef@gmail.com
+
+                          td(data-label="") 
+                            a(href="") 
+                              i.fa-regular.fa-pen-to-square
+                            a.text-danger(href="") 
+                              i.fa-solid.fa-trash-can
+                        tr
+                          td(data-label="Assignee") 
+                            .user-card.d-flex.align-items-center 
+                              .image.me-1
+                                img(src="./assets/images/Abdul.png", alt="" width="25")
+                              .text Abdul
+                          td(data-label="Department") 
+                            a.badge.bg-process.text-dark.rounded-pill(href="informationRowTable.html") Maintenance    
+                          td(data-label="Role") Admin
+                          td(data-label="Email") katef@gmail.com
+
+                          td(data-label="") 
+                            a(href="") 
+                              i.fa-regular.fa-pen-to-square
+                            a.text-danger(href="") 
+                              i.fa-solid.fa-trash-can
+                        
+
+                       
+                    
+                    .d-flex.justify-content-center 
+                      nav.pagination-nav(aria-label='...')
+                        ul.pagination
+                          li.page-item.disabled
+                            span.page-link 
+                              i.fa-solid.fa-chevron-left
+                          li.page-item
+                            a.page-link(href='#') 1
+                          li.page-item.active(aria-current='page')
+                            span.page-link 2
+                          li.page-item
+                            a.page-link(href='#') 3
+                          li.page-item
+                            a.page-link(href='#') 
+                              i.fa-solid.fa-chevron-right
+                .col-lg-12.mb-5 
+                  .overview-Orders.mb-5  
+                    .d-flex.justify-content-between.mb-4
+                      h4 Departments
+                      a.rounded-pill.btn.btn-outline-master.align-items-center(href="AddDepartment.html")
+                        i.fa-solid.fa-plus.fa-fw
+                        | Add Department
+                    .group-button 
+                        span.btn.mx-2.rounded-pill.btn-outline-master.mb-3.active Maintenance
+                        span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Reception
+                        span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Delivery
+                        span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Procurement
+
+
+
+      //- End Content category hotel
+    //- Start Modal
+    include includes/modal.pug 
+    include includes/script.pug
+    script(src="../assets/js/ajaxLoad.js") 
+    
+      
+
+
+

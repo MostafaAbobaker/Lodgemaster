@@ -1,0 +1,63 @@
+- var titlePage = 'Inspection';
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+    //- link(rel="stylesheet", href="../assets/css/jquery-steps.css")
+  body 
+    .Dashboard-home
+      include includes/headerNavBar.pug
+      include includes/asideBar.pug
+      //- start Content category hotel
+      section.content-category-hotel 
+        //- Start Filter
+        include includes/FilterDashboard.pug
+        //- End Filter
+        //- Start Load Master page 
+        #pageMasterLoad
+          //- Start Create Order
+          .Create-Order
+            .container-fluid 
+              .row 
+                .col-lg-12 
+                  //- Start Create Order
+                  .Create-Order
+                    .container-fluid 
+                      .row 
+                        .col-lg-12 
+                          .button-room.card-master.setup-Room-page
+                            .container-fluid 
+                              .row.justify-content-center 
+                                .col-lg-6.col-md-6.col-sm-12.py-5 
+                                  h1.text-center.text-primary.mb-5 Your inspection form is ready.
+                                  .d-flex.justify-content-center                                    
+                                      a.btn.btn-dark.me-3.rounded-pill.px-5(href="Inspection.html") Preview 
+                                      a.btn.btn-primary.rounded-pill.px-5(href="" data-bs-toggle="modal" data-bs-target="#PublishSetupRoom") Publish
+
+                               
+          //- End Create Order
+                  
+        
+            
+
+
+      //- End Content category hotel
+    //- Start Modal
+    include includes/modal.pug 
+    include includes/script.pug
+    script(src="./assets/js/DragFile.js") 
+    //- script(src="./assets/js/tackPhoto.js") 
+    //- script(src="../assets/js/jquery-steps.js") 
+    //- script.
+    //-   $('#demo').steps({
+    //-     onFinish: function () { alert('complete'); }
+    //-   });
+
+    
+      
+
+
+
+     
+//- End Create Order
+
