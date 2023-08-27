@@ -1,12 +1,12 @@
 // Modal
 //- Start model-filter-home
 #exampleModal.modal.fade.model-filter-home(tabindex='-1', aria-labelledby='exampleModalLabel', aria-hidden='true')
-  .modal-dialog
+  .modal-dialog.modal-xl
     .modal-content
       .modal-header
         h1#exampleModalLabel.modal-title.fs-5 
           .input-group.me-3
-            input.form-control(type='text', placeholder="Search", aria-label="Recipient's username", aria-describedby='button-addon2')
+            input.form-control(type='search', placeholder="Search", aria-label="Recipient's username", aria-describedby='button-addon2')
             button#button-addon2.btn.btn-outline-master(type='button') 
               i.fa-solid.fa-magnifying-glass
         button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
@@ -70,46 +70,93 @@
       .modal-footer.justify-content-start 
         button.btn.btn-primary.btn-apply.rounded-pill.col-7(type='button') Apply Filters
         button.btn.btn-light.rounded-pill(type='button', data-bs-dismiss='modal') Cancel
+        button.btn.btn-light.rounded-pill(type='button', ) Reset
 //- End model-filter-home
 //- Start model-Add-Item
 #AddItem.modal.fade.model-filter-home(tabindex='-1', aria-labelledby='AddItemLabel', aria-hidden='true')
   .modal-dialog
     .modal-content
       .modal-header
-        h1#exampleModalLabel.modal-title.fs-5 
+        h1#exampleModalLabel.modal-title.fs-5 Add Item
           
         button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
       .modal-body
         .container-fluid 
           .row 
-            .col-lg-12.mb-3 
-              h4.title Add Item
-            .col-lg-6.mb-3
+            .col-lg-12.mb-3
               .form-group
                 label English Name
                 input.form-control(type='text')
-            .col-lg-6.mb-3
+            .col-lg-12.mb-3
               .form-group
                 label Arabic Name
                 input.form-control(type='text')
             .col-lg-12.mb-3 
-              h5.mb-2 Department
-                .group-button 
-                  span.btn.mx-2.rounded-pill.btn-outline-master.mb-3.active Maintenance
-                  span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Reception
-                  span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Delivery
-                  span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Procurement 
+              h5.mb-3 Department
+              .group-button 
+                span.btn.mx-2.rounded-pill.btn-outline-master.mb-3.active Maintenance
+                span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Reception
+                span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Delivery
+                span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Procurement 
             .col-lg-12.mb-3
               h5.mb-2 Assignee
               .label-Assignee
                 .icon 
                   span K
                 .text Katef
-                
-
-            
       .modal-footer.justify-content-start 
         button.btn.btn-primary.btn-apply.rounded-pill.col-12(type='button' data-bs-toggle="modal" data-bs-target="#ConfirmAddItem") ADD 
+//- End model-filter-home
+//- Start model-Change Assignee
+#ChangeAssignee.modal.fade.model-filter-home(tabindex='-1', aria-labelledby='ChangeAssigneeLabel', aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h1#exampleModalLabel.modal-title.fs-5 Assignee
+          
+        button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+      .modal-body
+        .container-fluid 
+          .row 
+            .col-lg-12.mb-3
+              h5.mb-2 Assignee
+              .label-Assignee
+                .icon 
+                  span K
+                .text Katef
+            .col-lg-12.mb-3
+              .form-group
+                label Employ Name
+                select#selectItem.form-select.form-control-lg
+                  option Ahmed Alaa
+                  option Mohamed Mahomud
+                  option Karem Ali
+                  option Mostafa
+                  
+
+      .modal-footer.justify-content-start 
+        button.btn.btn-primary.btn-apply.rounded-pill.col-12(type='button' data-bs-toggle="modal" data-bs-target="#ConfirmAddItem") Change 
+//- End model-filter-home
+//- Start model-Change Assignee
+#ChangeDepartment.modal.fade.model-filter-home(tabindex='-1', aria-labelledby='ChangeDepartmentLabel', aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h1#exampleModalLabel.modal-title.fs-5 Department
+          
+        button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+      .modal-body
+        .container-fluid 
+            h5.mb-3 Department
+            .group-button.d-flex.flex-wrap 
+              span.btn.mx-1.rounded-pill.btn-outline-master.mb-3.active Maintenance
+              span.btn.mx-1.rounded-pill.btn-outline-master.mb-3 Reception
+              span.btn.mx-1.rounded-pill.btn-outline-master.mb-3 Delivery
+              span.btn.mx-1.rounded-pill.btn-outline-master.mb-3 Procurement 
+                  
+
+      .modal-footer.justify-content-start 
+        button.btn.btn-primary.btn-apply.rounded-pill.col-12(type='button' data-bs-toggle="modal" data-bs-target="#ConfirmAddItem") Change 
 //- End model-filter-home
 
 //- Start model-state-Table
@@ -195,7 +242,7 @@
           h3.mb-3.fw-bold  Order Placed
           p.mb-3  Your has been order placed and SMS has been sent successfully. To Preview the SMS 
             a(href="") Click here
-          a.btn.btn-master.px-5.rounded-pill.btn-Create-Order(href='LayoutDashboard.html') Continue
+          a.btn.btn-master.px-5.rounded-pill.btn-Create-Order(href='CreateOrderGeneralAddItem.html') Continue
       
 
 //- End Model 

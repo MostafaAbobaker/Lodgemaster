@@ -1,5 +1,5 @@
 const inputs = document.querySelectorAll(".input-otp"),
-  button = document.querySelector(".Verify");
+  buttonVerify = document.querySelector(".Verify");
 
 inputs.forEach((input, index1) => {
   input.addEventListener("keyup", (e) => {
@@ -30,10 +30,10 @@ inputs.forEach((input, index1) => {
       });
     }
     if (!inputs[3].disabled && inputs[3].value !== "") {
-      button.classList.add("active");
+      buttonVerify.classList.add("active");
       return;
     }
-    button.classList.remove("active");
+    buttonVerify.classList.remove("active");
   });
 });
 window.addEventListener("load", () => inputs[0].focus());

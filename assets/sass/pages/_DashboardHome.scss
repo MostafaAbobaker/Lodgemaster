@@ -79,7 +79,7 @@
           ul {
             list-style-type: none;
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(6, 1fr);
             // flex-wrap: wrap;
             // justify-content: space-between;
             margin: 0;
@@ -100,6 +100,7 @@
               flex: 1 0 0;
               text-align: center;
               margin-inline: 10px;
+              cursor: pointer;
               .number {
                 font-size: 42px;
                 font-weight: bold;
@@ -154,6 +155,10 @@
                     color: #009688;
                   }
                 }
+              }
+              &.active {
+                border: 2px solid $mColor;
+                box-shadow: 0 0 5px rgba(#000,0.3);
               }
             }
           }

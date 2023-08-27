@@ -19,7 +19,9 @@ html(lang="en")
               .row 
                 .col-lg-12 
                   .card-master.card-information-Table.mb-5.p-0
-                    .p-4.title-information-Table.d-flex.flex-wrap.align-items-center.border-bottom.justify-content-between 
+                    .p-4.title-information-Table.d-flex.flex-wrap.align-items-center.border-bottom
+                      a.me-3(href="LayoutDashboard.html")
+                        i.fa-solid.fa-arrow-left-long
                       .d-flex.flex-wrap.align-items-center
                         .bg-open.text-dark.rounded-pill.px-4.py-1.mb-2 Open
                         .inputs-group.mx-3.mb-2 
@@ -40,8 +42,7 @@ html(lang="en")
                             span.icon.me-2.text-primary 
                               i.fa-solid.fa-hourglass.fa-fw
                             span.text 02h: 05minutes
-                      a(href="LayoutDashboard.html")
-                        i.fa-solid.fa-arrow-right-long
+
                     .information-Table-body.p-0
                       .container-fluid 
                         .row 
@@ -119,10 +120,17 @@ html(lang="en")
 
                                     td 
                                       a(href="OrderSMS.html")  Sent
-                              .d-flex.justify-content-center 
-                                a.rounded-pill.p-2.px-4.btn-outline-master(href="CreateOrderGeneralAddItemReviewOrder.html")   
+                              .d-flex.justify-content-center.flex-wrap
+                                a.rounded-pill.p-2.px-4.btn-outline-master.mx-1.mb-3(href="#"  data-bs-toggle="modal" data-bs-target="#ChangeAssignee")   
+                                  | Change Assignee
+                                a.rounded-pill.p-2.px-4.btn-outline-master.mx-1.mb-3(href="#"  data-bs-toggle="modal" data-bs-target="#ChangeDepartment")   
+                                  | Change Department
+                                a.rounded-pill.p-2.px-4.btn-outline-master.mx-1.mb-3(href="CreateOrderGeneralAddItemReviewOrder.html")   
                                   i.fa-solid.fa-plus.fa-fw
                                   | Add new product
+                            .mb-3
+                                label Add  Notes 
+                                textarea#exampleFormControlTextarea1.form-control(rows='3' placeholder='Notes')      
                             footer.footer.mb-4.px-4
                               h6 Attachments
                               span.fst-italic No Attachments

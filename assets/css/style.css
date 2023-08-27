@@ -438,12 +438,9 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
 }
 
 /* Start Model Filter Home */
-.model-filter-home .modal-dialog {
-  max-width: 750px;
-}
-@media (max-width: 768px) {
+@media (max-width: 990px) {
   .model-filter-home .modal-dialog {
-    max-width: 90%;
+    max-width: 80%;
   }
 }
 .model-filter-home .modal-dialog .modal-title .input-group .form-control {
@@ -517,7 +514,8 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
   padding: 20px;
 }
 .add-item-order .select-item .form-group {
-  width: 80%;
+  width: 49%;
+  margin-inline-end: 1%;
 }
 .add-item-order .select-item .btn {
   margin-inline-start: 2%;
@@ -529,9 +527,6 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
 .add-item-order .select-item .btn:hover {
   background-color: #005daa;
   color: #fff;
-}
-.add-item-order .increment-item .input-group {
-  width: 30%;
 }
 .add-item-order .increment-item .input-group .form-control {
   border-color: #005daa;
@@ -1178,7 +1173,7 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
 .Dashboard-home .content-category-hotel .overview-Orders .header-overview .group-overview ul {
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   margin: 0;
   padding: 0;
 }
@@ -1202,6 +1197,7 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
   flex: 1 0 0;
   text-align: center;
   margin-inline: 10px;
+  cursor: pointer;
 }
 .Dashboard-home .content-category-hotel .overview-Orders .header-overview .group-overview ul li .number {
   font-size: 42px;
@@ -1237,6 +1233,10 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
 }
 .Dashboard-home .content-category-hotel .overview-Orders .header-overview .group-overview ul li.bg-Closed .label .icon {
   color: #009688;
+}
+.Dashboard-home .content-category-hotel .overview-Orders .header-overview .group-overview ul li.active {
+  border: 2px solid #005daa;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 @media (max-width: 767.98px) {
   .Dashboard-home .content-category-hotel .overview-Orders .table .user-card {

@@ -9,7 +9,7 @@ html(lang="en")
       //- start Content category hotel
       section.content-category-hotel 
         //- Start Filter
-        include includes/FilterDashboard.pug
+        //- include includes/FilterDashboard.pug
         //- End Filter
         //- Start Load Master page 
         #pageMasterLoad
@@ -19,23 +19,23 @@ html(lang="en")
               .row 
                 .col-lg-12 
                   //- Start Create Order
-                  .Create-Order
+                  .Create-Order.mt-4
                     .container-fluid 
                       .row 
                         .col-lg-12 
                           .card-master.mb-4
                             .title-card.position-relative.text-center
-                              a.position-absolute.top-0.start-0(href="CreateOrderGeneralAddItemReviewOrder.html")
+                              a.position-absolute.top-0.start-0(href="CreateOrderGeneralAddItem.html")
                                 i.fa-solid.fa-arrow-left-long
                               h4.mb-4 Assignees
                             .body-card
                               .d-flex.justify-content-between.flex-wrap.mb-4 
                                 h4 Blanket
                                 .group-icon.d-flex
-                                  button.btn.btn-outline-primary(type='button').mx-2 
+                                  a.btn.btn-outline-primary.mx-2(href='' data-bs-toggle="modal" data-bs-target="#ChangeAssignee") 
                                     i.fa-solid.fa-pencil.fa-fw.me-2  
                                     | Edit
-                                  button.btn.btn-outline-danger(type='button').mx-2 
+                                  a.btn.btn-outline-danger(type='button').mx-2 
                                     i.fa-regular.fa-trash-can.fa-fw.me-2 
                                     | Remove
                               .container-fluid
@@ -61,7 +61,7 @@ html(lang="en")
                               .d-flex.justify-content-between.flex-wrap.mb-4 
                                 h4 Water Bottles
                                 .group-icon.d-flex
-                                  button.btn.btn-outline-primary(type='button').mx-2 
+                                  a.btn.btn-outline-primary.mx-2(href='' data-bs-toggle="modal" data-bs-target="#ChangeAssignee") 
                                     i.fa-solid.fa-pencil.fa-fw.me-2  
                                     | Edit
                                   button.btn.btn-outline-danger(type='button').mx-2 
@@ -90,7 +90,7 @@ html(lang="en")
                               .d-flex.justify-content-between.flex-wrap.mb-4 
                                 h4 Cold Drinks
                                 .group-icon.d-flex
-                                  button.btn.btn-outline-primary(type='button').mx-2 
+                                  a.btn.btn-outline-primary.mx-2(href='' data-bs-toggle="modal" data-bs-target="#ChangeAssignee") 
                                     i.fa-solid.fa-pencil.fa-fw.me-2  
                                     | Edit
                                   button.btn.btn-outline-danger(type='button').mx-2 

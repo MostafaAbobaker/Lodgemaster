@@ -15,19 +15,26 @@ html(lang="en")
             p.text-center.mb-5 New Joined? 
               a(href="signUp.html") Sign Up
             form.form-content.px-5(action="")   
-              
               .input-group.mb-3
                 span.input-group-text 
-                  i.fa-regular.fa-envelope
+                  i.fa-solid.fa-hotel.fa-fw
+
+                .form-floating
+                  input#floatingPassword.form-control(type='text' placeholder='Name Organization')
+                  label(for='') Organization
+              .input-group.mb-3
+                span.input-group-text 
+                  i.fa-regular.fa-envelope.fa-fw
                 .form-floating
                   input#floatingInput.form-control(type='email' placeholder='name@example.com')
                   label(for='floatingInput') Email 
               .input-group.mb-3
                 span.input-group-text 
-                  i.fa-solid.fa-key
+                  i.fa-solid.fa-key.fa-fw
                 .form-floating
                   input#floatingPassword.form-control(type='password' placeholder='Password')
                   label(for='floatingPassword') Password
+              
               .row.justify-content-between.mb-3 
                 .mb-3.form-check.col-lg-6.col-md-6.col-sm-12.ps-5
                   input#exampleCheck1.form-check-input(type='checkbox')

@@ -9,7 +9,7 @@ html(lang="en")
       //- start Content category hotel
       section.content-category-hotel 
         //- Start Filter
-        include includes/FilterDashboard.pug
+        //- include includes/FilterDashboard.pug
         //- End Filter
         //- Start Load Master page 
         #pageMasterLoad
@@ -19,13 +19,13 @@ html(lang="en")
               .row 
                 .col-lg-12 
                   //- Start Create Order
-                  .Create-Order.GeneralAddItem
+                  .Create-Order.GeneralAddItem.mt-4
                     .container-fluid 
                       .row 
                         .col-lg-12 
                           .card-master
                             .title-card.position-relative.text-center
-                              a.position-absolute.top-0.start-0(href="CreateOrderGeneralRoom.html")
+                              a.position-absolute.top-0.start-0(href="LayoutDashboard.html")
                                 i.fa-solid.fa-arrow-left-long
                               h4.mb-4 Select Item
                             .body-card
@@ -33,27 +33,46 @@ html(lang="en")
                                 .row.justify-content-center 
                                   .col-lg-9.col-md-10.col-sm-12
                                     .add-item-order.mb-4 
-                                      .d-flex.mb-3.select-item.flex-wrap 
-                                        .form-group
-                                          select#selectItem.form-select.form-control-lg
-                                            option Cold Drinks
-                                            option Cold Tea
-                                            option Cold Can
-                                            option Blanket
-                                            option Cold Drinks 
-                                            option Water Bottles
-                                            option Add New
-                                        .btn Add New
-                                      .d-flex.mb-3.increment-item.align-items-center.flex-wrap   
-                                        .input-group
-                                          button#decrementButton.btn.btn-outline-master.btn-decrease(type='button') 
-                                            i.fa-solid.fa-minus
-                                          input#inputCount.form-control(type='text',  min="1", max="99" value="1")
-                                          button#incrementButton.btn.btn-outline-master.btn-increase(type='button' ) 
-                                            i.fa-solid.fa-plus
-                                        button#AddOrder.btn.btn-master Add
+                                      .row
+                                        .col-lg-6.col-md-6.col-sm-12.mb-3
+                                          .form-floating
+                                            select#floatingSelect.form-select(aria-label='Floating label select example')
+                                              option(selected='') General
+                                              option(value='1') Room
+                                            label(for='floatingSelect') Select Category
+                                        .col-lg-6.col-md-6.col-sm-12.mb-3
+                                          .form-floating
+                                            select#floatingSelect.form-select(aria-label='Floating label select example')
+                                              option(selected='') Room 101
+                                              option(value='1') Room 102
+                                              option(value='2') Room 103
+                                              option(value='3') Room 104
+                                              option(value='4') Room 105
+                                              option(value='5') Room 106
+                                            label(for='floatingSelect') Select Location
+                                      .row
+                                        .col-lg-6.col-md-6.col-sm-12.mb-3
+                                          .form-group
+                                            select#selectItem.form-select.form-control-lg
+                                              option Cold Drinks
+                                              option Cold Tea
+                                              option Cold Can
+                                              option Blanket
+                                              option Cold Drinks 
+                                              option Water Bottles
+                                              option Add New
+                                        .col-lg-6.col-md-6.col-sm-12.mb-3      
+                                          .increment-item    
+                                            .input-group
+                                              button#decrementButton.btn.btn-outline-master.btn-decrease(type='button') 
+                                                i.fa-solid.fa-minus
+                                              input#inputCount.form-control(type='text',  min="1", max="99" value="1")
+                                              button#incrementButton.btn.btn-outline-master.btn-increase(type='button' ) 
+                                                i.fa-solid.fa-plus
                                       .mb-3
                                         textarea#exampleFormControlTextarea1.form-control(rows='3' placeholder='Notes')
+                                      .mb-3 
+                                        button#AddOrder.btn.btn-master.w-100 Add
                                     h5.mb-4 Selected Items: 
                                     #contentValue.d-flex.flex-wrap.mb-4
                                       span.badge-item.mx-2.mb-3
@@ -96,7 +115,7 @@ html(lang="en")
                                         span.badge-number 1
                                         span.icon-exit
                                           i.fa-solid.fa-xmark.fa-fw
-                                    a.btn.btn-dark.d-block.w-100.p-3(href='CreateOrderGeneralAddItemReviewOrder.html') Next
+                                    a.btn.btn-dark.d-block.w-100.p-3(href='CreateOrderGeneralAssignees.html') Next
 
         
 

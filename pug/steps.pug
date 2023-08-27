@@ -108,9 +108,9 @@ html(lang="en")
                                       | Please Drag the photos here or click on upload the photos or Take Photos
                                     .d-flex.justify-content-center 
                                       input(type="file", name="" , hidden)
-                                      button.btn.btn-dark.mx-2.fileUpload Upload  
+                                      //- button.btn.btn-dark.mx-2.fileUpload Upload  
                                       input#capture(type="file", name="", accept="image/*,video/*,audio/*" ,capture , multiple , hidden)
-                                      button.TakePhotos.btn.btn-outline-dark.mx-2 Take Photos  
+                                      button.TakePhotos.btn.btn-outline-dark.mx-2.fileUpload Take Photos  
 
 
                                 
@@ -125,12 +125,7 @@ html(lang="en")
     include includes/modal.pug 
     include includes/script.pug
     script(src="./assets/js/DragFile.js") 
-    //- script(src="./assets/js/tackPhoto.js") 
-    //- script(src="../assets/js/jquery-steps.js") 
-    //- script.
-    //-   $('#demo').steps({
-    //-     onFinish: function () { alert('complete'); }
-    //-   });
+   
 
     
       

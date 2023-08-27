@@ -12,7 +12,8 @@
   padding: 20px;
   .select-item {
     .form-group {
-      width: 80%;
+      width: 49%;
+      margin-inline-end: 1%;
     }
     .btn {
       margin-inline-start: 2%;
@@ -28,7 +29,7 @@
   }
   .increment-item {
     .input-group {
-      width: 30%;
+      // width: 49%;
       .form-control {
         border-color: $mColor;
         font-size: 1.4rem;

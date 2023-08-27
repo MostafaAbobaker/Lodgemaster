@@ -1,9 +1,9 @@
 /* Start Model Filter Home */
 .model-filter-home {
   .modal-dialog {
-    max-width: 750px;
-    @media (max-width: 768px) {
-      max-width: 90%;
+    // max-width: 750px;
+    @media (max-width: 990px) {
+      max-width: 80%;
     }
     .modal-title {
       .input-group {
