@@ -50,7 +50,7 @@ aside.aside-bar .body-aside-bar {
 }
 aside.aside-bar .body-aside-bar ul {
   margin: 0;
-  padding: 40px 20px 40px 10px;
+  padding: 20px 20px 40px 10px;
   list-style-type: none;
 }
 aside.aside-bar .body-aside-bar ul li {
@@ -146,7 +146,7 @@ aside.aside-bar .body-aside-bar ul li.dropdown ul li {
   margin-bottom: 0;
 }
 aside.aside-bar .body-aside-bar ul li.dropdown ul li a {
-  padding: 10px 15px;
+  padding: 5px 15px;
   transition: all 0.4s ease-in-out;
 }
 aside.aside-bar .body-aside-bar ul li.dropdown ul li a .icon {
@@ -164,6 +164,10 @@ aside.aside-bar .body-aside-bar ul li.dropdown ul li.hover a {
 aside.aside-bar .body-aside-bar ul li.dropdown ul li.hover a span.text {
   transform: scaleX(1);
   position: relative;
+}
+aside.aside-bar .body-aside-bar ul li.dropdown ul li.active a {
+  background-color: #ebf5ff;
+  color: #005daa;
 }
 aside.aside-bar .body-aside-bar ul li.dropdown.active ul {
   display: block;

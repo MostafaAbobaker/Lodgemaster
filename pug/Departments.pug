@@ -1,0 +1,46 @@
+- var titlePage = 'Settings';
+- var titlesPage = 'Departments';
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .Dashboard-home
+      include includes/headerNavBar.pug
+      include includes/asideBar.pug
+      //- start Content category hotel
+      section.content-category-hotel 
+        //- Start Filter
+        include includes/FilterDashboard.pug
+        //- End Filter
+        //- Start Load Master page 
+        #pageMasterLoad
+          .HomeDashboard
+            .container-fluid 
+              .row           
+                
+                .col-lg-12.mb-5 
+                  .overview-Orders.mb-5  
+                    .d-flex.justify-content-between.mb-4
+                      h4 Departments
+                      a.rounded-pill.btn.btn-outline-master.align-items-center(href="AddDepartment.html")
+                        i.fa-solid.fa-plus.fa-fw
+                        | Add Department
+                    .group-button 
+                        span.btn.mx-2.rounded-pill.btn-outline-master.mb-3.active Maintenance
+                        span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Reception
+                        span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Delivery
+                        span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Procurement
+
+
+
+      //- End Content category hotel
+    //- Start Modal
+    include includes/modal.pug 
+    include includes/script.pug
+    script(src="../assets/js/ajaxLoad.js") 
+    
+      
+
+
+

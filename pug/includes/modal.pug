@@ -83,21 +83,34 @@
       .modal-body
         .container-fluid 
           .row 
-            .col-lg-12.mb-3
+            .col-lg-12.mb-2
               .form-group
                 label English Name
                 input.form-control(type='text')
-            .col-lg-12.mb-3
+            .col-lg-12.mb-2
               .form-group
                 label Arabic Name
+                input.form-control(type='text')
+            .col-lg-12.mb-2
+              .form-check
+                input#flexCheckDefault.form-check-input(type='checkbox', value='')
+                label.form-check-label(for='flexCheckDefault')
+                  | Service
+            .col-lg-6.mb-2
+              .form-group
+                label Quantity
+                input.form-control(type='text')
+            .col-lg-6.mb-2
+              .form-group
+                label Minima Quantity
                 input.form-control(type='text')
             .col-lg-12.mb-3 
               h5.mb-3 Department
               .group-button 
-                span.btn.mx-2.rounded-pill.btn-outline-master.mb-3.active Maintenance
-                span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Reception
-                span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Delivery
-                span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Procurement 
+                span.btn.rounded-pill.btn-outline-master.mb-3.active Maintenance
+                span.btn.mx-1.rounded-pill.btn-outline-master.mb-3 Reception
+                span.btn.mx-1.rounded-pill.btn-outline-master.mb-3 Delivery
+                span.btn.rounded-pill.btn-outline-master.mb-3 Procurement 
             .col-lg-12.mb-3
               h5.mb-2 Assignee
               .label-Assignee

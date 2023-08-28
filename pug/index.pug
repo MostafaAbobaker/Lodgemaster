@@ -20,7 +20,7 @@ html(lang="en")
               li.nav-item
                 a.nav-link(href='#') Contact
               li.nav-item
-                a.nav-link(href='#' data-bs-toggle="modal" data-bs-target="#exampleModal") Login
+                a.nav-link(href='login.html' ) Login
           
 
       //- End Nav Bar      
@@ -29,29 +29,6 @@ html(lang="en")
           span.color indulgent luxury 
           | At our 5-star hotel
         a(href="")   Explore our Services
-    //- Start Model
-    #exampleModal.modal.fade.model-login(tabindex='-1', aria-labelledby='exampleModalLabel', aria-hidden='true')
-      .modal-dialog.modal-dialog-centered
-        .modal-content
-          .modal-header
-            h1#exampleModalLabel.modal-title.fs-5.d-flex.justify-content-center.w-100
-              .icon.me-2
-                i.fa-solid.fa-user-plus
-              .text Sign In
-           
-          .modal-body.d-flex
-            .col-6
-              .card-sign
-                .image 
-                  img(src="./assets/images/Svg/Admin.svg", alt="")
-                a(href="login.html") Admin
-
-            .col-6
-              .card-sign
-                .image 
-                  img(src="./assets/images/Svg/employe.svg", alt="")
-                a(href="login.html") Employ
-          
 
     include includes/script.pug 
 

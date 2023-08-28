@@ -39,7 +39,7 @@ aside.aside-bar
                 i.fa-solid.fa-minus
               span.text Items Management
           li(class=titlesPage == 'Inspection' ? "active " : "  ") 
-            a(href="ItemsManagement.html") 
+            a(href="#") 
               .icon 
                 i.fa-solid.fa-minus
               span.text Inspection 
@@ -54,9 +54,32 @@ aside.aside-bar
             include ../../assets/images/Svg/Notifications.svg
           span.text Notifications
           span.Notifi 9
-      li(class=titlePage == 'Staff Management' ? "active" : " ")
-        a(href="StaffManagement.html")
-          .icon
-            include ../../assets/images/Svg/StaffManagementAside.svg 
-          span.text Staff Management
+      
+      li(class=titlePage == 'Settings'  ? "active dropdown" : " dropdown ")
+        a(href="#")
+          .icon 
+            include ../../assets/images/Svg/Settings3.svg
+          span.text Settings
+        ul 
+          li(class=titlesPage == 'Departments' ? "active " : "  ") 
+            
+            a(href="Departments.html") 
+              .icon 
+                i.fa-solid.fa-minus  
+              span.text  Department
+          li(class=titlesPage == 'Users' ? "active " : "  ") 
+            a(href="Users.html") 
+              .icon 
+                i.fa-solid.fa-minus
+              span.text User
+          li(class=titlesPage == 'Setup Room' ? "active " : "  ") 
+            a(href="setupRoom.html") 
+              .icon 
+                i.fa-solid.fa-minus
+              span.text Inspection 
+          li(class=titlesPage == 'Profile Settings' ? "active " : "  ") 
+            a(href="ProfileSettings.html") 
+              .icon 
+                i.fa-solid.fa-minus
+              span.text My Profile    
       //- End Aside Bar  
