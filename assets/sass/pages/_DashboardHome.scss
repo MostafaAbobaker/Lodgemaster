@@ -94,7 +94,7 @@
             }
             li {
               border: 1px solid #ddd;
-              background-color: #f7f7f7;
+              background-color: #ede6f9;
               border-radius: 5px;
               padding: 10px;
               flex: 1 0 0;
@@ -157,7 +157,7 @@
                 }
               }
               &.active {
-                border: 2px solid $mColor;
+                border: 3px solid $mColor;
                 box-shadow: 0 0 5px rgba(#000,0.3);
               }
             }

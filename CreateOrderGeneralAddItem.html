@@ -7,6 +7,7 @@
     <link rel="icon" href="./assets/images/main-logo.png" type="image/x-icon">
     <title>Alhytt Jeddah Continental Hotel</title>
     <link rel="stylesheet" href="./assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./assets/css/select2.min.css">
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
@@ -126,19 +127,12 @@
                                 <div class="row justify-content-center"> 
                                   <div class="col-lg-9 col-md-10 col-sm-12">
                                     <div class="add-item-order mb-4"> 
+                                      <div class="row"></div>
                                       <div class="row">
-                                        <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
-                                          <div class="form-floating">
-                                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                                              <option selected="">General</option>
-                                              <option value="1">Room</option>
-                                            </select>
-                                            <label for="floatingSelect">Select Category</label>
-                                          </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
-                                          <div class="form-floating">
-                                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                        <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                                          <div class="form-group">
+                                            <label for="floatingSelect">Select Location</label>
+                                            <select class="form-select js-example-templating" id="floatingSelect" aria-label="Floating label select example">
                                               <option selected="">Room 101</option>
                                               <option value="1">Room 102</option>
                                               <option value="2">Room 103</option>
@@ -146,14 +140,12 @@
                                               <option value="4">Room 105</option>
                                               <option value="5">Room 106</option>
                                             </select>
-                                            <label for="floatingSelect">Select Location</label>
                                           </div>
                                         </div>
-                                      </div>
-                                      <div class="row">
-                                        <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
+                                        <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
                                           <div class="form-group">
-                                            <select class="form-select form-control-lg" id="selectItem">
+                                            <label for="floatingSelect">Select Items</label>
+                                            <select class="form-select form-control-lg js-example-templating" id="selectItem">
                                               <option>Cold Drinks</option>
                                               <option>Cold Tea</option>
                                               <option>Cold Can</option>
@@ -164,7 +156,7 @@
                                             </select>
                                           </div>
                                         </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-12 mb-3">     
+                                        <div class="col-lg-4 col-md-4 col-sm-12 mb-3">     
                                           <div class="increment-item">   
                                             <div class="input-group">
                                               <button class="btn btn-outline-master btn-decrease" id="decrementButton" type="button"> <i class="fa-solid fa-minus"></i></button>
@@ -182,7 +174,7 @@
                                       </div>
                                     </div>
                                     <h5 class="mb-4">Selected Items: </h5>
-                                    <div class="d-flex flex-wrap mb-4" id="contentValue"><span class="badge-item mx-2 mb-3">Blanket <span class="badge-number">1</span><span class="icon-exit"><i class="fa-solid fa-xmark fa-fw"></i></span></span><span class="badge-item mx-2 mb-3">Water Bottles <span class="badge-number">3</span><span class="icon-exit"><i class="fa-solid fa-xmark fa-fw"></i></span></span><span class="badge-item mx-2 mb-3">Cold Drinks <span class="badge-number">2</span><span class="icon-exit"><i class="fa-solid fa-xmark fa-fw"></i></span></span><span class="badge-item mx-2 mb-3">Blanket <span class="badge-number">1</span><span class="icon-exit"><i class="fa-solid fa-xmark fa-fw"></i></span></span><span class="badge-item mx-2 mb-3">Blanket <span class="badge-number">1</span><span class="icon-exit"><i class="fa-solid fa-xmark fa-fw"></i></span></span><span class="badge-item mx-2 mb-3">Water Bottles <span class="badge-number">3</span><span class="icon-exit"><i class="fa-solid fa-xmark fa-fw"></i></span></span><span class="badge-item mx-2 mb-3">Cold Drinks <span class="badge-number">2</span><span class="icon-exit"><i class="fa-solid fa-xmark fa-fw"></i></span></span><span class="badge-item mx-2 mb-3">Blanket <span class="badge-number">1</span><span class="icon-exit"><i class="fa-solid fa-xmark fa-fw"></i></span></span></div><a class="btn btn-dark d-block w-100 p-3" href="CreateOrderGeneralAssignees.html">Next</a>
+                                    <div class="d-flex flex-wrap mb-4" id="contentValue"></div><a class="btn btn-dark d-block w-100 p-3" href="CreateOrderGeneralAssignees.html">Next</a>
                                   </div>
                                 </div>
                               </div>
@@ -650,7 +642,8 @@
     <script src="./assets/js/jquery-3.6.3.min.js"> </script>
     <script src="./assets/js/bootstrap.bundle.min.js"> </script>
     <script src="../assets/js/popper.min.js"> </script>
-    <script src="../assets/js/bootstrap.min.js"> </script>
+    <script src="./assets/js/bootstrap.min.js"> </script>
+    <script src="./assets/js/select2.min.js"> </script>
     <script src="./assets/js/main.js"> </script>
     <script src="./assets/js/OTP.js"> </script>
     <script src="../assets/js/ajaxLoad.js"> </script>

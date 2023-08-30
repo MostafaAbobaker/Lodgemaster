@@ -1195,7 +1195,7 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
 }
 .Dashboard-home .content-category-hotel .overview-Orders .header-overview .group-overview ul li {
   border: 1px solid #ddd;
-  background-color: #f7f7f7;
+  background-color: #ede6f9;
   border-radius: 5px;
   padding: 10px;
   flex: 1 0 0;
@@ -1239,7 +1239,7 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
   color: #009688;
 }
 .Dashboard-home .content-category-hotel .overview-Orders .header-overview .group-overview ul li.active {
-  border: 2px solid #005daa;
+  border: 3px solid #005daa;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 @media (max-width: 767.98px) {

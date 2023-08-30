@@ -34,26 +34,38 @@ html(lang="en")
                                   .col-lg-9.col-md-10.col-sm-12
                                     .add-item-order.mb-4 
                                       .row
-                                        .col-lg-6.col-md-6.col-sm-12.mb-3
-                                          .form-floating
-                                            select#floatingSelect.form-select(aria-label='Floating label select example')
-                                              option(selected='') General
-                                              option(value='1') Room
-                                            label(for='floatingSelect') Select Category
-                                        .col-lg-6.col-md-6.col-sm-12.mb-3
-                                          .form-floating
-                                            select#floatingSelect.form-select(aria-label='Floating label select example')
+                                        //- .col-lg-6.col-md-6.col-sm-12.mb-3
+                                        //-   .form-floating
+                                        //-     select#floatingSelect.form-select(aria-label='Floating label select example')
+                                        //-       option(selected='') General
+                                        //-       option(value='1') Room
+                                        //-     label(for='floatingSelect') Select Category
+                                        //- .col-lg-6.col-md-6.col-sm-12.mb-3
+                                        //-   .form-floating
+                                        //-     select#floatingSelect.form-select(aria-label='Floating label select example')
+                                        //-       option(selected='') Room 101
+                                        //-       option(value='1') Room 102
+                                        //-       option(value='2') Room 103
+                                        //-       option(value='3') Room 104
+                                        //-       option(value='4') Room 105
+                                        //-       option(value='5') Room 106
+                                        //-     label(for='floatingSelect') Select Location
+                                      .row
+                                        .col-lg-4.col-md-4.col-sm-12.mb-3
+                                          .form-group
+                                            label(for='floatingSelect') Select Location
+                                            select#floatingSelect.form-select.js-example-templating(aria-label='Floating label select example')
                                               option(selected='') Room 101
                                               option(value='1') Room 102
                                               option(value='2') Room 103
                                               option(value='3') Room 104
                                               option(value='4') Room 105
                                               option(value='5') Room 106
-                                            label(for='floatingSelect') Select Location
-                                      .row
-                                        .col-lg-6.col-md-6.col-sm-12.mb-3
+                                            
+                                        .col-lg-4.col-md-4.col-sm-12.mb-3
                                           .form-group
-                                            select#selectItem.form-select.form-control-lg
+                                            label(for='floatingSelect') Select Items
+                                            select#selectItem.form-select.form-control-lg.js-example-templating
                                               option Cold Drinks
                                               option Cold Tea
                                               option Cold Can
@@ -61,7 +73,8 @@ html(lang="en")
                                               option Cold Drinks 
                                               option Water Bottles
                                               option Add New
-                                        .col-lg-6.col-md-6.col-sm-12.mb-3      
+                                              
+                                        .col-lg-4.col-md-4.col-sm-12.mb-3      
                                           .increment-item    
                                             .input-group
                                               button#decrementButton.btn.btn-outline-master.btn-decrease(type='button') 
@@ -75,46 +88,7 @@ html(lang="en")
                                         button#AddOrder.btn.btn-master.w-100 Add
                                     h5.mb-4 Selected Items: 
                                     #contentValue.d-flex.flex-wrap.mb-4
-                                      span.badge-item.mx-2.mb-3
-                                        | Blanket 
-                                        span.badge-number 1
-                                        span.icon-exit
-                                          i.fa-solid.fa-xmark.fa-fw
-                                      span.badge-item.mx-2.mb-3
-                                        | Water Bottles 
-                                        span.badge-number 3
-                                        span.icon-exit
-                                          i.fa-solid.fa-xmark.fa-fw
-                                      span.badge-item.mx-2.mb-3
-                                        | Cold Drinks 
-                                        span.badge-number 2
-                                        span.icon-exit
-                                          i.fa-solid.fa-xmark.fa-fw
-                                      span.badge-item.mx-2.mb-3
-                                        | Blanket 
-                                        span.badge-number 1
-                                        span.icon-exit
-                                          i.fa-solid.fa-xmark.fa-fw
-                                      span.badge-item.mx-2.mb-3
-                                        | Blanket 
-                                        span.badge-number 1
-                                        span.icon-exit
-                                          i.fa-solid.fa-xmark.fa-fw
-                                      span.badge-item.mx-2.mb-3
-                                        | Water Bottles 
-                                        span.badge-number 3
-                                        span.icon-exit
-                                          i.fa-solid.fa-xmark.fa-fw
-                                      span.badge-item.mx-2.mb-3
-                                        | Cold Drinks 
-                                        span.badge-number 2
-                                        span.icon-exit
-                                          i.fa-solid.fa-xmark.fa-fw
-                                      span.badge-item.mx-2.mb-3
-                                        | Blanket 
-                                        span.badge-number 1
-                                        span.icon-exit
-                                          i.fa-solid.fa-xmark.fa-fw
+                                      
                                     a.btn.btn-dark.d-block.w-100.p-3(href='CreateOrderGeneralAssignees.html') Next
 
         

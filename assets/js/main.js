@@ -2,9 +2,20 @@ $(document).ready(function () {
   $("#AddOrder").click(function () {
     var SelectItem = $("#selectItem").val();
     var Count = $("#inputCount").val();
+    $("#contentValue .badge-item").each(function (index) {
+      if ($(this).children(".text").text() == SelectItem ){
+        alert("This is Add " + SelectItem);
+      } else {
+        console.log(
+          $(this).children(".text").text() + " - Nomber of: " + index + "<br/>"
+        );
+      }
+      
+    });
     $("#contentValue").append(`
     <span class="badge-item mx-2 mb-3">
-    ${SelectItem}
+    <span class="text">${SelectItem}</span>
+    
     <span class="badge-number">${Count}</span>
     <span class="icon-exit ">
     <i class="fa-solid fa-xmark fa-fw"></i>
@@ -86,5 +97,8 @@ $(document).ready(function () {
   }
   $("#imageUpload").change(function () {
     readURL(this);
+  });
+  $(".js-example-templating").select2({
+    tags: true,
   });
 });
