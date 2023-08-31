@@ -21,6 +21,18 @@ aside.aside-bar
           .icon 
             include ../../assets/images/Svg/ItemAside.svg
           span.text Items
+      
+      li(class=titlePage == 'Inspection' ? "active" : " ")
+        a(href="Inspection.html")
+          .icon
+            include ../../assets/images/Svg/RoomsInspection.svg
+          span.text Rooms Inspection
+      li(class=titlePage == 'Notifications' ? "active" : " ")
+        a(href="Notifications.html")
+          .icon 
+            include ../../assets/images/Svg/Notifications.svg
+          span.text Notifications
+          span.Notifi 9
       li(class=titlePage == 'Reports' ? "active dropdown" : " dropdown ")
         a(href="#")
           .icon 
@@ -43,17 +55,6 @@ aside.aside-bar
               .icon 
                 i.fa-solid.fa-minus
               span.text Inspection 
-      li(class=titlePage == 'Inspection' ? "active" : " ")
-        a(href="Inspection.html")
-          .icon
-            include ../../assets/images/Svg/RoomsInspection.svg
-          span.text Rooms Inspection
-      li(class=titlePage == 'Notifications' ? "active" : " ")
-        a(href="Notifications.html")
-          .icon 
-            include ../../assets/images/Svg/Notifications.svg
-          span.text Notifications
-          span.Notifi 9
       
       li(class=titlePage == 'Settings'  ? "active dropdown" : " dropdown ")
         a(href="#")

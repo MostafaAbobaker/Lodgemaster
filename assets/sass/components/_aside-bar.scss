@@ -113,7 +113,7 @@ aside.aside-bar {
             }
           }
           ul {
-            // display: none;
+            display: none;
             transform: scaleY(0);
             opacity: 0;
             position: absolute;
@@ -126,6 +126,7 @@ aside.aside-bar {
               transform: scaleY(1);
               opacity: 1;
               position: relative;
+              display: block;
             }
             li {
               display: flex;
@@ -155,6 +156,7 @@ aside.aside-bar {
                 }
               }
               &.active {
+                
                 a {
                   background-color: #ebf5ff;
                   color: $mColor;
