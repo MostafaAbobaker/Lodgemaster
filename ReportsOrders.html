@@ -71,7 +71,7 @@
     fill="#333333" />
 </svg>
                 </div><span class="text">Notifications</span><span class="Notifi">9</span></a></li>
-            <li class="active dropdown"><a href="#">
+            <li class=" dropdown "><a href="#">
                 <div class="icon">
                    <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path
@@ -87,7 +87,7 @@
                     <div class="icon"> <i class="fa-solid fa-minus"> </i></div><span class="text"> Reports Orders</span></a></li>
                 <li class="  "> <a href="ItemsManagement.html"> 
                     <div class="icon"> <i class="fa-solid fa-minus"></i></div><span class="text">Items Management</span></a></li>
-                <li class="  "> <a href="#"> 
+                <li class="  "> <a href="ReportsInspection.html"> 
                     <div class="icon"> <i class="fa-solid fa-minus"></i></div><span class="text">Inspection </span></a></li>
               </ul>
             </li>
@@ -120,7 +120,13 @@
                     <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
                       <div class="form-group">
                         <label class="mb-2" for="exampleFormControlSelect1">Period Date</label>
-                        <input class="form-control rounded-pill" type="date">
+                        <select class="form-select" aria-label="Default select example">
+                          <option selected="">This Today </option>
+                          <option value="1">Before Month</option>
+                          <option value="2">Before Year</option>
+                          <option value="3">Before Week </option>
+                          <option value="3">This Week</option>
+                        </select>
                       </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
@@ -279,15 +285,6 @@
     <div class="modal fade model-filter-home" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
         <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel"> 
-              <div class="input-group me-3">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-master" id="button-addon2" type="button"> <i class="fa-solid fa-magnifying-glass"></i></button>
-              </div>
-            </h1>
-            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
           <div class="modal-body">
             <div class="container-fluid"> 
               <div class="row"> 
@@ -321,11 +318,11 @@
                   <div class="d-flex mb-3 flex-wrap">
                     <div class="form-group d-flex col-md-6 px-2 align-items-center col-sm-12 mb-3">
                       <label class="col-4 text-end pe-2" for="">From</label>
-                      <input class="form-control" type="date">
+                      <input class="form-control" type="text">
                     </div>
                     <div class="form-group d-flex col-md-6 px-2 align-items-center col-sm-12 mb-3">
                       <label class="col-4 text-end pe-2" for="">To</label>
-                      <input class="form-control" type="date">
+                      <input class="form-control" type="text">
                     </div>
                   </div>
                   <div class="form-group">
@@ -338,14 +335,14 @@
                   <div class="d-flex mb-3 flex-wrap">
                     <div class="form-group d-flex col-md-6 align-items-center col-sm-12 mb-3 col-lg-6">
                       <label class="col-4 text-end pe-2" for="">From</label>
-                      <input class="form-control" type="date">
+                      <input class="form-control" type="time">
                     </div>
                     <div class="form-group d-flex col-md-6 align-items-center col-sm-12 mb-3 col-lg-6">
                       <label class="col-4 text-end pe-2" for="">To</label>
-                      <input class="form-control" type="date">
+                      <input class="form-control" type="time">
                     </div>
                   </div>
-                  <h5 class="fw-bold">Filter</h5>
+                  <label class="fw-bold">Date</label>
                   <div class="d-flex mb-3 flex-wrap">
                     <div class="form-group d-flex col-md-6 align-items-center col-sm-12 mb-3 col-lg-6">
                       <label class="col-4 text-end pe-2" for="">From</label>

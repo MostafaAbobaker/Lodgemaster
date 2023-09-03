@@ -21,7 +21,7 @@
         <div class="header"> <a class="image" href="CategoryHotel.html"> <img class="large-logo" src="./assets/images/logoWhite.png" alt=""><img class="small-logo" src="./assets/images/main-logo.png" alt=""></a></div>
         <div class="body-aside-bar">
           <ul>
-            <li class="active"><a href="LayoutDashboard.html">
+            <li class=" "><a href="LayoutDashboard.html">
                 <div class="icon">
                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24"
@@ -87,7 +87,7 @@
                     <div class="icon"> <i class="fa-solid fa-minus"> </i></div><span class="text"> Reports Orders</span></a></li>
                 <li class="  "> <a href="ItemsManagement.html"> 
                     <div class="icon"> <i class="fa-solid fa-minus"></i></div><span class="text">Items Management</span></a></li>
-                <li class="  "> <a href="ReportsInspection.html"> 
+                <li class="active "> <a href="ReportsInspection.html"> 
                     <div class="icon"> <i class="fa-solid fa-minus"></i></div><span class="text">Inspection </span></a></li>
               </ul>
             </li>
@@ -111,16 +111,45 @@
       <section class="content-category-hotel"> 
         <div class="container-fluid"> 
           <div class="row">
+            <div class="col-lg-12"> </div>
             <div class="col-lg-12 pt-3">
-              <header class="header-filter">
-                <div class="group-filter d-flex"> 
-                  <div class="input-group me-3">
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-master" id="button-addon2" type="button"> <i class="fa-solid fa-magnifying-glass"></i></button>
+              <header class="header-filter flex-column">
+                <h4 class="fw-bold">Reports</h4>
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                      <div class="form-group">
+                        <label class="mb-2" for="exampleFormControlSelect1">Period Date</label>
+                        <select class="form-select" aria-label="Default select example">
+                          <option selected="">This Today </option>
+                          <option value="1">Before Month</option>
+                          <option value="2">Before Year</option>
+                          <option value="3">Before Week </option>
+                          <option value="3">This Week</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                      <div class="form-group">
+                        <label class="mb-2" for="exampleFormControlSelect1">From Date</label>
+                        <input class="form-control rounded-pill" type="date">
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                      <div class="form-group">
+                        <label class="mb-2" for="exampleFormControlSelect1">To Date</label>
+                        <input class="form-control rounded-pill" type="date">
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                      <label class="mb-2" for="exampleFormControlSelect1"> &nbsp;</label>
+                      <div class="d-flex justify-content-around"><a class="btn btn-master d-flex align-items-center rounded-pill btn-Create-Order" href="CreateOrderGeneral.html">
+                           Apply Filter</a>
+                        <button class="btn btn-outline-dark rounded-pill">Export<i class="fa-solid fa-cloud-arrow-down ms-2 fa-fw"></i></button>
+                      </div>
+                    </div>
                   </div>
-                  <button class="btn btn-outline-master d-flex align-items-center" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="fa-solid fa-arrow-down-wide-short me-2"></i>Filter</button>
                 </div>
-                <div class="date">Thursday, 20 April 2023</div><a class="btn btn-master d-flex align-items-center rounded-pill btn-Create-Order" href="CreateOrderGeneralAddItem.html"> <i class="fa-solid fa-plus me-2"></i>Create Order</a>
               </header>
             </div>
           </div>
@@ -131,72 +160,22 @@
               <div class="row">          
                 <div class="col-lg-12 mb-4">
                   <div class="overview-Orders">
-                    <div class="header-overview mb-3"> 
-                      <div class="title-head col-lg-3 col-md-3 col-sm-12">Recent Orders</div>
-                      <div class="group-overview col-lg-9 col-md-9 col-sm-12"> 
-                        <ul>
-                          <li class="active">
-                            <div class="number">250</div>
-                            <div class="label">
-                              <div class="icon"> <i class="fa-solid fa-clipboard-check"></i></div>
-                              <div class="text">All</div>
-                            </div>
-                          </li>
-                          <li class="bg-open"> 
-                            <div class="number">21</div>
-                            <div class="label">
-                              <div class="icon"> <i class="fa-regular fa-circle-play"></i></div>
-                              <div class="text">Open</div>
-                            </div>
-                          </li>
-                          <li class="bg-process">
-                            <div class="number">15</div>
-                            <div class="label">
-                              <div class="icon"> <i class="fa-regular fa-clock"></i></div>
-                              <div class="text">In process</div>
-                            </div>
-                          </li>
-                          <li class="bg-Completed"> 
-                            <div class="number">24</div>
-                            <div class="label">
-                              <div class="icon"> <i class="fa-regular fa-circle-check"></i></div>
-                              <div class="text">Completed</div>
-                            </div>
-                          </li>
-                          <li class="bg-Hold">
-                            <div class="number">09</div>
-                            <div class="label">
-                              <div class="icon"> <i class="fa-regular fa-circle-pause"></i></div>
-                              <div class="text">Hold</div>
-                            </div>
-                          </li>
-                          <li class="bg-Closed"> 
-                            <div class="number">125</div>
-                            <div class="label">
-                              <div class="icon"> <i class="fa-solid fa-lock"></i></div>
-                              <div class="text">Closed</div>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
+                    <div class="header-overview mb-3 justify-content-start"> 
+                      <div class="title-head mb-0"> Inspection</div>
                     </div>
                     <table class="table table-hover table-responsive">
                       <thead>
                         <tr>
-                          <th scope="col">Order no.</th>
                           <th scope="col">Location</th>
-                          <th scope="col">Guest name</th>
                           <th scope="col">Accessories</th>
                           <th scope="col">Assigned to</th>
-                          <th scope="col">Run time</th>
-                          <th scope="col">Status</th>
+                          <th scope="col">Num Questions </th>
+                          <th scope="col">Progress</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td data-label="Order no.">527</td>
                           <td data-label="Location">Room 101</td>
-                          <td data-label="Guest name">Hussain Abad Ali</td>
                           <td data-label="Accessories">Water, Blanket</td>
                           <td data-label="Assigned to"> 
                             <div class="user-card d-flex align-items-center"> 
@@ -204,13 +183,26 @@
                               <div class="text">Katef</div>
                             </div>
                           </td>
-                          <td data-label="Run time">8h</td>
-                          <td data-label="Status"> <a class="badge bg-open text-dark rounded-pill" href="informationRowTable.html">Open</a></td>
+                          <td data-label="Num Questions ">5</td>
+                          <td data-label="Progress"> 
+                            <div class="progress-stacked">
+                              <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <div class="progress-bar"></div>
+                              </div>
+                              <div class="progress" role="progressbar" aria-label="Segment two" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <div class="progress-bar bg-success"></div>
+                              </div>
+                              <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <div class="progress-bar bg-warning"></div>
+                              </div>
+                              <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <div class="progress-bar bg-danger"></div>
+                              </div>
+                            </div>
+                          </td>
                         </tr>
                         <tr>
-                          <td data-label="Order no.">527</td>
                           <td data-label="Location">Room 101</td>
-                          <td data-label="Guest name">Hussain Abad Ali</td>
                           <td data-label="Accessories">Water, Blanket</td>
                           <td data-label="Assigned to"> 
                             <div class="user-card d-flex align-items-center"> 
@@ -218,13 +210,26 @@
                               <div class="text">Katef</div>
                             </div>
                           </td>
-                          <td data-label="Run time">8h</td>
-                          <td data-label="Status"> <span class="badge bg-Hold text-dark rounded-pill">Hold</span></td>
+                          <td data-label="Num Questions ">5</td>
+                          <td data-label="Progress"> 
+                            <div class="progress-stacked">
+                              <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <div class="progress-bar"></div>
+                              </div>
+                              <div class="progress" role="progressbar" aria-label="Segment two" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <div class="progress-bar bg-success"></div>
+                              </div>
+                              <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <div class="progress-bar bg-warning"></div>
+                              </div>
+                              <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <div class="progress-bar bg-danger"></div>
+                              </div>
+                            </div>
+                          </td>
                         </tr>
                         <tr>
-                          <td data-label="Order no.">527</td>
                           <td data-label="Location">Room 101</td>
-                          <td data-label="Guest name">Hussain Abad Ali</td>
                           <td data-label="Accessories">Water, Blanket</td>
                           <td data-label="Assigned to"> 
                             <div class="user-card d-flex align-items-center"> 
@@ -232,13 +237,26 @@
                               <div class="text">Katef</div>
                             </div>
                           </td>
-                          <td data-label="Run time">8h</td>
-                          <td data-label="Status"> <span class="badge bg-Closed text-dark rounded-pill">Closed</span></td>
+                          <td data-label="Num Questions ">5</td>
+                          <td data-label="Progress"> 
+                            <div class="progress-stacked">
+                              <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <div class="progress-bar"></div>
+                              </div>
+                              <div class="progress" role="progressbar" aria-label="Segment two" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <div class="progress-bar bg-success"></div>
+                              </div>
+                              <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <div class="progress-bar bg-warning"></div>
+                              </div>
+                              <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <div class="progress-bar bg-danger"></div>
+                              </div>
+                            </div>
+                          </td>
                         </tr>
                         <tr>
-                          <td data-label="Order no.">527</td>
                           <td data-label="Location">Room 101</td>
-                          <td data-label="Guest name">Hussain Abad Ali</td>
                           <td data-label="Accessories">Water, Blanket</td>
                           <td data-label="Assigned to"> 
                             <div class="user-card d-flex align-items-center"> 
@@ -246,13 +264,26 @@
                               <div class="text">Katef</div>
                             </div>
                           </td>
-                          <td data-label="Run time">8h</td>
-                          <td data-label="Status"> <span class="badge bg-process text-dark rounded-pill">In process</span></td>
+                          <td data-label="Num Questions ">5</td>
+                          <td data-label="Progress"> 
+                            <div class="progress-stacked">
+                              <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <div class="progress-bar"></div>
+                              </div>
+                              <div class="progress" role="progressbar" aria-label="Segment two" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <div class="progress-bar bg-success"></div>
+                              </div>
+                              <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <div class="progress-bar bg-warning"></div>
+                              </div>
+                              <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <div class="progress-bar bg-danger"></div>
+                              </div>
+                            </div>
+                          </td>
                         </tr>
                         <tr>
-                          <td data-label="Order no.">527</td>
                           <td data-label="Location">Room 101</td>
-                          <td data-label="Guest name">Hussain Abad Ali</td>
                           <td data-label="Accessories">Water, Blanket</td>
                           <td data-label="Assigned to"> 
                             <div class="user-card d-flex align-items-center"> 
@@ -260,80 +291,36 @@
                               <div class="text">Katef</div>
                             </div>
                           </td>
-                          <td data-label="Run time">8h</td>
-                          <td data-label="Status"> <span class="badge bg-Completed text-dark rounded-pill">Completed</span></td>
-                        </tr>
-                        <tr>
-                          <td data-label="Order no.">527</td>
-                          <td data-label="Location">Room 101</td>
-                          <td data-label="Guest name">Hussain Abad Ali</td>
-                          <td data-label="Accessories">Water, Blanket</td>
-                          <td data-label="Assigned to"> 
-                            <div class="user-card d-flex align-items-center"> 
-                              <div class="image me-1"><img src="./assets/images/photoUser.png" alt="" width="25"></div>
-                              <div class="text">Katef</div>
+                          <td data-label="Num Questions ">5</td>
+                          <td data-label="Progress"> 
+                            <div class="progress-stacked">
+                              <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <div class="progress-bar"></div>
+                              </div>
+                              <div class="progress" role="progressbar" aria-label="Segment two" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <div class="progress-bar bg-success"></div>
+                              </div>
+                              <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <div class="progress-bar bg-warning"></div>
+                              </div>
+                              <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <div class="progress-bar bg-danger"></div>
+                              </div>
                             </div>
                           </td>
-                          <td data-label="Run time">8h</td>
-                          <td data-label="Status"> <span class="badge bg-Completed text-dark rounded-pill">Open</span></td>
                         </tr>
                       </tbody>
                     </table>
-                  </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                  <div class="card border-0">
-                    <div class="card-header p-3 mx-2 fw-bold">Run time Analytics</div>
-                    <div class="card-body">
-                      <div class="d-flex"> 
-                        <div class="col-6">
-                          <div class="form-group mx-2">
-                            <label for="exampleFormControlSelect1">Filters</label>
-                            <select class="form-select" id="exampleFormControlSelect1">
-                              <option>Inprogress</option>
-                              <option>Open</option>
-                              <option>Hold</option>
-                              <option>Closed</option>
-                              <option>Completed</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-6">
-                          <div class="form-group mx-2">
-                            <label for="exampleFormControlSelect1"> </label>
-                            <select class="form-select" id="exampleFormControlSelect1">
-                              <option>Last 7 Days</option>
-                              <option>Last Month</option>
-                              <option>Last Year</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="chart"> </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                  <div class="card border-0">
-                    <div class="card-header p-3 d-flex justify-content-between mx-2"><a class="title fw-bold text-dark" href="Notifications.html"> Notifications</a><span class="badge bg-primary rounded-pill">9</span></div>
-                    <div class="card-body p-0">            
-                      <div class="list-group"><a class="list-group-item list-group-item-action active" href="#" aria-current="true">
-                          <div class="title d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">Katef Assigned you task</h5><small>20 mins ago</small>
-                          </div><small>Order 455, Room 201</small>
-                          <p class="mb-1">Please check the task for details.</p></a><a class="list-group-item list-group-item-action" href="#">
-                          <div class="title d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">Muthna completed the task</h5><small class="text-body-secondary">3 hours ago</small>
-                          </div><small class="text-body-secondary">Order 345, Room: 102</small>
-                          <p class="mb-1">Muthna Added notes, please check.</p></a><a class="list-group-item list-group-item-action" href="#">
-                          <div class="title d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">Muthna completed the task</h5><small class="text-body-secondary">3 hours ago</small>
-                          </div><small class="text-body-secondary">Order 345, Room: 102</small>
-                          <p class="mb-1">Muthna Added notes, please check.</p></a><a class="list-group-item list-group-item-action" href="#">
-                          <div class="title d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">Muthna completed the task</h5><small class="text-body-secondary">3 hours ago</small>
-                          </div><small class="text-body-secondary">Order 345, Room: 102</small>
-                          <p class="mb-1">Muthna Added notes, please check.</p></a></div>
+                    <div class="d-flex justify-content-center"> 
+                      <nav class="pagination-nav" aria-label="...">
+                        <ul class="pagination">
+                          <li class="page-item disabled"><span class="page-link"> <i class="fa-solid fa-chevron-left"></i></span></li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item active" aria-current="page"><span class="page-link">2</span></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item"><a class="page-link" href="#"> <i class="fa-solid fa-chevron-right"></i></a></li>
+                        </ul>
+                      </nav>
                     </div>
                   </div>
                 </div>
@@ -789,7 +776,6 @@
     <script src="./assets/js/select2.min.js"> </script>
     <script src="./assets/js/main.js"> </script>
     <script src="./assets/js/OTP.js"> </script>
-    <script src="./assets/js/apexcharts.min.js"> </script>
-    <script src="./assets/js/chartFun.js"> </script>
+    <script src="../assets/js/ajaxLoad.js"> </script>
   </body>
 </html>
