@@ -35,17 +35,19 @@ html(lang="en")
                                     .add-item-order.mb-4 
                                       .row
                                         .col-lg-8.col-md-8.col-sm-12
-                                          input#exampleDataList.form-control(list='datalistOptions', placeholder='Type to search...')
-                                          datalist#datalistOptions
-                                            option(value='Room 101')
-                                            option(value='Room 102')
-                                            option(value='Room 103')
-                                            option(value='Room 104')
-                                            option(value='Room 105')
+                                          #exampleDataList
+                                            input.form-control(list='datalistOptions', placeholder='Type to search...')
+                                            datalist#datalistOptions
+                                              option(value='Room 101')
+                                              option(value='Room 102')
+                                              option(value='Room 103')
+                                              option(value='Room 104')
+                                              option(value='Room 105')
+                                          span.badge.text-bg-secondary.label-info(style="display: none")  
                                         .col-lg-2.col-md-2.col-sm-6 
-                                          button#AddOrder.btn.btn-master.w-100 Add    
+                                          button#AddOrderItem.btn.btn-master.w-100 Add    
                                         .col-lg-2.col-md-2.col-sm-6   
-                                          button#AddOrder.btn.btn-light.w-100 Rest
+                                          button#AddOrder.btn.btn-light.w-100.rest-info(disabled) Rest
                                     .add-item-order.mb-4 
                                       .row
                                         

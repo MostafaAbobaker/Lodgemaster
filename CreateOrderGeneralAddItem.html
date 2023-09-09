@@ -129,20 +129,22 @@
                                     <div class="add-item-order mb-4"> 
                                       <div class="row">
                                         <div class="col-lg-8 col-md-8 col-sm-12">
-                                          <input class="form-control" id="exampleDataList" list="datalistOptions" placeholder="Type to search...">
-                                          <datalist id="datalistOptions">
-                                            <option value="Room 101"></option>
-                                            <option value="Room 102"></option>
-                                            <option value="Room 103"></option>
-                                            <option value="Room 104"></option>
-                                            <option value="Room 105"></option>
-                                          </datalist>
+                                          <div id="exampleDataList">
+                                            <input class="form-control" list="datalistOptions" placeholder="Type to search...">
+                                            <datalist id="datalistOptions">
+                                              <option value="Room 101"></option>
+                                              <option value="Room 102"></option>
+                                              <option value="Room 103"></option>
+                                              <option value="Room 104"></option>
+                                              <option value="Room 105"></option>
+                                            </datalist>
+                                          </div><span class="badge text-bg-secondary label-info" style="display: none"> </span>
                                         </div>
                                         <div class="col-lg-2 col-md-2 col-sm-6"> 
-                                          <button class="btn btn-master w-100" id="AddOrder">Add    </button>
+                                          <button class="btn btn-master w-100" id="AddOrderItem">Add    </button>
                                         </div>
                                         <div class="col-lg-2 col-md-2 col-sm-6">  
-                                          <button class="btn btn-light w-100" id="AddOrder">Rest</button>
+                                          <button class="btn btn-light w-100 rest-info" id="AddOrder" disabled>Rest</button>
                                         </div>
                                       </div>
                                     </div>

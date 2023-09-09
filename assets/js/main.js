@@ -1,4 +1,20 @@
 $(document).ready(function () {
+  $('#AddOrderItem ').click(function() {
+    let lectionRoom =  $('#exampleDataList .form-control').val();
+    $('span.label-info').show().text(lectionRoom);
+    $('#exampleDataList .form-control').slideUp();
+    $(this).attr("disabled", true);
+    $('.rest-info').attr("disabled", false);
+  });
+  $('.rest-info ').click(function() {
+    let labelInfo = $('span.label-info').text()
+    $('span.label-info').slideUp();
+    $('#exampleDataList .form-control').slideDown();
+    $('#exampleDataList .form-control').val(labelInfo);
+    $('#AddOrderItem ').attr("disabled", false);
+    $(this).attr("disabled", true);
+  });
+
   $("#AddOrder").click(function () {
     var SelectItem = $("#selectItem").val();
     var Count = $("#inputCount").val();
