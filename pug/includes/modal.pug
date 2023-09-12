@@ -119,28 +119,34 @@
   .modal-dialog
     .modal-content
       .modal-header
-        h1#exampleModalLabel.modal-title.fs-5 Assignee
+        h1#exampleModalLabel.modal-title.fs-5 Change Item
           
         button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
       .modal-body
         .container-fluid 
           .row 
             .col-lg-12.mb-3
-              h5.mb-2 Assignee
+              h5.mb-2 Items
               .label-Assignee
-                .icon 
-                  span K
-                .text Katef
-            .col-lg-12.mb-3
+                .text Cold Tea ( 5 )
+            .col-lg-8.mb-3
               .form-group
-                label Employ Name
                 select#selectItem.form-select.form-control-lg
-                  option Ahmed Alaa
-                  option Mohamed Mahomud
-                  option Karem Ali
-                  option Mostafa
-                  
-
+                  option Cold Drinks
+                  option Cold Tea
+                  option Cold Can
+                  option Blanket
+                  option Cold Drinks 
+                  option Water Bottles
+                  option Add New
+            .col-lg-4.mb-3      
+              .increment-item    
+                .input-group
+                  button#decrementButton.btn.btn-outline-master.btn-decrease(type='button') 
+                    i.fa-solid.fa-minus
+                  input#inputCount.form-control(type='text',  min="1", max="99" value="1")
+                  button#incrementButton.btn.btn-outline-master.btn-increase(type='button' ) 
+                    i.fa-solid.fa-plus
       .modal-footer.justify-content-start 
         button.btn.btn-primary.btn-apply.rounded-pill.col-12(type='button' data-bs-toggle="modal" data-bs-target="#ConfirmAddItem") Change 
 //- End model-filter-home

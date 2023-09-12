@@ -303,28 +303,38 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Assignee</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Change Item</h1>
             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <div class="container-fluid"> 
               <div class="row"> 
                 <div class="col-lg-12 mb-3">
-                  <h5 class="mb-2">Assignee</h5>
+                  <h5 class="mb-2">Items</h5>
                   <div class="label-Assignee">
-                    <div class="icon"> <span>K</span></div>
-                    <div class="text">Katef</div>
+                    <div class="text">Cold Tea ( 5 )</div>
                   </div>
                 </div>
-                <div class="col-lg-12 mb-3">
+                <div class="col-lg-8 mb-3">
                   <div class="form-group">
-                    <label>Employ Name</label>
                     <select class="form-select form-control-lg" id="selectItem">
-                      <option>Ahmed Alaa</option>
-                      <option>Mohamed Mahomud</option>
-                      <option>Karem Ali</option>
-                      <option>Mostafa</option>
+                      <option>Cold Drinks</option>
+                      <option>Cold Tea</option>
+                      <option>Cold Can</option>
+                      <option>Blanket</option>
+                      <option>Cold Drinks </option>
+                      <option>Water Bottles</option>
+                      <option>Add New</option>
                     </select>
+                  </div>
+                </div>
+                <div class="col-lg-4 mb-3">     
+                  <div class="increment-item">   
+                    <div class="input-group">
+                      <button class="btn btn-outline-master btn-decrease" id="decrementButton" type="button"> <i class="fa-solid fa-minus"></i></button>
+                      <input class="form-control" id="inputCount" type="text" min="1" max="99" value="1">
+                      <button class="btn btn-outline-master btn-increase" id="incrementButton" type="button"> <i class="fa-solid fa-plus"></i></button>
+                    </div>
                   </div>
                 </div>
               </div>

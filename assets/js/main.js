@@ -1,10 +1,13 @@
 $(document).ready(function () {
   $('#AddOrderItem ').click(function() {
     let lectionRoom =  $('#exampleDataList .form-control').val();
-    $('span.label-info').show().text(lectionRoom);
+    if(lectionRoom != "") {
+      $('span.label-info').show().text(lectionRoom);
     $('#exampleDataList .form-control').slideUp();
     $(this).attr("disabled", true);
     $('.rest-info').attr("disabled", false);
+    }
+    
   });
   $('.rest-info ').click(function() {
     let labelInfo = $('span.label-info').text()
