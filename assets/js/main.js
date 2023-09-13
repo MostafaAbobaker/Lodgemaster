@@ -1,26 +1,9 @@
 $(document).ready(function () {
-  $('#AddOrderItem ').click(function() {
-    let lectionRoom =  $('#exampleDataList .form-control').val();
-    if(lectionRoom != "") {
-      $('span.label-info').show().text(lectionRoom);
-    $('#exampleDataList .form-control').slideUp();
-    $(this).attr("disabled", true);
-    $('.rest-info').attr("disabled", false);
-    }
-    
-  });
-  $('.rest-info ').click(function() {
-    let labelInfo = $('span.label-info').text()
-    $('span.label-info').slideUp();
-    $('#exampleDataList .form-control').slideDown();
-    $('#exampleDataList .form-control').val(labelInfo);
-    $('#AddOrderItem ').attr("disabled", false);
-    $(this).attr("disabled", true);
-  });
+  
 
   $("#AddOrder").click(function () {
-    var SelectItem = $("#selectItem").val();
-    var Count = $("#inputCount").val();
+    let SelectItem = $("#selectItem").val();
+    let Count = $("#inputCount").val();
     $("#contentValue .badge-item").each(function (index) {
       if ($(this).children(".text").text() == SelectItem ){
         alert("This is Add " + SelectItem);
@@ -40,7 +23,7 @@ $(document).ready(function () {
     <i class="fa-solid fa-xmark fa-fw"></i>
     </span>
     `);
-    var Count = $("#inputCount").val(1);
+      Count = $("#inputCount").val(1);
   });
   $(".icon-exit").click(function () {
     $(this).parents(".badge-item").remove();
@@ -82,6 +65,9 @@ $(document).ready(function () {
   $(".group-button-toggle .btn-toggle").click(function () {
     $(this).toggleClass("active");
   });
+  $(".group-button .btn-outline-master").click(function () {
+    $(this).addClass("active").siblings().removeClass('active');
+  });
   $(".expand-aside").click(function () {
     $("aside.aside-bar").toggleClass("show-expand-aside");
   });
@@ -119,5 +105,23 @@ $(document).ready(function () {
   });
   $(".js-example-templating").select2({
     tags: true,
+  });
+  $('#AddOrderItem ').click(function() {
+    let lectionRoom =  $('#exampleDataList .form-control').val();
+    if(lectionRoom != "") {
+      $('span.label-info').show().text(lectionRoom);
+    $('#exampleDataList .form-control').slideUp();
+    $(this).attr("disabled", true);
+    $('.rest-info').attr("disabled", false);
+    }
+    
+  });
+  $('.rest-info ').click(function() {
+    let labelInfo = $('span.label-info').text()
+    $('span.label-info').slideUp();
+    $('#exampleDataList .form-control').slideDown();
+    $('#exampleDataList .form-control').val(labelInfo);
+    $('#AddOrderItem ').attr("disabled", false);
+    $(this).attr("disabled", true);
   });
 });
