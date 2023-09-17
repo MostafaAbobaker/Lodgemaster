@@ -462,7 +462,7 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .model-filter-home .modal-dialog .group-button-toggle {
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
@@ -1202,6 +1202,12 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
   grid-template-columns: repeat(6, 1fr);
   margin: 0;
   padding: 0;
+}
+@media (max-width: 1300px) {
+  .Dashboard-home .content-category-hotel .overview-Orders .header-overview .group-overview ul {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
 }
 @media (max-width: 991.98px) {
   .Dashboard-home .content-category-hotel .overview-Orders .header-overview .group-overview ul {
