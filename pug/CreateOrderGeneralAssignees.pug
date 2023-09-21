@@ -15,19 +15,20 @@ html(lang="en")
         #pageMasterLoad
           //- Start Create Order
           .Create-Order
-            .container-fluid 
+            .container 
               .row 
                 .col-lg-12 
                   //- Start Create Order
                   .Create-Order.mt-4
                     .container-fluid 
-                      .row 
-                        .col-lg-12 
+                      .row.justify-content-center
+                        .col-lg-10 
                           .card-master.mb-4
                             .title-card.position-relative.text-center
                               a.position-absolute.top-0.start-0(href="CreateOrderGeneralAddItem.html")
                                 i.fa-solid.fa-arrow-left-long
                               h4.mb-4 Assignees
+                          .card-master.mb-4    
                             .body-card
                               .d-flex.justify-content-between.flex-wrap.mb-4 
                                 h4 Blanket (5)
@@ -57,7 +58,7 @@ html(lang="en")
                                       span.btn.mx-2.rounded-pill.btn-outline-master.mb-2 Procurement
                                   .col-lg-4.col-md-12.col-sm-12.mb-4 
                                     label.mb-4(for="")  Assignee
-                                    select.form-select(aria-label='Default select example')
+                                    select.form-select.select-color(aria-label='Default select example')
                                       option(selected='') Katef
                                       option(value='1') Ali 
                                       option(value='2') Alaa
@@ -86,10 +87,12 @@ html(lang="en")
                                   .col-lg-8.col-md-12.col-sm-12.mb-4.p-0 
                                     h5.mb-4 Department
                                     .group-button 
-                                      span.btn.mx-2.rounded-pill.btn-outline-master.mb-3.active Maintenance
-                                      span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Reception
-                                      span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Delivery
-                                      span.btn.mx-2.rounded-pill.btn-outline-master.mb-3 Procurement
+                                      select.form-select.select-color.w-50(aria-label='Default select example')
+                                        option(selected='') Maintenance
+                                        option(value='1') Reception 
+                                        option(value='2') Delivery
+                                        option(value='3') Procurement
+                                      
                                   .col-lg-4.col-md-12.col-sm-12.mb-4 
                                     h5.mb-4 Assignee
                                     .label-Assignee

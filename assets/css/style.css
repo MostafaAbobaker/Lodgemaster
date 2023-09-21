@@ -82,10 +82,15 @@ aside.aside-bar .body-aside-bar ul li a .Notifi {
   position: absolute;
   top: 7px;
   inset-inline-end: 25px;
-  background-color: rgba(0, 93, 170, 0.3);
-  border-radius: 30px;
-  color: #005daa;
-  padding: 3px 7px;
+  background-color: #EBF5FF;
+  border-radius: 7px;
+  color: #005DAA;
+  font-size: 16px;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: bold;
 }
 aside.aside-bar .body-aside-bar ul li:not(.active, .dropdown):hover {
@@ -370,77 +375,77 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
 
 .bg-outline-open {
   background-color: #fff;
-  border: 1px solid #ffaa6a;
-  color: #ffaa6a;
+  border: 1px solid #FADEC9;
+  color: #333;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
 
 .bg-outline-open:hover,
 .bg-outline-open.active {
-  background-color: #ffaa6a;
+  background-color: #FADEC9;
   border: 1px solid #fff;
-  color: #fff;
+  color: #333;
 }
 
 .bg-outline-process {
   background-color: #fff;
-  border: 1px solid #26bd26;
-  color: #26bd26;
+  border: 1px solid #DBEDDB;
+  color: #333;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
 
 .bg-outline-process:hover,
 .bg-outline-process.active {
-  background-color: #26bd26;
+  background-color: #DBEDDB;
   border: 1px solid #fff;
-  color: #fff;
+  color: #333;
 }
 
 .bg-outline-Completed {
   background-color: #fff;
-  border: 1px solid #23546f;
-  color: #23546f;
+  border: 1px solid #D3E5EF;
+  color: #333;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
 
 .bg-outline-Completed:hover,
 .bg-outline-Completed.active {
-  background-color: #23546f;
+  background-color: #D3E5EF;
   border: 1px solid #fff;
-  color: #fff;
+  color: #333;
 }
 
 .bg-outline-Hold {
   background-color: #fff;
-  border: 1px solid #ed705b;
-  color: #ed705b;
+  border: 1px solid #FFE2DD;
+  color: #333;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
 
 .bg-outline-Hold:hover,
 .bg-outline-Hold.active {
-  background-color: #ed705b;
+  background-color: #FFE2DD;
   border: 1px solid #fff;
-  color: #fff;
+  color: #333;
 }
 
 .bg-outline-Closed {
   background-color: #fff;
-  border: 1px solid #5b814e;
-  color: #5b814e;
+  border: 1px solid #ECF7E8;
+  color: #333;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
 
 .bg-outline-Closed:hover,
 .bg-outline-Closed.active {
-  background-color: #5b814e;
+  background-color: #ECF7E8;
   border: 1px solid #fff;
-  color: #fff;
+  color: #333;
 }
 
 /* Start Model Filter Home */
@@ -538,6 +543,10 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
   border-color: #005daa;
   font-size: 1.4rem;
   text-align: center;
+  height: 35px;
+}
+.add-item-order .increment-item .input-group .btn-outline-master {
+  height: 35px;
 }
 .add-item-order .increment-item .btn-master {
   width: 68%;
@@ -1290,6 +1299,18 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
 .Dashboard-home .content-category-hotel .card .card-header {
   background-color: #fff;
 }
+.Dashboard-home .content-category-hotel .card .card-header .badge {
+  background-color: #EBF5FF;
+  border-radius: 7px;
+  color: #005DAA;
+  font-size: 16px;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
 .Dashboard-home .content-category-hotel .card .list-group .list-group-item:first-child {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -1301,7 +1322,7 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
   color: #005daa;
 }
 .Dashboard-home .content-category-hotel .card .list-group h5 {
-  color: #005daa;
+  color: #005DAA;
   font-weight: bold;
 }
 .Dashboard-home .content-category-hotel .card .list-group .list-group-item.active {
@@ -1366,9 +1387,16 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
   background-color: transparent;
   border: none;
 }
-.information-Row-Table .table-Assignees table tbody tr:hover {
+.information-Row-Table .table-Assignees table tbody tr {
   border-top: 1px solid rgb(222, 226, 230);
   border-bottom: 1px solid rgb(222, 226, 230);
+  transition: all 0.4s ease;
+}
+.information-Row-Table .table-Assignees table tbody tr td {
+  vertical-align: middle;
+}
+.information-Row-Table .table-Assignees table tbody tr:hover {
+  border-top: 1px solid rgb(222, 226, 230);
 }
 .information-Row-Table .table-Assignees table .form-check .form-check-input:checked ~ .form-check-label {
   text-decoration: line-through;
@@ -1678,6 +1706,12 @@ nav.pagination-nav .pagination li.page-item.disabled .page-link {
 .inputs-otp input::-webkit-inner-spin-button,
 .inputs-otp input::-webkit-outer-spin-button {
   display: none;
+}
+
+.select-color {
+  background-color: #ebf5ff;
+  height: 45px;
+  border: 1px solid #333333;
 }
 
 /*# sourceMappingURL=style.css.map */

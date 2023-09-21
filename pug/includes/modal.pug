@@ -16,22 +16,23 @@
                   .text Open
                 .btn-toggle.mx-2.bg-outline-process.rounded-pill.d-flex.align-items-center.p-2 
                   .icon.me-1 
-                    i.fa-regular.fa-circle-pause
-                  .text Hold
-                .btn-toggle.mx-2.bg-outline-Completed.rounded-pill.d-flex.align-items-center.p-2 
-                  .icon.me-1 
-                    i.fa-solid.fa-lock
-                  .text Closed
-                .btn-toggle.mx-2.bg-outline-Hold.rounded-pill.d-flex.align-items-center.p-2 
-                  .icon.me-1 
                     i.fa-regular.fa-clock
                   .text In process
-                .btn-toggle.mx-2.bg-outline-Closed.rounded-pill.d-flex.align-items-center.p-2 
+                .btn-toggle.mx-2.bg-outline-Completed.rounded-pill.d-flex.align-items-center.p-2 
                   .icon.me-1 
                     i.fa-regular.fa-circle-check
                   .text Completed
+                .btn-toggle.mx-2.bg-outline-Hold.rounded-pill.d-flex.align-items-center.p-2 
+                  .icon.me-1 
+                    i.fa-regular.fa-circle-pause
+                  .text Hold  
+                .btn-toggle.mx-2.bg-outline-Closed.rounded-pill.d-flex.align-items-center.p-2 
+                  .icon.me-1 
+                    i.fa-solid.fa-lock
+                  .text Closed
+
             .col-lg-6.mb-3
-              h5.fw-bold Order number
+              label.fw-bold Order number
               .d-flex.mb-3.flex-wrap
                 .form-group.d-flex.col-md-6.px-2.align-items-center.col-sm-12.mb-3
                   label.col-4.text-end.pe-2(for='') From
@@ -45,7 +46,7 @@
                 
 
             .col-lg-6
-              h5.fw-bold Run Time
+              label.fw-bold Run Time
               .d-flex.mb-3.flex-wrap
                 .form-group.d-flex.col-md-6.align-items-center.col-sm-12.mb-3.col-lg-6
                   label.col-4.text-end.pe-2(for='') From
@@ -119,34 +120,41 @@
   .modal-dialog
     .modal-content
       .modal-header
-        h1#exampleModalLabel.modal-title.fs-5 Change Item
+        h1#exampleModalLabel.modal-title.fs-5 Change Assign to
           
         button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
       .modal-body
         .container-fluid 
           .row 
             .col-lg-12.mb-3
-              h5.mb-2 Items
-              .label-Assignee
-                .text Cold Tea ( 5 )
-            .col-lg-8.mb-3
               .form-group
-                select#selectItem.form-select.form-control-lg
-                  option Cold Drinks
-                  option Cold Tea
-                  option Cold Can
-                  option Blanket
-                  option Cold Drinks 
-                  option Water Bottles
-                  option Add New
-            .col-lg-4.mb-3      
-              .increment-item    
-                .input-group
-                  button#decrementButton.btn.btn-outline-master.btn-decrease(type='button') 
-                    i.fa-solid.fa-minus
-                  input#inputCount.form-control.text-center(type='text',  min="1", max="99" value="1")
-                  button#incrementButton.btn.btn-outline-master.btn-increase(type='button' ) 
-                    i.fa-solid.fa-plus
+                select.form-select.select-color(aria-label='Default select example')
+                  option(selected='') Katef
+                  option(value='1') Ali 
+                  option(value='2') Alaa
+                  option(value='3') Amer
+           
+      .modal-footer.justify-content-start 
+        button.btn.btn-primary.btn-apply.rounded-pill.col-12(type='button' data-bs-toggle="modal" data-bs-target="#ConfirmAddItem") Change 
+//- End model-filter-home
+//- Start model-Change Assignee
+#ChangeDeferred.modal.fade.model-filter-home(tabindex='-1', aria-labelledby='ChangeDeferredLabel', aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h1#exampleModalLabel.modal-title.fs-5 Change Defer
+          
+        button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+      .modal-body
+        .container-fluid 
+          .row 
+            .col-lg-12.mb-3
+              .form-group
+                input.form-control(type="date", name="")
+            .col-lg-12.mb-3
+              .form-group
+                input.form-control(type="time", name="")
+           
       .modal-footer.justify-content-start 
         button.btn.btn-primary.btn-apply.rounded-pill.col-12(type='button' data-bs-toggle="modal" data-bs-target="#ConfirmAddItem") Change 
 //- End model-filter-home
@@ -161,12 +169,17 @@
       .modal-body
         .container-fluid 
             h5.mb-3 Department
-            .group-button.d-flex.flex-wrap 
+            .group-button.d-flex.flex-wrap.mb-3
               span.btn.mx-1.rounded-pill.btn-outline-master.mb-3.active Maintenance
               span.btn.mx-1.rounded-pill.btn-outline-master.mb-3 Reception
               span.btn.mx-1.rounded-pill.btn-outline-master.mb-3 Delivery
               span.btn.mx-1.rounded-pill.btn-outline-master.mb-3 Procurement 
-                  
+
+            select.form-select.select-color(aria-label='Default select example')
+              option(selected='') Maintenance
+              option(value='1') Reception 
+              option(value='2') Delivery
+              option(value='3') Procurement      
 
       .modal-footer.justify-content-start 
         button.btn.btn-primary.btn-apply.rounded-pill.col-12(type='button' data-bs-toggle="modal" data-bs-target="#ConfirmAddItem") Change 
@@ -196,7 +209,7 @@
             .input-value.d-flex.algin-items-center 
               span.icon.me-2.text-primary 
                 i.fa-solid.fa-hourglass.fa-fw
-              span.text 02h: 05minutes
+              span.text 02 h: 05 minutes
         button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
       .modal-body.p-0
         .container-fluid 

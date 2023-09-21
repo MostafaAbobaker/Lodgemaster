@@ -63,10 +63,16 @@ aside.aside-bar {
             position: absolute;
             top: 7px;
             inset-inline-end: 25px;
-            background-color: rgba($mColor, 0.3);
-            border-radius: 30px;
-            color: $mColor;
-            padding: 3px 7px;
+            background-color: #EBF5FF;;
+            border-radius: 7px;
+            color: #005DAA;
+            // padding: 3px 7px;
+            font-size: 16px;
+            height: 24px;
+            width: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             font-weight: bold;
           }
         }

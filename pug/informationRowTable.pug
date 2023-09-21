@@ -23,7 +23,7 @@ html(lang="en")
                       a.me-3(href="LayoutDashboard.html")
                         i.fa-solid.fa-arrow-left-long
                       .d-flex.flex-wrap.align-items-center
-                        .bg-open.text-dark.rounded-pill.px-4.py-1.mb-2 Open
+                        .bg-open.text-dark.rounded-pill.px-4.py-1 Open
                         .inputs-group.mx-3.mb-2 
                           .label Order Created
                           .input-value.d-flex.algin-items-center 
@@ -50,13 +50,19 @@ html(lang="en")
                             span.badge-item.my-2.d-inline-block.rounded-pill.p-2.px-4.text-primary Order number: 253
                             h3.fw-bold.my-2 Room 101
                             .row.my-3.users-image 
-                              .col-lg-6.col-md-6.col-sm-6
+                              .col-lg-4.col-md-4.col-sm-6
                                 h5.label Created by
                                 .created.d-flex.align-items-center
                                   .icon.me-2
                                     img(src="./assets/images/user1.png", alt="")
                                   .text.text-primary Hassan
-                              .col-lg-6.col-md-6.col-sm-6
+                              .col-lg-4.col-md-4.col-sm-6
+                                h5.label Assignees
+                                .created.d-flex.align-items-center
+                                  .icon.me-2
+                                    img(src="./assets/images/user2.png", alt="")
+                                  .text.text-primary Kattef
+                              .col-lg-4.col-md-4.col-sm-6
                                 h5.label Assigned to
                                 .created.d-flex.align-items-center
                                   .icon.me-2
@@ -72,8 +78,7 @@ html(lang="en")
                                 thead
                                   tr
                                     th(scope='col') Products
-                                    th(scope='col') Assignees
-                                    th(scope='col') Message
+                                    th(scope='col') Add Notes
                                 tbody
                                   tr
                                     td 
@@ -82,14 +87,11 @@ html(lang="en")
                                         label.form-check-label(for='flexCheckDefault1')
                                           | Water bottles (02)
 
-                                    td 
-                                      .label-table.d-flex
-                                        .icon
-                                          span K
-                                        .text Katef
+                                    
 
                                     td 
-                                      a(href="OrderSMS.html")  Sent
+                                      input.form-control(type='text'  )
+
                                   tr
                                     td 
                                       .form-check
@@ -97,14 +99,10 @@ html(lang="en")
                                         label.form-check-label(for='flexCheckDefault2')
                                           | Blanket (01)
 
-                                    td 
-                                      .label-table.d-flex
-                                        .icon
-                                          span R
-                                        .text Rohana
+                                    
 
                                     td 
-                                      a(href="OrderSMS.html")  Sent
+                                      input.form-control(type='text' Disabled)
                                   tr
                                     td 
                                       .form-check
@@ -112,25 +110,25 @@ html(lang="en")
                                         label.form-check-label(for='flexCheckDefault3')
                                           | Cold drinks (03)
 
-                                    td 
-                                      .label-table.d-flex
-                                        .icon
-                                          span W
-                                        .text Waleed
+                                    
 
                                     td 
-                                      a(href="OrderSMS.html")  Sent
+                                      input.form-control(type='text' Disabled)
                               .d-flex.justify-content-center.flex-wrap
                                 a.rounded-pill.p-2.px-4.btn-outline-master.mx-1.mb-3(href="#"  data-bs-toggle="modal" data-bs-target="#ChangeAssignee")   
-                                  | Change Assignee
+                                  |  Assign to
                                 a.rounded-pill.p-2.px-4.btn-outline-master.mx-1.mb-3(href="#"  data-bs-toggle="modal" data-bs-target="#ChangeDepartment")   
-                                  | Change Department
-                                a.rounded-pill.p-2.px-4.btn-outline-master.mx-1.mb-3(href="CreateOrderGeneralAddItemReviewOrder.html")   
-                                  i.fa-solid.fa-plus.fa-fw
-                                  | Add new product
+                                  |  Department
+                                a.rounded-pill.p-2.px-4.btn-outline-master.mx-1.mb-3(href="#"  data-bs-toggle="modal" data-bs-target="#ChangeDeferred")   
+                                  | Hold
+                                a.rounded-pill.p-2.px-4.btn-outline-master.mx-1.mb-3(href="#"  data-bs-toggle="modal" data-bs-target="#ChangeDeferred")   
+                                  | Defer
+                                a.rounded-pill.p-2.px-4.btn-outline-master.mx-1.mb-3(href="#"  data-bs-toggle="modal" data-bs-target="#ChangeDepartment")   
+                                  | Compleat
+                                
                             .mb-3
                                 label Add  Notes 
-                                textarea#exampleFormControlTextarea1.form-control(rows='3' placeholder='Notes')      
+                                textarea#exampleFormControlTextarea1.form-control(rows='3' placeholder='Notes')  
                             footer.footer.mb-4.px-4
                               h6 Attachments
                               span.fst-italic No Attachments

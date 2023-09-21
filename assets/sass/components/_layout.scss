@@ -34,11 +34,17 @@
         border-color: $mColor;
         font-size: 1.4rem;
         text-align: center;
+        height: 35px;
+      }
+      .btn-outline-master {
+        height: 35px;
       }
     }
     .btn-master {
       width: 68%;
+      
       margin-inline-start: 2%;
+      
     }
   }
   
