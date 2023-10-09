@@ -543,10 +543,10 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
   border-color: #005daa;
   font-size: 1.4rem;
   text-align: center;
-  height: 35px;
+  height: 37.6px;
 }
 .add-item-order .increment-item .input-group .btn-outline-master {
-  height: 35px;
+  height: 37.6px;
 }
 .add-item-order .increment-item .btn-master {
   width: 68%;
@@ -1388,15 +1388,13 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
   border: none;
 }
 .information-Row-Table .table-Assignees table tbody tr {
-  border-top: 1px solid rgb(222, 226, 230);
-  border-bottom: 1px solid rgb(222, 226, 230);
   transition: all 0.4s ease;
 }
 .information-Row-Table .table-Assignees table tbody tr td {
   vertical-align: middle;
 }
 .information-Row-Table .table-Assignees table tbody tr:hover {
-  border-top: 1px solid rgb(222, 226, 230);
+  background-color: #d4e7f9;
 }
 .information-Row-Table .table-Assignees table .form-check .form-check-input:checked ~ .form-check-label {
   text-decoration: line-through;
@@ -1418,6 +1416,53 @@ aside.aside-bar.show-expand-aside .body-aside-bar ul li a .Notifi {
   border-radius: 50%;
   border: 1px solid #a9a9a9;
   margin-inline-end: 10px;
+}
+
+.dataTables_wrapper .paging_simple_numbers .paginate_button {
+  transition: all 0.4s ease-in;
+  border-radius: 50%;
+  color: #005daa !important;
+}
+.dataTables_wrapper .paging_simple_numbers .paginate_button.previous, .dataTables_wrapper .paging_simple_numbers .paginate_button.next {
+  content: "";
+  position: relative;
+  font-size: 0;
+  width: 20px;
+}
+.dataTables_wrapper .paging_simple_numbers .paginate_button.previous::before, .dataTables_wrapper .paging_simple_numbers .paginate_button.next::before {
+  color: #005daa !important;
+  position: absolute;
+  font-size: 20px;
+  top: -20px;
+  transition: all 0.4s ease-in;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  width: 30px;
+  height: 30px;
+}
+.dataTables_wrapper .paging_simple_numbers .paginate_button.previous::before:hover, .dataTables_wrapper .paging_simple_numbers .paginate_button.next::before:hover {
+  background: #bbb !important;
+  border-radius: 50% !important;
+  border: none !important;
+}
+.dataTables_wrapper .paging_simple_numbers .paginate_button.previous::before {
+  content: "\f104";
+  inset-inline-start: -10px;
+}
+.dataTables_wrapper .paging_simple_numbers .paginate_button.next::before {
+  content: "\f105";
+  inset-inline-end: -15px;
+}
+.dataTables_wrapper .paging_simple_numbers .paginate_button:hover {
+  background: #bbb !important;
+  border-radius: 50% !important;
+  border: none !important;
+}
+.dataTables_wrapper .paging_simple_numbers .paginate_button.current {
+  border-radius: 50%;
+  background-color: #005daa !important;
+  color: #fff !important;
+  border: none !important;
 }
 
 .content-msg {
@@ -1579,8 +1624,6 @@ a {
   .table-responsive-scroll thead tr th:nth-child(odd) {
     background-color: #ebf5ff;
   }
-}
-@media (max-width: 991.98px) {
   .table-responsive-scroll tbody {
     width: 80%;
     overflow-x: auto;

@@ -37,7 +37,7 @@
   </g>
 </svg>
                 </div><span class="text"> Dashboard</span></a></li>
-            <li class="active"><a href="ServiceOrders.html">
+            <li class=" "><a href="ServiceOrders.html">
                 <div class="icon">
                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path
@@ -126,169 +126,117 @@
           </div>
         </div>
         <div id="pageMasterLoad">
-          <div class="HomeDashboard">
+          <div class="information-Row-Table">
             <div class="container-fluid"> 
-              <div class="row">          
-                <div class="col-lg-12 mb-4">
-                  <div class="overview-Orders">
-                    <div class="header-overview mb-3"> 
-                      <div class="title-head col-lg-3 col-md-3 col-sm-12">My Orders</div>
-                      <div class="group-overview col-lg-9 col-md-9 col-sm-12"> 
-                        <ul>
-                          <li class="active">
-                            <div class="number">250</div>
-                            <div class="label">
-                              <div class="icon"> <i class="fa-solid fa-clipboard-check"></i></div>
-                              <div class="text">All</div>
-                            </div>
-                          </li>
-                          <li class="bg-open"> 
-                            <div class="number">21</div>
-                            <div class="label">
-                              <div class="icon"> <i class="fa-regular fa-circle-play"></i></div>
-                              <div class="text">Open</div>
-                            </div>
-                          </li>
-                          <li class="bg-process">
-                            <div class="number">15</div>
-                            <div class="label">
-                              <div class="icon"> <i class="fa-regular fa-clock"></i></div>
-                              <div class="text">In process</div>
-                            </div>
-                          </li>
-                          <li class="bg-Completed"> 
-                            <div class="number">24</div>
-                            <div class="label">
-                              <div class="icon"> <i class="fa-regular fa-circle-check"></i></div>
-                              <div class="text">Completed</div>
-                            </div>
-                          </li>
-                          <li class="bg-Hold">
-                            <div class="number">09</div>
-                            <div class="label">
-                              <div class="icon"> <i class="fa-regular fa-circle-pause"></i></div>
-                              <div class="text">Hold</div>
-                            </div>
-                          </li>
-                          <li class="bg-Closed"> 
-                            <div class="number">125</div>
-                            <div class="label">
-                              <div class="icon"> <i class="fa-solid fa-lock"></i></div>
-                              <div class="text">Closed</div>
-                            </div>
-                          </li>
-                        </ul>
+              <div class="row"> 
+                <div class="col-lg-12"> 
+                  <div class="card-master card-information-Table mb-5 p-0">
+                    <div class="p-4 title-information-Table d-flex flex-wrap align-items-center border-bottom"><a class="me-3" href="LayoutDashboard.html"><i class="fa-solid fa-arrow-left-long"></i></a>
+                      <div class="d-flex flex-wrap align-items-center">
+                        <div class="bg-open text-dark rounded-pill px-4 py-1">Open</div>
+                        <div class="inputs-group mx-3 mb-2"> 
+                          <div class="label">Inspection No.</div>
+                          <div class="input-value d-flex algin-items-center"> <span class="text">1024</span></div>
+                        </div>
+                        <div class="inputs-group mx-3 mb-2"> 
+                          <div class="label">Date</div>
+                          <div class="input-value d-flex algin-items-center"> <span class="icon me-2 text-primary"> <i class="fa-solid fa-calendar-days fa-fw"></i></span><span class="text">15 May, 2023</span></div>
+                        </div>
                       </div>
                     </div>
-                    <table class="table table-hover table-responsive">
-                      <thead>
-                        <tr>
-                          <th scope="col">Order no.</th>
-                          <th scope="col">Location</th>
-                          <th scope="col">Guest name</th>
-                          <th scope="col">Accessories</th>
-                          <th scope="col">Assigned by</th>
-                          <th scope="col">Run time</th>
-                          <th scope="col">Status</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td data-label="Order no.">527</td>
-                          <td data-label="Location">Room 101</td>
-                          <td data-label="Guest name">Hussain Abad Ali</td>
-                          <td data-label="Accessories">Water, Blanket</td>
-                          <td data-label="Assigned to"> 
-                            <div class="user-card d-flex align-items-center"> 
-                              <div class="image me-1"><img src="./assets/images/photoUser.png" alt="" width="25"></div>
-                              <div class="text">Katef</div>
+                    <div class="information-Table-body p-0">
+                      <div class="container-fluid"> 
+                        <div class="row"> 
+                          <div class="col-lg-7 col-md-12 col-sm-12">
+                            <h3 class="fw-bold my-2">Room 101</h3>
+                            <table class="table table-responsive-scroll">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Question</th>
+                                  <th scope="col"> Yes</th>
+                                  <th scope="col"> No</th>
+                                  <th scope="col"> Note  </th>
+                                  <th scope="col"> Attachment  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Is the floor Clean?</td>
+                                  <td> <i class="fa-solid fa-circle-check text-success"></i></td>
+                                  <td> </td>
+                                  <td> </td>
+                                  <td><a href="#" data-bs-toggle="modal" data-bs-target="#ViewImageModal">    <i class="fa-regular fa-image"></i></a></td>
+                                </tr>
+                                <tr>
+                                  <td>Are the windows and mirrors clean?</td>
+                                  <td> </td>
+                                  <td> <i class="fa-solid fa-circle-check text-success"></i></td>
+                                  <td> </td>
+                                  <td><a href="#" data-bs-toggle="modal" data-bs-target="#ViewImageModal">  <i class="fa-regular fa-image"></i></a></td>
+                                </tr>
+                                <tr>
+                                  <td>Is the furniture clean?</td>
+                                  <td> <i class="fa-solid fa-circle-check text-success"></i></td>
+                                  <td> </td>
+                                  <td> </td>
+                                  <td><a href="#" data-bs-toggle="modal" data-bs-target="#ViewImageModal">  <i class="fa-regular fa-image"></i></a></td>
+                                </tr>
+                                <tr>
+                                  <td>Are the trash cans are empty and clean?</td>
+                                  <td> </td>
+                                  <td> <i class="fa-solid fa-circle-check text-success"></i></td>
+                                  <td> </td>
+                                  <td><a href="#" data-bs-toggle="modal" data-bs-target="#ViewImageModal">  <i class="fa-regular fa-image"></i></a></td>
+                                </tr>
+                                <tr>
+                                  <td>Are the trash cans are empty and clean?</td>
+                                  <td> <i class="fa-solid fa-circle-check text-success"></i></td>
+                                  <td> </td>
+                                  <td> </td>
+                                  <td><a href="#" data-bs-toggle="modal" data-bs-target="#ViewImageModal"> <i class="fa-regular fa-image"></i></a></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="col-lg-5 col-md-12 col-sm-12 p-0">
+                            <div class="Recent-part p-3"> 
+                              <h5 class="title">Recent Activity</h5>
+                              <div class="list-group">
+                                <div class="list-group-item list-group-item-action">
+                                  <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1 title">Hassan Task Created</h5><small>20 min ago</small>
+                                  </div><small class="note">Created at 15/05/202 - 2:00PM</small>
+                                </div>
+                                <div class="list-group-item list-group-item-action">
+                                  <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1 title">Hassan Added Products</h5><small>25 min ago</small>
+                                  </div><small class="note">Added at 15/05/202 - 2:00PM</small>
+                                </div>
+                                <div class="list-group-item list-group-item-action">
+                                  <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1 title">Hassan Assigned to Kattef</h5><small>35 min ago</small>
+                                  </div><small class="note">Assigned at 15/05/202 - 2:00PM</small>
+                                </div>
+                                <div class="list-group-item list-group-item-action">
+                                  <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1 title">Hassan Assigned to Kattef</h5><small>35 min ago</small>
+                                  </div><small class="note">Added at 15/05/202 - 2:00PM</small>
+                                </div>
+                                <div class="list-group-item list-group-item-action">
+                                  <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1 title">Kattef Completed Order</h5><small>35 min ago</small>
+                                  </div><small class="note">Added at 15/05/202 - 2:00PM</small>
+                                </div>
+                                <div class="list-group-item list-group-item-action">
+                                  <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1 title">Hassan Marked as finished</h5><small>35 min ago</small>
+                                  </div><small class="note">Added at 15/05/202 - 2:00PM</small>
+                                </div>
+                              </div>
                             </div>
-                          </td>
-                          <td data-label="Run time">8h</td>
-                          <td data-label="Status"> <a class="badge bg-open text-dark rounded-pill" href="informationRowTable.html">Open</a></td>
-                        </tr>
-                        <tr>
-                          <td data-label="Order no.">527</td>
-                          <td data-label="Location">Room 101</td>
-                          <td data-label="Guest name">Hussain Abad Ali</td>
-                          <td data-label="Accessories">Water, Blanket</td>
-                          <td data-label="Assigned to"> 
-                            <div class="user-card d-flex align-items-center"> 
-                              <div class="image me-1"><img src="./assets/images/photoUser.png" alt="" width="25"></div>
-                              <div class="text">Katef</div>
-                            </div>
-                          </td>
-                          <td data-label="Run time">8h</td>
-                          <td data-label="Status"> <span class="badge bg-Hold text-dark rounded-pill">Hold</span></td>
-                        </tr>
-                        <tr>
-                          <td data-label="Order no.">527</td>
-                          <td data-label="Location">Room 101</td>
-                          <td data-label="Guest name">Hussain Abad Ali</td>
-                          <td data-label="Accessories">Water, Blanket</td>
-                          <td data-label="Assigned to"> 
-                            <div class="user-card d-flex align-items-center"> 
-                              <div class="image me-1"><img src="./assets/images/photoUser.png" alt="" width="25"></div>
-                              <div class="text">Katef</div>
-                            </div>
-                          </td>
-                          <td data-label="Run time">8h</td>
-                          <td data-label="Status"> <span class="badge bg-Closed text-dark rounded-pill">Closed</span></td>
-                        </tr>
-                        <tr>
-                          <td data-label="Order no.">527</td>
-                          <td data-label="Location">Room 101</td>
-                          <td data-label="Guest name">Hussain Abad Ali</td>
-                          <td data-label="Accessories">Water, Blanket</td>
-                          <td data-label="Assigned to"> 
-                            <div class="user-card d-flex align-items-center"> 
-                              <div class="image me-1"><img src="./assets/images/photoUser.png" alt="" width="25"></div>
-                              <div class="text">Katef</div>
-                            </div>
-                          </td>
-                          <td data-label="Run time">8h</td>
-                          <td data-label="Status"> <span class="badge bg-process text-dark rounded-pill">In process</span></td>
-                        </tr>
-                        <tr>
-                          <td data-label="Order no.">527</td>
-                          <td data-label="Location">Room 101</td>
-                          <td data-label="Guest name">Hussain Abad Ali</td>
-                          <td data-label="Accessories">Water, Blanket</td>
-                          <td data-label="Assigned to"> 
-                            <div class="user-card d-flex align-items-center"> 
-                              <div class="image me-1"><img src="./assets/images/photoUser.png" alt="" width="25"></div>
-                              <div class="text">Katef</div>
-                            </div>
-                          </td>
-                          <td data-label="Run time">8h</td>
-                          <td data-label="Status"> <span class="badge bg-Completed text-dark rounded-pill">Completed</span></td>
-                        </tr>
-                        <tr>
-                          <td data-label="Order no.">527</td>
-                          <td data-label="Location">Room 101</td>
-                          <td data-label="Guest name">Hussain Abad Ali</td>
-                          <td data-label="Accessories">Water, Blanket</td>
-                          <td data-label="Assigned to"> 
-                            <div class="user-card d-flex align-items-center"> 
-                              <div class="image me-1"><img src="./assets/images/photoUser.png" alt="" width="25"></div>
-                              <div class="text">Katef</div>
-                            </div>
-                          </td>
-                          <td data-label="Run time">8h</td>
-                          <td data-label="Status"> <span class="badge bg-Completed text-dark rounded-pill">Open</span></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <div class="d-flex justify-content-center"> 
-                      <nav class="pagination-nav" aria-label="...">
-                        <ul class="pagination">
-                          <li class="page-item disabled"><span class="page-link"> <i class="fa-solid fa-chevron-left"></i></span></li>
-                          <li class="page-item"><a class="page-link" href="#">1</a></li>
-                          <li class="page-item active" aria-current="page"><span class="page-link">2</span></li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item"><a class="page-link" href="#"> <i class="fa-solid fa-chevron-right"></i></a></li>
-                        </ul>
-                      </nav>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
