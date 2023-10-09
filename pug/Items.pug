@@ -2,6 +2,7 @@
 doctype html
 html(lang="en")
   head
+    link(rel="stylesheet", href="https://nightly.datatables.net/css/jquery.dataTables.css")
     include includes/head.pug
   body 
     .Dashboard-home
@@ -74,7 +75,7 @@ html(lang="en")
 
 
   
-                    table.table.table-hover.table-responsive-scroll
+                    table#dataTables.table.table-hover.table-responsive-scroll.data-Tables
                       thead
                         tr
                           th(scope='col') English name
@@ -329,21 +330,21 @@ html(lang="en")
 
                        
                     
-                    .d-flex.justify-content-center 
-                      nav.pagination-nav(aria-label='...')
-                        ul.pagination
-                          li.page-item.disabled
-                            span.page-link 
-                              i.fa-solid.fa-chevron-left
-                          li.page-item
-                            a.page-link(href='#') 1
-                          li.page-item.active(aria-current='page')
-                            span.page-link 2
-                          li.page-item
-                            a.page-link(href='#') 3
-                          li.page-item
-                            a.page-link(href='#') 
-                              i.fa-solid.fa-chevron-right
+                    //- .d-flex.justify-content-center 
+                    //-   nav.pagination-nav(aria-label='...')
+                    //-     ul.pagination
+                    //-       li.page-item.disabled
+                    //-         span.page-link 
+                    //-           i.fa-solid.fa-chevron-left
+                    //-       li.page-item
+                    //-         a.page-link(href='#') 1
+                    //-       li.page-item.active(aria-current='page')
+                    //-         span.page-link 2
+                    //-       li.page-item
+                    //-         a.page-link(href='#') 3
+                    //-       li.page-item
+                    //-         a.page-link(href='#') 
+                    //-           i.fa-solid.fa-chevron-right
 
             
 
@@ -352,7 +353,13 @@ html(lang="en")
     //- Start Modal
     include includes/modal.pug 
     include includes/script.pug
+    script(src="https://nightly.datatables.net/js/jquery.dataTables.js") 
     script(src="../assets/js/ajaxLoad.js") 
+    script.
+      $(document).ready( function () {
+        var table = $('#dataTables').DataTable();
+      } );
+
     
       
 

@@ -1,7 +1,7 @@
 // Modal
 //- Start model-filter-home
 #exampleModal.modal.fade.model-filter-home(tabindex='-1', aria-labelledby='exampleModalLabel', aria-hidden='true')
-  .modal-dialog.modal-xl
+  .modal-dialog.modal-xl.modal-dialog-centered
     .modal-content
     
       .modal-body
@@ -69,7 +69,7 @@
 //- End model-filter-home
 //- Start model-Add-Item
 #AddItem.modal.fade.model-filter-home(tabindex='-1', aria-labelledby='AddItemLabel', aria-hidden='true')
-  .modal-dialog
+  .modal-dialog.modal-dialog-centered
     .modal-content
       .modal-header
         h1#exampleModalLabel.modal-title.fs-5 Add Item
@@ -117,10 +117,10 @@
 //- End model-filter-home
 //- Start model-Change Assignee
 #ChangeAssignee.modal.fade.model-filter-home(tabindex='-1', aria-labelledby='ChangeAssigneeLabel', aria-hidden='true')
-  .modal-dialog
+  .modal-dialog.modal-dialog-centered
     .modal-content
       .modal-header
-        h1#exampleModalLabel.modal-title.fs-5 Change Assign to
+        h1#exampleModalLabel.modal-title.fs-5 Assign to
           
         button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
       .modal-body
@@ -139,10 +139,10 @@
 //- End model-filter-home
 //- Start model-Change Assignee
 #ChangeDeferred.modal.fade.model-filter-home(tabindex='-1', aria-labelledby='ChangeDeferredLabel', aria-hidden='true')
-  .modal-dialog
+  .modal-dialog.modal-dialog-centered
     .modal-content
       .modal-header
-        h1#exampleModalLabel.modal-title.fs-5 Change Defer
+        h1#exampleModalLabel.modal-title.fs-5  Defer
           
         button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
       .modal-body
@@ -160,7 +160,7 @@
 //- End model-filter-home
 //- Start model-Change Assignee
 #ChangeDepartment.modal.fade.model-filter-home(tabindex='-1', aria-labelledby='ChangeDepartmentLabel', aria-hidden='true')
-  .modal-dialog
+  .modal-dialog.modal-dialog-centered
     .modal-content
       .modal-header
         h1#exampleModalLabel.modal-title.fs-5 Department
@@ -169,11 +169,11 @@
       .modal-body
         .container-fluid 
             h5.mb-3 Department
-            .group-button.d-flex.flex-wrap.mb-3
-              span.btn.mx-1.rounded-pill.btn-outline-master.mb-3.active Maintenance
-              span.btn.mx-1.rounded-pill.btn-outline-master.mb-3 Reception
-              span.btn.mx-1.rounded-pill.btn-outline-master.mb-3 Delivery
-              span.btn.mx-1.rounded-pill.btn-outline-master.mb-3 Procurement 
+            //- .group-button.d-flex.flex-wrap.mb-3
+            //-   //- span.btn.mx-1.rounded-pill.btn-outline-master.mb-3.active Maintenance
+            //-   //- span.btn.mx-1.rounded-pill.btn-outline-master.mb-3 Reception
+            //-   //- span.btn.mx-1.rounded-pill.btn-outline-master.mb-3 Delivery
+            //-   //- span.btn.mx-1.rounded-pill.btn-outline-master.mb-3 Procurement 
 
             select.form-select.select-color(aria-label='Default select example')
               option(selected='') Maintenance
@@ -187,7 +187,7 @@
 
 //- Start model-state-Table
 #modelStateTable.modal.fade.model-state-Table(tabindex='-1', aria-labelledby='exampleModalLabel', aria-hidden='true')
-  .modal-dialog.modal-xl
+  .modal-dialog.modal-xl.modal-dialog-centered
     .modal-content
       .modal-header
         .modal-title.d-flex.flex-wrap.align-items-center 
@@ -481,6 +481,20 @@
           h3.mb-3.fw-bold Verification Complete
           p.mb-3 Thank you for verifying the number. Your new mobile number has been added.
           a.btn.btn-master.px-5.rounded-pill.btn-Create-Order(href='ProfileSettings.html') Continue
+      
+
+//- End Model 
+//- Modal
+#ViewImageModal.modal.fade(tabindex='-1', aria-labelledby='ViewImageModalLabel', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered.modal-xl
+    .modal-content
+      .modal-header
+        h1#exampleModalLabel.modal-title.fs-5 Image test.jpg
+          
+        button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+      .modal-body.text-center.p-0(style="height: 500px")
+          img.w-100.h-100(src="../../assets/images/NewProject2.png", alt="" style="    object-fit: contain;")
+          
       
 
 //- End Model 

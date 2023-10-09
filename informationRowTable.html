@@ -154,23 +154,29 @@
                           <div class="col-lg-7 col-md-12 col-sm-12"><span class="badge-item my-2 d-inline-block rounded-pill p-2 px-4 text-primary">Order number: 253</span>
                             <h3 class="fw-bold my-2">Room 101</h3>
                             <div class="row my-3 users-image"> 
-                              <div class="col-lg-4 col-md-4 col-sm-6">
+                              <div class="col-lg-3 col-md-4 col-sm-6 text-center mb-3">
                                 <h5 class="label">Created by</h5>
-                                <div class="created d-flex align-items-center">
+                                <div class="created d-flex align-items-center justify-content-center">
                                   <div class="icon me-2"><img src="./assets/images/user1.png" alt=""></div>
                                   <div class="text text-primary">Hassan</div>
                                 </div>
                               </div>
-                              <div class="col-lg-4 col-md-4 col-sm-6">
-                                <h5 class="label">Assignees</h5>
-                                <div class="created d-flex align-items-center">
+                              <div class="col-lg-3 col-md-4 col-sm-6 text-center mb-3">
+                                <h5 class="label">Department</h5>
+                                <div class="created d-flex align-items-center justify-content-center">
+                                  <div class="text text-primary">Maintenance</div>
+                                </div>
+                              </div>
+                              <div class="col-lg-3 col-md-4 col-sm-6 text-center mb-3">
+                                <h5 class="label">Assignee</h5>
+                                <div class="created d-flex align-items-center justify-content-center">
                                   <div class="icon me-2"><img src="./assets/images/user2.png" alt=""></div>
                                   <div class="text text-primary">Kattef</div>
                                 </div>
                               </div>
-                              <div class="col-lg-4 col-md-4 col-sm-6">
+                              <div class="col-lg-3 col-md-4 col-sm-6 text-center mb-3">
                                 <h5 class="label">Assigned to</h5>
-                                <div class="created d-flex align-items-center">
+                                <div class="created d-flex align-items-center justify-content-center">
                                   <div class="icon me-2"><img src="./assets/images/user2.png" alt=""></div>
                                   <div class="text text-primary">Kattef</div>
                                 </div>
@@ -188,7 +194,8 @@
                                 <thead>
                                   <tr>
                                     <th scope="col">Products</th>
-                                    <th scope="col">Add Notes</th>
+                                    <th scope="col"> Notes</th>
+                                    <th scope="col"> Attachment</th>
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -199,9 +206,8 @@
                                         <label class="form-check-label" for="flexCheckDefault1">Water bottles (02)</label>
                                       </div>
                                     </td>
-                                    <td> 
-                                      <input class="form-control" type="text">
-                                    </td>
+                                    <td>Sample text </td>
+                                    <td><a href="#" data-bs-toggle="modal" data-bs-target="#ViewImageModal"> <i class="fa-regular fa-image">   </i></a></td>
                                   </tr>
                                   <tr>
                                     <td> 
@@ -210,9 +216,8 @@
                                         <label class="form-check-label" for="flexCheckDefault2">Blanket (01)</label>
                                       </div>
                                     </td>
-                                    <td> 
-                                      <input class="form-control" type="text" Disabled>
-                                    </td>
+                                    <td>Sample text </td>
+                                    <td><a href="#" data-bs-toggle="modal" data-bs-target="#ViewImageModal"> <i class="fa-regular fa-image"> </i></a></td>
                                   </tr>
                                   <tr>
                                     <td> 
@@ -221,26 +226,21 @@
                                         <label class="form-check-label" for="flexCheckDefault3">Cold drinks (03)</label>
                                       </div>
                                     </td>
-                                    <td> 
-                                      <input class="form-control" type="text" Disabled>
-                                    </td>
+                                    <td> </td>
+                                    <td><a href="#" data-bs-toggle="modal" data-bs-target="#ViewImageModal"> <i class="fa-regular fa-image"> </i></a></td>
                                   </tr>
                                 </tbody>
                               </table>
-                              <div class="d-flex justify-content-center flex-wrap"><a class="rounded-pill p-2 px-4 btn-outline-master mx-1 mb-3" href="#" data-bs-toggle="modal" data-bs-target="#ChangeAssignee">
-                                     Assign to</a><a class="rounded-pill p-2 px-4 btn-outline-master mx-1 mb-3" href="#" data-bs-toggle="modal" data-bs-target="#ChangeDepartment">
-                                     Department</a><a class="rounded-pill p-2 px-4 btn-outline-master mx-1 mb-3" href="#" data-bs-toggle="modal" data-bs-target="#ChangeDeferred">
-                                    Hold</a><a class="rounded-pill p-2 px-4 btn-outline-master mx-1 mb-3" href="#" data-bs-toggle="modal" data-bs-target="#ChangeDeferred">
-                                    Defer</a><a class="rounded-pill p-2 px-4 btn-outline-master mx-1 mb-3" href="#" data-bs-toggle="modal" data-bs-target="#ChangeDepartment">
-                                    Compleat</a></div>
+                              <div class="d-flex justify-content-center flex-wrap"><a class="w-25 text-center rounded-pill p-2 px-4 btn-outline-master mx-1 mb-3" href="#" data-bs-toggle="modal" data-bs-target="#ChangeAssignee">
+                                     Assign to</a><a class="w-25 text-center rounded-pill p-2 px-4 btn-outline-master mx-1 mb-3" href="#" data-bs-toggle="modal" data-bs-target="#ChangeDepartment">
+                                     Department</a><a class="w-25 text-center rounded-pill p-2 px-4 btn-outline-master mx-1 mb-3" href="#" data-bs-toggle="modal" data-bs-target="#ChangeDeferred">
+                                    Defer</a></div>
                             </div>
                             <div class="mb-3">
                               <label>Add  Notes </label>
                               <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Notes"> </textarea>
                             </div>
-                            <footer class="footer mb-4 px-4">
-                              <h6>Attachments</h6><span class="fst-italic">No Attachments</span>
-                            </footer>
+                            <div class="d-flex justify-content-end mb-3"> <a class="btn btn-primary w-25 text-center rounded-pill" href="#">   Add Note</a></div>
                           </div>
                           <div class="col-lg-5 col-md-12 col-sm-12 p-0">
                             <div class="Recent-part p-3"> 
@@ -292,7 +292,7 @@
     </div>
     <!-- Modal-->
     <div class="modal fade model-filter-home" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-body">
             <div class="container-fluid"> 
@@ -375,7 +375,7 @@
       </div>
     </div>
     <div class="modal fade model-filter-home" id="AddItem" tabindex="-1" aria-labelledby="AddItemLabel" aria-hidden="true">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalLabel">Add Item</h1>
@@ -435,10 +435,10 @@
       </div>
     </div>
     <div class="modal fade model-filter-home" id="ChangeAssignee" tabindex="-1" aria-labelledby="ChangeAssigneeLabel" aria-hidden="true">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Change Assign to</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Assign to</h1>
             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -464,10 +464,10 @@
       </div>
     </div>
     <div class="modal fade model-filter-home" id="ChangeDeferred" tabindex="-1" aria-labelledby="ChangeDeferredLabel" aria-hidden="true">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Change Defer</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel"> Defer</h1>
             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -493,7 +493,7 @@
       </div>
     </div>
     <div class="modal fade model-filter-home" id="ChangeDepartment" tabindex="-1" aria-labelledby="ChangeDepartmentLabel" aria-hidden="true">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalLabel">Department</h1>
@@ -502,7 +502,6 @@
           <div class="modal-body">
             <div class="container-fluid"> 
               <h5 class="mb-3">Department</h5>
-              <div class="group-button d-flex flex-wrap mb-3"><span class="btn mx-1 rounded-pill btn-outline-master mb-3 active">Maintenance</span><span class="btn mx-1 rounded-pill btn-outline-master mb-3">Reception</span><span class="btn mx-1 rounded-pill btn-outline-master mb-3">Delivery</span><span class="btn mx-1 rounded-pill btn-outline-master mb-3">Procurement </span></div>
               <select class="form-select select-color" aria-label="Default select example">
                 <option selected="">Maintenance</option>
                 <option value="1">Reception </option>
@@ -518,7 +517,7 @@
       </div>
     </div>
     <div class="modal fade model-state-Table" id="modelStateTable" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <div class="modal-title d-flex flex-wrap align-items-center"> 
@@ -753,6 +752,17 @@
             <h3 class="mb-3 fw-bold">Verification Complete</h3>
             <p class="mb-3">Thank you for verifying the number. Your new mobile number has been added.</p><a class="btn btn-master px-5 rounded-pill btn-Create-Order" href="ProfileSettings.html">Continue</a>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="ViewImageModal" tabindex="-1" aria-labelledby="ViewImageModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Image test.jpg</h1>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center p-0" style="height: 500px"><img class="w-100 h-100" src="../../assets/images/NewProject2.png" alt="" style="    object-fit: contain;"></div>
         </div>
       </div>
     </div>

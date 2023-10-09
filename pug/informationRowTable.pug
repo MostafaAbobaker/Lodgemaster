@@ -50,21 +50,31 @@ html(lang="en")
                             span.badge-item.my-2.d-inline-block.rounded-pill.p-2.px-4.text-primary Order number: 253
                             h3.fw-bold.my-2 Room 101
                             .row.my-3.users-image 
-                              .col-lg-4.col-md-4.col-sm-6
+
+                              .col-lg-3.col-md-4.col-sm-6.text-center.mb-3
                                 h5.label Created by
-                                .created.d-flex.align-items-center
+                                .created.d-flex.align-items-center.justify-content-center
                                   .icon.me-2
                                     img(src="./assets/images/user1.png", alt="")
                                   .text.text-primary Hassan
-                              .col-lg-4.col-md-4.col-sm-6
-                                h5.label Assignees
-                                .created.d-flex.align-items-center
+
+                              .col-lg-3.col-md-4.col-sm-6.text-center.mb-3
+                                h5.label Department
+                                .created.d-flex.align-items-center.justify-content-center
+                                  //- .icon.me-2
+                                  //-   img(src="./assets/images/user1.png", alt="")
+                                  .text.text-primary Maintenance
+
+                              .col-lg-3.col-md-4.col-sm-6.text-center.mb-3
+                                h5.label Assignee
+                                .created.d-flex.align-items-center.justify-content-center
                                   .icon.me-2
                                     img(src="./assets/images/user2.png", alt="")
                                   .text.text-primary Kattef
-                              .col-lg-4.col-md-4.col-sm-6
+
+                              .col-lg-3.col-md-4.col-sm-6.text-center.mb-3
                                 h5.label Assigned to
-                                .created.d-flex.align-items-center
+                                .created.d-flex.align-items-center.justify-content-center
                                   .icon.me-2
                                     img(src="./assets/images/user2.png", alt="")
                                   .text.text-primary Kattef
@@ -78,7 +88,8 @@ html(lang="en")
                                 thead
                                   tr
                                     th(scope='col') Products
-                                    th(scope='col') Add Notes
+                                    th(scope='col')  Notes
+                                    th(scope='col')  Attachment
                                 tbody
                                   tr
                                     td 
@@ -89,8 +100,10 @@ html(lang="en")
 
                                     
 
-                                    td 
-                                      input.form-control(type='text'  )
+                                    td Sample text 
+                                    td
+                                      a(href="#" data-bs-toggle="modal" data-bs-target="#ViewImageModal")  
+                                        i.fa-regular.fa-image    
 
                                   tr
                                     td 
@@ -101,8 +114,10 @@ html(lang="en")
 
                                     
 
-                                    td 
-                                      input.form-control(type='text' Disabled)
+                                    td Sample text 
+                                    td
+                                      a(href="#" data-bs-toggle="modal" data-bs-target="#ViewImageModal")  
+                                        i.fa-regular.fa-image  
                                   tr
                                     td 
                                       .form-check
@@ -113,25 +128,27 @@ html(lang="en")
                                     
 
                                     td 
-                                      input.form-control(type='text' Disabled)
+                                    td
+                                      a(href="#" data-bs-toggle="modal" data-bs-target="#ViewImageModal")  
+                                        i.fa-regular.fa-image  
                               .d-flex.justify-content-center.flex-wrap
-                                a.rounded-pill.p-2.px-4.btn-outline-master.mx-1.mb-3(href="#"  data-bs-toggle="modal" data-bs-target="#ChangeAssignee")   
+                                a.w-25.text-center.rounded-pill.p-2.px-4.btn-outline-master.mx-1.mb-3(href="#"  data-bs-toggle="modal" data-bs-target="#ChangeAssignee")   
                                   |  Assign to
-                                a.rounded-pill.p-2.px-4.btn-outline-master.mx-1.mb-3(href="#"  data-bs-toggle="modal" data-bs-target="#ChangeDepartment")   
+                                a.w-25.text-center.rounded-pill.p-2.px-4.btn-outline-master.mx-1.mb-3(href="#"  data-bs-toggle="modal" data-bs-target="#ChangeDepartment")   
                                   |  Department
-                                a.rounded-pill.p-2.px-4.btn-outline-master.mx-1.mb-3(href="#"  data-bs-toggle="modal" data-bs-target="#ChangeDeferred")   
-                                  | Hold
-                                a.rounded-pill.p-2.px-4.btn-outline-master.mx-1.mb-3(href="#"  data-bs-toggle="modal" data-bs-target="#ChangeDeferred")   
+                                a.w-25.text-center.rounded-pill.p-2.px-4.btn-outline-master.mx-1.mb-3(href="#"  data-bs-toggle="modal" data-bs-target="#ChangeDeferred")   
                                   | Defer
-                                a.rounded-pill.p-2.px-4.btn-outline-master.mx-1.mb-3(href="#"  data-bs-toggle="modal" data-bs-target="#ChangeDepartment")   
-                                  | Compleat
+                                
                                 
                             .mb-3
                                 label Add  Notes 
                                 textarea#exampleFormControlTextarea1.form-control(rows='3' placeholder='Notes')  
-                            footer.footer.mb-4.px-4
-                              h6 Attachments
-                              span.fst-italic No Attachments
+                            .d-flex.justify-content-end.mb-3 
+                              a.btn.btn-primary.w-25.text-center.rounded-pill(href="#")    Add Note
+
+                            //- footer.footer.mb-4.px-4
+                            //-   h6 Attachments
+                            //-   span.fst-italic No Attachments
                           .col-lg-5.col-md-12.col-sm-12.p-0
                             .Recent-part.p-3 
                               h5.title Recent Activity
