@@ -87,31 +87,30 @@
                 label Arabic Name
                 input.form-control(type='text')
             .col-lg-12.mb-2
-              .form-check
-                input#flexCheckDefault.form-check-input(type='checkbox', value='')
+              .form-group
+                label Department
+                
+                select.form-select.select-color.w-100(aria-label='Default select example')
+                  option(selected='') Maintenance
+                  option(value='1') Reception 
+                  option(value='2') Delivery
+                  option(value='3') Procurement
+
+            .col-lg-12.mb-2
+              .form-check.content-check-box
+                input#flexCheckDefault.form-check-input.check-service(type='checkbox', value='')
                 label.form-check-label(for='flexCheckDefault')
                   | Service
-            .col-lg-6.mb-2
-              .form-group
-                label Quantity
-                input.form-control(type='text')
-            .col-lg-6.mb-2
-              .form-group
-                label Minima Quantity
-                input.form-control(type='text')
-            .col-lg-12.mb-3 
-              h5.mb-3 Department
-              .group-button 
-                span.btn.rounded-pill.btn-outline-master.mb-3.active Maintenance
-                span.btn.mx-1.rounded-pill.btn-outline-master.mb-3 Reception
-                span.btn.mx-1.rounded-pill.btn-outline-master.mb-3 Delivery
-                span.btn.rounded-pill.btn-outline-master.mb-3 Procurement 
-            .col-lg-12.mb-3
-              h5.mb-2 Assignee
-              .label-Assignee
-                .icon 
-                  span K
-                .text Katef
+                .row  
+                  .col-lg-6.mb-2
+                    .form-group
+                      label Quantity
+                      input.form-control(type='text')
+                  .col-lg-6.mb-2
+                    .form-group
+                      label Minima Quantity
+                      input.form-control(type='text')
+            
       .modal-footer.justify-content-start 
         button.btn.btn-primary.btn-apply.rounded-pill.col-12(type='button' data-bs-toggle="modal" data-bs-target="#ConfirmAddItem") ADD 
 //- End model-filter-home

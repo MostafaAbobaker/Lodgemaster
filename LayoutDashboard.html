@@ -180,7 +180,7 @@
                         </ul>
                       </div>
                     </div>
-                    <table class="table table-hover table-responsive">
+                    <table class="table table-hover table-responsive-scroll data-Tables" id="dataTables">
                       <thead>
                         <tr>
                           <th scope="col">Order no.</th>
@@ -220,6 +220,90 @@
                           </td>
                           <td data-label="Run time">8h</td>
                           <td data-label="Status"> <span class="badge bg-Hold text-dark rounded-pill">Hold</span></td>
+                        </tr>
+                        <tr>
+                          <td data-label="Order no.">527</td>
+                          <td data-label="Location">Room 101</td>
+                          <td data-label="Guest name">Hussain Abad Ali</td>
+                          <td data-label="Accessories">Water, Blanket</td>
+                          <td data-label="Assigned to"> 
+                            <div class="user-card d-flex align-items-center"> 
+                              <div class="image me-1"><img src="./assets/images/photoUser.png" alt="" width="25"></div>
+                              <div class="text">Katef</div>
+                            </div>
+                          </td>
+                          <td data-label="Run time">8h</td>
+                          <td data-label="Status"> <span class="badge bg-Closed text-dark rounded-pill">Closed</span></td>
+                        </tr>
+                        <tr>
+                          <td data-label="Order no.">527</td>
+                          <td data-label="Location">Room 101</td>
+                          <td data-label="Guest name">Hussain Abad Ali</td>
+                          <td data-label="Accessories">Water, Blanket</td>
+                          <td data-label="Assigned to"> 
+                            <div class="user-card d-flex align-items-center"> 
+                              <div class="image me-1"><img src="./assets/images/photoUser.png" alt="" width="25"></div>
+                              <div class="text">Katef</div>
+                            </div>
+                          </td>
+                          <td data-label="Run time">8h</td>
+                          <td data-label="Status"> <span class="badge bg-process text-dark rounded-pill">In process</span></td>
+                        </tr>
+                        <tr>
+                          <td data-label="Order no.">527</td>
+                          <td data-label="Location">Room 101</td>
+                          <td data-label="Guest name">Hussain Abad Ali</td>
+                          <td data-label="Accessories">Water, Blanket</td>
+                          <td data-label="Assigned to"> 
+                            <div class="user-card d-flex align-items-center"> 
+                              <div class="image me-1"><img src="./assets/images/photoUser.png" alt="" width="25"></div>
+                              <div class="text">Katef</div>
+                            </div>
+                          </td>
+                          <td data-label="Run time">8h</td>
+                          <td data-label="Status"> <span class="badge bg-Completed text-dark rounded-pill">Completed</span></td>
+                        </tr>
+                        <tr>
+                          <td data-label="Order no.">527</td>
+                          <td data-label="Location">Room 101</td>
+                          <td data-label="Guest name">Hussain Abad Ali</td>
+                          <td data-label="Accessories">Water, Blanket</td>
+                          <td data-label="Assigned to"> 
+                            <div class="user-card d-flex align-items-center"> 
+                              <div class="image me-1"><img src="./assets/images/photoUser.png" alt="" width="25"></div>
+                              <div class="text">Katef</div>
+                            </div>
+                          </td>
+                          <td data-label="Run time">8h</td>
+                          <td data-label="Status"> <span class="badge bg-Closed text-dark rounded-pill">Closed</span></td>
+                        </tr>
+                        <tr>
+                          <td data-label="Order no.">527</td>
+                          <td data-label="Location">Room 101</td>
+                          <td data-label="Guest name">Hussain Abad Ali</td>
+                          <td data-label="Accessories">Water, Blanket</td>
+                          <td data-label="Assigned to"> 
+                            <div class="user-card d-flex align-items-center"> 
+                              <div class="image me-1"><img src="./assets/images/photoUser.png" alt="" width="25"></div>
+                              <div class="text">Katef</div>
+                            </div>
+                          </td>
+                          <td data-label="Run time">8h</td>
+                          <td data-label="Status"> <span class="badge bg-process text-dark rounded-pill">In process</span></td>
+                        </tr>
+                        <tr>
+                          <td data-label="Order no.">527</td>
+                          <td data-label="Location">Room 101</td>
+                          <td data-label="Guest name">Hussain Abad Ali</td>
+                          <td data-label="Accessories">Water, Blanket</td>
+                          <td data-label="Assigned to"> 
+                            <div class="user-card d-flex align-items-center"> 
+                              <div class="image me-1"><img src="./assets/images/photoUser.png" alt="" width="25"></div>
+                              <div class="text">Katef</div>
+                            </div>
+                          </td>
+                          <td data-label="Run time">8h</td>
+                          <td data-label="Status"> <span class="badge bg-Completed text-dark rounded-pill">Completed</span></td>
                         </tr>
                         <tr>
                           <td data-label="Order no.">527</td>
@@ -450,32 +534,34 @@
                   </div>
                 </div>
                 <div class="col-lg-12 mb-2">
-                  <div class="form-check">
-                    <input class="form-check-input" id="flexCheckDefault" type="checkbox" value="">
+                  <div class="form-group">
+                    <label>Department</label>
+                    <select class="form-select select-color w-100" aria-label="Default select example">
+                      <option selected="">Maintenance</option>
+                      <option value="1">Reception </option>
+                      <option value="2">Delivery</option>
+                      <option value="3">Procurement</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-12 mb-2">
+                  <div class="form-check content-check-box">
+                    <input class="form-check-input check-service" id="flexCheckDefault" type="checkbox" value="">
                     <label class="form-check-label" for="flexCheckDefault">Service</label>
-                  </div>
-                </div>
-                <div class="col-lg-6 mb-2">
-                  <div class="form-group">
-                    <label>Quantity</label>
-                    <input class="form-control" type="text">
-                  </div>
-                </div>
-                <div class="col-lg-6 mb-2">
-                  <div class="form-group">
-                    <label>Minima Quantity</label>
-                    <input class="form-control" type="text">
-                  </div>
-                </div>
-                <div class="col-lg-12 mb-3"> 
-                  <h5 class="mb-3">Department</h5>
-                  <div class="group-button"> <span class="btn rounded-pill btn-outline-master mb-3 active">Maintenance</span><span class="btn mx-1 rounded-pill btn-outline-master mb-3">Reception</span><span class="btn mx-1 rounded-pill btn-outline-master mb-3">Delivery</span><span class="btn rounded-pill btn-outline-master mb-3">Procurement </span></div>
-                </div>
-                <div class="col-lg-12 mb-3">
-                  <h5 class="mb-2">Assignee</h5>
-                  <div class="label-Assignee">
-                    <div class="icon"> <span>K</span></div>
-                    <div class="text">Katef</div>
+                    <div class="row"> 
+                      <div class="col-lg-6 mb-2">
+                        <div class="form-group">
+                          <label>Quantity</label>
+                          <input class="form-control" type="text">
+                        </div>
+                      </div>
+                      <div class="col-lg-6 mb-2">
+                        <div class="form-group">
+                          <label>Minima Quantity</label>
+                          <input class="form-control" type="text">
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -828,5 +914,12 @@
     <script src="./assets/js/OTP.js"> </script>
     <script src="./assets/js/apexcharts.min.js"> </script>
     <script src="./assets/js/chartFun.js"> </script>
+    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"> </script>
+    <script src="../assets/js/ajaxLoad.js"> </script>
+    <script>
+      $(document).ready( function () {
+        var table = $('#dataTables').DataTable();
+      } );
+    </script>
   </body>
 </html>

@@ -104,6 +104,10 @@
               flex: 1 0 0;
               text-align: center;
               margin-inline: 10px;
+              margin-bottom: 10px;
+              @media (max-width: 991.98px) {
+                margin-bottom: 0;
+              }
               cursor: pointer;
               .number {
                 font-size: 42px;
@@ -193,8 +197,8 @@
           border-radius: 7px;
           color: #005DAA;
           font-size: 16px;
-          height: 24px;
-          width: 24px;
+          height: 30px;
+          width: 30px;
           display: flex;
           justify-content: center;
           align-items: center;
