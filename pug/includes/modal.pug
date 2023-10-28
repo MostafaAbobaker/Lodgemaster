@@ -102,11 +102,19 @@
                 label.form-check-label(for='flexCheckDefault')
                   | Service
                 .row  
-                  .col-lg-6.mb-2
+                  .col-lg-12.mb-2
+                    .form-check.form-switch.d-flex.p-0
+                      span
+                        label.form-check-label(for='flexSwitchCheckDefault') outStock
+                      input#flexSwitchCheckDefault.mx-2.form-check-input(type='checkbox', role='switch')
+                      label.form-check-label(for='flexSwitchCheckDefault') InStock 
+
+
+                  .col-lg-6
                     .form-group
                       label Quantity
                       input.form-control(type='text')
-                  .col-lg-6.mb-2
+                  .col-lg-6
                     .form-group
                       label Minima Quantity
                       input.form-control(type='text')
