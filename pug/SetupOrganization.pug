@@ -1,0 +1,77 @@
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .master-home.category-hotel
+      //- Start Nav Bar
+      nav.navbar.navbar-expand-lg
+        .container
+          a.navbar-brand(href='#') 
+            img(src="./assets/images/NewLogo.png", alt="logo")
+          
+          nav.navbar-user.d-flex.align-items-center 
+            .image.me-2 
+              img(src="./assets/images/user.png", alt="" height='65')
+            a.user-settings(href="ProfileSettings.html")
+              i.fa-solid.fa-gear
+            .body-navbar-user  
+              .text.fw-bold Hassan
+              a(href="login.html")  
+                span.text-black Sign out
+                i.fa-solid.fa-right-from-bracket.ms-2.text-primary
+
+      //- End Nav Bar      
+      //- start Content category hotel
+      section.content-category-hotel 
+        .container 
+          h1.text-center.my-5.fw-bold.text-primary Organization Setup 
+          .row 
+            .col-lg-4.col-md-6.col-sm-6 
+              a.category-item(href="LayoutDashboard.html") 
+                 
+                  .image 
+                    img(src="./assets/images/Svg/hotel.svg", alt="")
+                  
+                  .heder-category-item  Organization Details 
+            .col-lg-4.col-md-6.col-sm-6 
+              a.category-item(href="") 
+                
+                  .image 
+                    img(src="./assets/images/Svg/hierarchy-structure.svg", alt="")
+                  .heder-category-item  Department 
+            .col-lg-4.col-md-6.col-sm-6 
+              a.category-item(href="") 
+                
+                  .image 
+                    img(src="./assets/images/Svg/add-user.svg", alt="")
+
+                  .heder-category-item  Add User
+            .col-lg-4.col-md-6.col-sm-6 
+              a.category-item(href="") 
+                
+                  .image 
+                    img(src="./assets/images/Svg/inspection.svg", alt="")
+
+                  .heder-category-item  Inspection 
+            .col-lg-4.col-md-6.col-sm-6 
+              a.category-item(href="") 
+                
+                  .image 
+                    img(src="./assets/images/Svg/add-item.svg", alt="")
+
+                  .heder-category-item  items and services
+            .col-lg-4.col-md-6.col-sm-6 
+              a.category-item(href="") 
+                
+                  .image 
+                    img(src="./assets/images/Svg/user.svg", alt="")
+
+                  .heder-category-item  My Profile
+
+      //- End Content category hotel
+
+    include includes/script.pug 
+
+
+

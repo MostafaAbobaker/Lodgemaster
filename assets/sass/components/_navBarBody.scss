@@ -1,21 +1,44 @@
 /* Start nav-bar-body  */
+// nav.navbar {
+//   background-color: $mColor;
+//   color: #fff;
+//   height: 70px;
+
+// }
+
+
+
 .nav-bar-body {
   background-color: $mColor;
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  position: relative;
-  z-index: 9;
-  transform: scaleY(0);
-  transform-origin: top center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(#000,.1);
+  // height: 70px;
+  // padding: 10px 20px;
+  // transform: scaleY(0);
+  // transform-origin: top center;
   transition: all 0.4s ease-in-out;
-  position: absolute;
+  // position: absolute;
+  // .container {
+  //   display: flex;
+
+  // }
+ 
+  .navbar-brand {
+    display: none;
+    img {
+      height: 55px;
+    }
+  }
   .logo {
   }
   .icon-toggle {
-    padding: 10px;
+    color: #fff;
     cursor: pointer;
     svg {
       width: 20px;
@@ -24,6 +47,60 @@
       path,
       g {
         stroke: #fff;
+      }
+    }
+  }
+  ul.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    margin-inline-start: auto;
+    gap: 40px;
+    li {
+      
+      a {
+        color: #fff;
+        position: relative;
+        span.badge {
+          position: absolute;
+          top: 0;
+          inset-inline-end: -15px;
+        }
+        svg {
+          width: 20px;
+          height: 20px;
+          stroke: #fff;
+          path,
+          g {
+            stroke: #fff;
+          }
+        }
+      }
+      &.navbar-user {
+        display: flex;
+        gap: 10px;
+        position: relative;
+        align-items: center;
+        .text {
+          max-width: 150px;
+          white-space: nowrap;
+          overflow-x: hidden;
+          text-overflow: ellipsis;
+        }
+        a.sign-out {
+          color: #ccc;
+        }
+        .user-settings {
+          position: absolute;
+          top: 61%;
+          inset-inline-start: 0;
+          color: #005daa;
+          background-color: #fff;
+          border-radius: 50%;
+          width: 25px;
+          height: 25px;
+          display: grid;
+          place-items: center;
+        }
       }
     }
   }

@@ -29,23 +29,29 @@ html(lang="en")
                             #demo.step-app.mb-5
                               ul.step-steps.mb-5
                                 li.active(data-step-target='step1')
-                                  span.icon 01 
-                                  span General
+                                  .content-text
+                                    span.icon 01 
+                                    span General
                                 li(data-step-target='step2')
-                                  span.icon 02
-                                  span Bathroom 1 
+                                  .content-text
+                                    span.icon 02
+                                    span Bathroom 1 
                                 li(data-step-target='step3')
-                                  span.icon 03
-                                  span Bathroom 2
+                                  .content-text
+                                    span.icon 03
+                                    span Bathroom 2
                                 li(data-step-target='step4')
-                                  span.icon 04
-                                  span Bathroom 3
+                                  .content-text
+                                    span.icon 04
+                                    span Bathroom 3
                                 li(data-step-target='step5')
-                                  span.icon 05
-                                  span Bathroom 4
+                                  .content-text
+                                    span.icon 05
+                                    span Bathroom 4
                                 li(data-step-target='step6')
-                                  span.icon 06
-                                  span Submit
+                                  .content-text
+                                    span.icon 06
+                                    span Submit
                               .step-content
                                 .step-tab-panel.active(data-step='step1')
                                   h3.text-center.text-primary.mb-4 General Cleanliness
@@ -99,19 +105,23 @@ html(lang="en")
                                   label(for='exampleFormControlTextarea1') Photos Attachment (You much attach the photos)
                                   #dragArea.upload-content
                                     //- img#img(src="", alt="")
-                                    p.header
-                                      span.icon 
-                                        svg(width='49', height='49', viewbox='0 0 49 49', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                          path(d='M39.8947 20.9473V16.2105C39.8947 14.9542 39.3956 13.7494 38.5073 12.861C37.619 11.9727 36.4141 11.4736 35.1578 11.4736H16.2105C14.9542 11.4736 13.7494 11.9727 12.861 12.861C11.9727 13.7494 11.4736 14.9542 11.4736 16.2105V35.1578C11.4736 36.4141 11.9727 37.619 12.861 38.5073C13.7494 39.3956 14.9542 39.8947 16.2105 39.8947H20.9473', stroke='#005DAA', stroke-width='3', stroke-linecap='round', stroke-linejoin='round')
-                                          path(d='M2 2V2.02368M11.4737 2V2.02368M20.9474 2V2.02368M30.4211 2V2.02368M2 11.4737V11.4974M2 20.9474V20.9711M2 30.4211V30.4447M25.6842 25.6842L47 32.7895L37.5263 37.5263L32.7895 47L25.6842 25.6842Z', stroke='#005DAA', stroke-width='3', stroke-linecap='round', stroke-linejoin='round')
 
-                                      | Please Drag the photos here or click on upload the photos or Take Photos
-                                    .d-flex.justify-content-center 
-                                      input(type="file", name="" , hidden)
-                                      //- button.btn.btn-dark.mx-2.fileUpload Upload  
-                                      input#capture(type="file", name="", accept="image/*,video/*,audio/*" ,capture , multiple , hidden)
-                                      button.TakePhotos.btn.btn-outline-dark.mx-2.fileUpload Take Photos  
+                                    
+                                    input#inputFileUpload(type="file", name="")
+                                    .card.w-100.info-view.d-none
+                                      .row.g-0.align-items-center
+                                        .col-md-2
+                                          img#imgPreview.img-fluid.rounded-0.rounded-start.w-100.border-end(src='https://shorturl.at/bpHJ1' alt='...')
+                                        .col-md-8
+                                          .card-body
+                                            h5#title-file.card-title Card title
+                                            
+                                        .col-md-2.text-center
+                                          a#deleteItem.btn.btn-outline-danger  
+                                            i.fa-solid.fa-xmark.fa-lg
 
+
+                                      
 
                                 
           //- End Create Order
@@ -125,7 +135,35 @@ html(lang="en")
     include includes/modal.pug 
     include includes/script.pug
     script(src="./assets/js/DragFile.js") 
-   
+    script.
+      $(document).ready(() => {
+        const photoInp = $("#inputFileUpload");
+        let file;
+      $('#deleteItem').click(function(e) {
+        $('.info-view').addClass('d-none');
+        photoInp.removeClass('d-none')
+      });
+      photoInp.change(function(e){
+          photoInp.addClass('d-none');
+          $('.info-view').removeClass('d-none')
+          let info =  photoInp.val().split('\\').pop();
+          $('#title-file').append(info)
+          file = this.files[0];
+          if (file) {
+            let reader = new FileReader();
+            reader.onload = function (event) {
+          $("#imgPreview")
+            .attr("src", event.target.result);
+          };
+            reader.readAsDataURL(file);
+          }
+        })
+        
+        
+      });
+
+
+    
 
     
       

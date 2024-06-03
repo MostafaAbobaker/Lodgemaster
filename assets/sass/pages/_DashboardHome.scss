@@ -1,20 +1,20 @@
 /* Start Dashboard-home */
-.Dashboard-home {
+.Dashboard-home.show-expand-aside {
   background-color: #f7f7f7;
   // width: calc(100% - 300px);
   // margin-inline-start: 300px;
   // position: relative;
   .content-category-hotel {
-    width: calc(100% - 300px);
-    min-height: 90vh;
-    margin-inline-start: 300px;
-    position: relative;
-
-    @media (max-width: 1199.98px) {
-      width: calc(100% - 80px);
-      margin-inline-start: 80px;
-      padding-top: 68px;
-    }
+    // width: calc(100% - 300px);
+    // min-height: 90vh;
+    // margin-inline-start: 300px;
+    // position: relative;  
+    --width-aside : 90px;
+    min-height: 100svh;
+      width: calc(100% - var(--width-aside));
+      margin-inline-start: var(--width-aside);
+      // padding-top: 68px;
+   
     @media (max-width: 575.98px) {
       width: 100%;
       margin-inline-start: 0;
@@ -229,6 +229,229 @@
           border: none;
           color: #333;
         }
+      }
+    }
+  }
+}
+
+ .Dashboard-home  {
+  background-color: #f7f7f7;
+
+  .content-category-hotel {
+    --width-aside : 300px;
+    width: calc(100% - var(--width-aside));
+      margin-inline-start: var(--width-aside);
+      transition: all 0.3s ease-in-out;
+      min-height: 100svh;
+  }
+  .header-filter {
+    background-color: #fff;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    .group-filter {
+      width: 50%;
+      .input-group {
+        input.form-control {
+          border-start-start-radius: 35px;
+          border-end-start-radius: 35px;
+          padding-inline-start: 20px;
+        }
+        @media (max-width: 767.98px) {
+          display: none;
+        }
+      }
+
+      #button-addon2 {
+        border-start-end-radius: 35px;
+        border-end-end-radius: 35px;
+      }
+      @media (max-width: 767.98px) {
+        width: 30%;
+      }
+    }
+    .date {
+      @media (max-width: 575.98px) {
+        display: none;
+      }
+    }
+    // .input-group {
+    //   flex: 0 0 40%;
+    // }
+  }
+  // Start Header Filter
+  // Start Overview Orders
+  .overview-Orders {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+
+    .header-overview {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      .title-head {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+      .group-overview {
+        margin-bottom: 30px;
+        ul {
+          list-style-type: none;
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+          // flex-wrap: wrap;
+          // justify-content: space-between;
+          margin: 0;
+          padding: 0;
+          @media (max-width: 1300px) {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+          }
+          @media (max-width: 991.98px) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+          }
+          @media (max-width: 575.98px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+          }
+          li {
+            border: 1px solid #ddd;
+            background-color: #ede6f9;
+            border-radius: 5px;
+            padding: 10px;
+            flex: 1 0 0;
+            text-align: center;
+            margin-inline: 10px;
+            margin-bottom: 10px;
+            @media (max-width: 991.98px) {
+              margin-bottom: 0;
+            }
+            cursor: pointer;
+            .number {
+              font-size: 42px;
+              font-weight: bold;
+              text-align: center;
+            }
+            .label {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-top: -5px;
+              .icon {
+                margin-inline-end: 5px;
+                i {
+                  font-size: 1.1rem;
+                }
+              }
+              .text {
+                white-space: nowrap;
+              }
+            }
+            &.bg-open {
+              .label {
+                .icon {
+                  color: #ff5722;
+                }
+              }
+            }
+            &.bg-process {
+              .label {
+                .icon {
+                  color: #26bd26;
+                }
+              }
+            }
+            &.bg-Completed {
+              .label {
+                .icon {
+                  color: #2196f3;
+                }
+              }
+            }
+            &.bg-Hold {
+              .label {
+                .icon {
+                  color: #ed705b;
+                }
+              }
+            }
+            &.bg-Closed {
+              .label {
+                .icon {
+                  color: #009688;
+                }
+              }
+            }
+            &.active {
+              border: 3px solid $mColor;
+              box-shadow: 0 0 5px rgba(#000,0.3);
+            }
+          }
+        }
+      }
+    }
+    .table {
+      .user-card {
+        @media (max-width: 767.98px) {
+          justify-content: flex-end;
+        }
+      }
+      .badge {
+        width: 75%;
+        @media (max-width: 991.98px) {
+          width: auto;
+          padding-inline: 10px;
+        }
+      }
+    }
+  }
+  .card {
+    background-color: #fff;
+    .card-header {
+      background-color: #fff;
+      .badge  {
+        
+        background-color: #EBF5FF;
+        border-radius: 7px;
+        color: #005DAA;
+        font-size: 16px;
+        height: 30px;
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+      }
+    }
+    .list-group {
+      .list-group-item {
+        &:first-child {
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
+      }
+      small {
+        color: #878787;
+      }
+      .title {
+        small {
+          color: $mColor;
+        }
+      }
+      h5 {
+        color: #005DAA;
+        font-weight: bold;
+      }
+      .list-group-item.active {
+        background-color: #ebf5ff;
+        border: none;
+        color: #333;
       }
     }
   }
