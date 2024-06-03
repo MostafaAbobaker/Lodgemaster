@@ -210,6 +210,227 @@ aside.aside-bar .body-aside-bar ul li:hover > a {
   display: block;
 }
 
+@media (max-width: 1399.98px) {
+  aside.aside-bar {
+    width: 90px;
+    transition: all 0.3s ease-in-out;
+  }
+  aside.aside-bar .header a.image .large-logo {
+    display: none;
+  }
+  aside.aside-bar .header a.image .small-logo {
+    display: block;
+    width: 100%;
+  }
+  aside.aside-bar .body-aside-bar ul {
+    overflow-y: unset;
+  }
+  aside.aside-bar .body-aside-bar ul li a .text {
+    display: none;
+  }
+  aside.aside-bar .body-aside-bar ul li a[aria-expanded=false]::after {
+    content: "\f0da";
+    inset-inline-end: 0;
+  }
+  aside.aside-bar .body-aside-bar ul li a[aria-expanded=true]::after {
+    content: "\f0da";
+    inset-inline-end: 0;
+  }
+  aside.aside-bar .body-aside-bar ul li.item-collapse {
+    position: relative;
+  }
+  aside.aside-bar .body-aside-bar ul li.item-collapse:hover .collapse {
+    display: block;
+    position: absolute;
+    top: 0px;
+    inset-inline-start: 87%;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+  }
+  aside.aside-bar .body-aside-bar ul li.item-collapse:hover .collapse .text {
+    display: block;
+  }
+  aside.aside-bar .body-aside-bar ul li.item-collapse .collapse.show {
+    display: block;
+    position: absolute;
+    top: 0px;
+    inset-inline-start: 87%;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+  }
+  aside.aside-bar .body-aside-bar ul li.item-collapse .collapse.show .text {
+    display: block;
+  }
+  .show-expand-aside aside.aside-bar {
+    width: 300px;
+  }
+  .show-expand-aside aside.aside-bar .header a.image .large-logo {
+    display: block;
+  }
+  .show-expand-aside aside.aside-bar .header a.image .small-logo {
+    display: none;
+    width: 100%;
+  }
+  .show-expand-aside aside.aside-bar .body-aside-bar ul {
+    overflow-y: unset;
+  }
+  .show-expand-aside aside.aside-bar .body-aside-bar ul li a .text {
+    display: block;
+  }
+  .show-expand-aside aside.aside-bar .body-aside-bar ul li a[aria-expanded=false]::after {
+    content: "\f0da";
+    inset-inline-end: 0;
+  }
+  .show-expand-aside aside.aside-bar .body-aside-bar ul li a[aria-expanded=true]::after {
+    content: "\f0da";
+    inset-inline-end: 0;
+  }
+  .show-expand-aside aside.aside-bar .body-aside-bar ul li.item-collapse {
+    position: static;
+  }
+  .show-expand-aside aside.aside-bar .body-aside-bar ul li.item-collapse:hover .collapse {
+    display: block;
+    position: static;
+    top: unset;
+    inset-inline-start: unset;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    box-shadow: none;
+    border-radius: 5px;
+  }
+  .show-expand-aside aside.aside-bar .body-aside-bar ul li.item-collapse:hover .collapse .text {
+    display: block;
+  }
+  .show-expand-aside aside.aside-bar .body-aside-bar ul li.item-collapse .collapse.show {
+    display: block;
+    position: static;
+    top: unset;
+    inset-inline-start: unset;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    box-shadow: none;
+    border-radius: 5px;
+  }
+  .show-expand-aside aside.aside-bar .body-aside-bar ul li.item-collapse .collapse.show .text {
+    display: block;
+  }
+}
+@media (max-width: 767.98px) {
+  aside.aside-bar {
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    top: 75px;
+    inset-inline-start: -100%;
+  }
+  aside.aside-bar .header a.image .large-logo {
+    display: block;
+  }
+  aside.aside-bar .header a.image .small-logo {
+    display: none;
+    width: 100%;
+  }
+  aside.aside-bar .body-aside-bar ul {
+    overflow-y: unset;
+  }
+  aside.aside-bar .body-aside-bar ul li a .text {
+    display: block;
+  }
+  aside.aside-bar .body-aside-bar ul li a[aria-expanded=false]::after {
+    content: "\f0da";
+    inset-inline-end: 0;
+  }
+  aside.aside-bar .body-aside-bar ul li a[aria-expanded=true]::after {
+    content: "\f0da";
+    inset-inline-end: 0;
+  }
+  aside.aside-bar .body-aside-bar ul li.item-collapse {
+    position: relative;
+  }
+  aside.aside-bar .body-aside-bar ul li.item-collapse:hover .collapse {
+    display: block;
+    position: absolute;
+    top: 0px;
+    inset-inline-start: 87%;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+  }
+  aside.aside-bar .body-aside-bar ul li.item-collapse:hover .collapse .text {
+    display: block;
+  }
+  aside.aside-bar .body-aside-bar ul li.item-collapse .collapse.show {
+    display: block;
+    position: absolute;
+    top: 0px;
+    inset-inline-start: 87%;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+  }
+  aside.aside-bar .body-aside-bar ul li.item-collapse .collapse.show .text {
+    display: block;
+  }
+  .show-expand-aside aside.aside-bar {
+    inset-inline-start: 0;
+    width: 100%;
+  }
+  .show-expand-aside aside.aside-bar .header a.image .large-logo {
+    display: block;
+  }
+  .show-expand-aside aside.aside-bar .header a.image .small-logo {
+    display: none;
+    width: 100%;
+  }
+  .show-expand-aside aside.aside-bar .body-aside-bar ul {
+    overflow-y: unset;
+  }
+  .show-expand-aside aside.aside-bar .body-aside-bar ul li a .text {
+    display: block;
+  }
+  .show-expand-aside aside.aside-bar .body-aside-bar ul li a[aria-expanded=false]::after {
+    content: "\f0da";
+    inset-inline-end: 0;
+  }
+  .show-expand-aside aside.aside-bar .body-aside-bar ul li a[aria-expanded=true]::after {
+    content: "\f0da";
+    inset-inline-end: 0;
+  }
+  .show-expand-aside aside.aside-bar .body-aside-bar ul li.item-collapse {
+    position: relative;
+  }
+  .show-expand-aside aside.aside-bar .body-aside-bar ul li.item-collapse:hover .collapse {
+    display: block;
+    position: absolute;
+    top: 0px;
+    inset-inline-start: 87%;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+  }
+  .show-expand-aside aside.aside-bar .body-aside-bar ul li.item-collapse:hover .collapse .text {
+    display: block;
+  }
+  .show-expand-aside aside.aside-bar .body-aside-bar ul li.item-collapse .collapse.show {
+    display: block;
+    position: absolute;
+    top: 0px;
+    inset-inline-start: 87%;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+  }
+  .show-expand-aside aside.aside-bar .body-aside-bar ul li.item-collapse .collapse.show .text {
+    display: block;
+  }
+}
 /* Start nav-bar-body  */
 .nav-bar-body {
   background-color: #005daa;
@@ -1336,6 +1557,16 @@ aside.aside-bar .body-aside-bar ul li:hover > a {
   transition: all 0.3s ease-in-out;
   min-height: 100svh;
 }
+@media (max-width: 1399.98px) {
+  .Dashboard-home .content-category-hotel {
+    --width-aside: 90px;
+  }
+}
+@media (max-width: 767.98px) {
+  .Dashboard-home .content-category-hotel {
+    --width-aside: 0;
+  }
+}
 .Dashboard-home .header-filter {
   background-color: #fff;
   border-radius: 20px;
@@ -1528,8 +1759,20 @@ aside.aside-bar .body-aside-bar ul li:hover > a {
 }
 .rooms-status .over-view {
   display: grid;
-  grid-template-columns: repeat(var(--Num-columns), 1fr);
+  grid-template-columns: repeat(var(--Num-columns-xl), 1fr);
   gap: 15px;
+}
+@media (max-width: 1199.98px) {
+  .rooms-status .over-view {
+    margin-top: 70px;
+    grid-template-columns: repeat(var(--Num-columns-md), 1fr) !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .rooms-status .over-view {
+    margin-top: 70px;
+    grid-template-columns: repeat(var(--Num-columns-sm), 1fr) !important;
+  }
 }
 .rooms-status .over-view .card-item {
   background-color: var(--main-color);
@@ -1692,8 +1935,20 @@ aside.aside-bar .body-aside-bar ul li:hover > a {
 }
 .RoomsStatusV2 .rooms-status .over-view {
   display: grid;
-  grid-template-columns: repeat(var(--Num-columns), 1fr);
+  grid-template-columns: repeat(var(--Num-columns-xl), 1fr);
   gap: 15px;
+}
+@media (max-width: 1199.98px) {
+  .RoomsStatusV2 .rooms-status .over-view {
+    margin-top: 70px;
+    grid-template-columns: repeat(var(--Num-columns-md), 1fr) !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .RoomsStatusV2 .rooms-status .over-view {
+    margin-top: 70px;
+    grid-template-columns: repeat(var(--Num-columns-sm), 1fr) !important;
+  }
 }
 .RoomsStatusV2 .rooms-status .over-view .card-item {
   padding: 10px;
