@@ -1,0 +1,63 @@
+- var titlePage = 'Settings';
+- var titlesPage = 'Profile Settings';
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .Dashboard-home
+      include includes/headerNavBar.pug
+      include includes/asideBar.pug
+      //- start Content category hotel
+      section.content-category-hotel 
+        //- Start Filter
+        include includes/FilterDashboard.pug
+        //- End Filter
+        //- Start Load Master page 
+        #pageMasterLoad
+          .HomeDashboard
+            .container-fluid 
+              .row           
+                .col-lg-12.mb-4
+                  .overview-Orders
+                    h1.text-center.fw-bold.text-primary Profile Settings
+                    .image-upload
+                      .avatar-upload
+                        .avatar-edit
+                          input#imageUpload(type='file', accept='.png, .jpg, .jpeg')
+                          label(for='imageUpload')
+                        .avatar-preview
+                          #imagePreview(style='background-image: url(./assets/images/userbg.jpg);')
+                    .container-fluid 
+                      .row 
+                        .col-lg-6.col-md-6.col-sm-12.mb-4 
+                          .form-group
+                            label(for='') Name
+                            input.form-control(type='text', aria-describedby=' ',  placeholder="Hassan Khuazmi")
+                        .col-lg-6.col-md-6.col-sm-12.mb-4 
+                          .form-group
+                            .d-flex.justify-content-between
+                              label(for='') Phone
+                              a(href="#" data-bs-toggle="modal" data-bs-target="#AddPhone") Add new
+                            input.form-control(type='text', aria-describedby=' ', placeholder="+966 55 176 6662")
+                        .col-lg-6.col-md-6.col-sm-12.mb-4 
+                          .form-group
+                            .d-flex.justify-content-between
+                              label(for='') Email
+                              a(href="#" data-bs-toggle="modal" data-bs-target="#AddEmail") Add new
+                            input.form-control(type='text', aria-describedby=' ', placeholder="hassan@lodgemaster.com")
+                        .col-lg-6.col-md-6.col-sm-12.mb-4 
+                          .form-group
+                            label.d-block(for='') Password
+                            a.btn.btn-master.rounded-pill(href="PasswordSettings.html") Changepassword
+
+      //- End Content category hotel
+    //- Start Modal
+    include includes/modal.pug 
+    include includes/script.pug
+    script(src="../assets/js/ajaxLoad.js") 
+    
+      
+
+
+

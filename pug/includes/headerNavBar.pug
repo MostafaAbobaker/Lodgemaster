@@ -1,8 +1,28 @@
-nav.nav-bar-body 
-  a.logo(href="CategoryHotel.html")
-    img.large-logo(src="../assets/images/logoWhite.png", alt="")
-    //- img.small-logo(src="../assets/images/main-logo.png", alt="")
-  .icon-toggle.show-aside 
-    i.fas.fa-stream.fa-flip-horizontal.fa-fw.fa-xl
-  .icon-toggle.expand-aside
-    include ../../assets/images/Svg/Aside.svg
+nav.navbar.nav-bar-body(data-bs-theme="dark")
+  .container-fluid
+    div.d-flex 
+      a.me-3.icon-toggle
+        i.fa-solid.fa-bars
+
+      a.navbar-brand(href='#') 
+        img.small-logo(src="./assets/images/main-logo.png", alt="" )
+    ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+      li.nav-item
+        a.nav-link( href='Notifications.html') 
+          include ../../assets/images/Svg/Notifications.svg
+          span.badge.text-bg-danger 9
+
+      li.nav-item.navbar-user
+          .image.me-2 
+            img(src="./assets/images/user.png", alt="" height='50')
+          a.user-settings(href="ProfileSettings.html")
+            i.fa-solid.fa-gear
+          .body-navbar-user  
+            .text.fw-bold Mahound Mohamed Mostafa
+            a.sign-out(href="login.html")  
+              span Sign out
+              i.fa-solid.fa-right-from-bracket.ms-2.text-primary
+      
+        
+      
+      

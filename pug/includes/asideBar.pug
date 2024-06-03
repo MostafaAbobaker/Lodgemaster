@@ -1,11 +1,11 @@
 //- Start Aside Bar
-aside.aside-bar 
+aside.aside-bar
   .header 
     a.image(href="CategoryHotel.html")  
-      img.large-logo(src="./assets/images/logoWhite.png", alt="")
-      img.small-logo(src="./assets/images/main-logo.png", alt="")
+      img.large-logo(src="./assets/images/logoWhite.png", alt="" )
+      img.small-logo(src="./assets/images/main-logo.png", alt="" )
   .body-aside-bar
-    ul
+    ul#collapseGroup
       li(class=titlePage == 'Dashboard' ? "active" : " ")
         a(href="LayoutDashboard.html")
           .icon 
@@ -33,54 +33,70 @@ aside.aside-bar
             include ../../assets/images/Svg/Notifications.svg
           span.text Notifications
           span.Notifi 9
-      li(class=titlePage == 'Reports' ? "active dropdown" : " dropdown ")
-        a(href="#")
+      li(class=titlePage == 'Reports' ? "active item-collapse" : "item-collapse  ")
+        a(data-bs-toggle="collapse" href="#collapseReports" role="button" aria-expanded="false" aria-controls="collapseReports")
           .icon 
             include ../../assets/images/Svg/Reports.svg
           span.text Reports
-        ul 
-          li(class=titlesPage == 'Reports Orders' ? "active " : "  ") 
+        #collapseReports.collapse
             
             a(href="ReportsOrders.html") 
               .icon 
                 i.fa-solid.fa-minus  
               span.text  Reports Orders
-          li(class=titlesPage == 'Items Management' ? "active " : "  ") 
             a(href="ItemsManagement.html") 
               .icon 
                 i.fa-solid.fa-minus
               span.text Items Management
-          li(class=titlesPage == 'Reports Inspection' ? "active " : "  ") 
             a(href="ReportsInspection.html") 
               .icon 
                 i.fa-solid.fa-minus
               span.text Inspection 
       
-      li(class=titlePage == 'Settings'  ? "active dropdown" : " dropdown ")
-        a(href="#")
+      li(class=titlePage == 'Settings'  ? "active item-collapse" : " item-collapse ")
+        a(data-bs-toggle="collapse" href="#collapseSettings" role="button" aria-expanded="false" aria-controls="collapseSettings ")
           .icon 
             include ../../assets/images/Svg/Settings3.svg
           span.text Settings
-        ul 
-          li(class=titlesPage == 'Departments' ? "active " : "  ") 
+        #collapseSettings.collapse
             
             a(href="Departments.html") 
               .icon 
                 i.fa-solid.fa-minus  
               span.text  Department
-          li(class=titlesPage == 'Users' ? "active " : "  ") 
             a(href="Users.html") 
               .icon 
                 i.fa-solid.fa-minus
               span.text User
-          li(class=titlesPage == 'Setup Room' ? "active " : "  ") 
             a(href="setupRoom.html") 
               .icon 
                 i.fa-solid.fa-minus
               span.text Inspection 
-          li(class=titlesPage == 'Profile Settings' ? "active " : "  ") 
             a(href="ProfileSettings.html") 
               .icon 
                 i.fa-solid.fa-minus
               span.text My Profile    
-      //- End Aside Bar  
+            a(href="OrganizationDetails.html") 
+              .icon 
+                i.fa-solid.fa-minus
+              span.text Organization Details   
+      li(class=titlePage == 'Inspection' ? "active" : " ")
+        a(href="SetupOrganization.html")
+          .icon
+            include ../../assets/images/Svg/Settings3.svg
+          span.text Setup Organization
+      li(class=titlePage == 'RoomsStatus' ? "icon-room active" : " ")
+        a(href="RoomsStatus.html")
+          .icon
+            include ../../assets/images/Svg/Rooms.svg
+          span.text Rooms Status
+      li(class=titlePage == 'RoomsStatusV2' ? "icon-room active" : " ")
+        a(href="RoomsStatusV2.html")
+          .icon
+            include ../../assets/images/Svg/Rooms.svg
+          span.text Rooms Status Vs
+     
+     
+     
+      //- End Aside Bar   SetupOrganization
+

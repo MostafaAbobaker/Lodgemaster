@@ -4,11 +4,12 @@ html(lang="en")
   head
     include includes/head.pug
   body 
-    .Dashboard-home
-      include includes/headerNavBar.pug
+    .Dashboard-home.show-expand-aside
       include includes/asideBar.pug
       //- start Content category hotel
       section.content-category-hotel 
+        include includes/headerNavBar.pug
+
         //- Start Filter
         include includes/FilterDashboard.pug
         //- End Filter
@@ -26,7 +27,13 @@ html(lang="en")
     script(src="./assets/js/apexcharts.min.js") 
     script(src="./assets/js/chartFun.js") 
     //- script(src="../assets/js/ajaxLoad.js") 
-    
+    script(src="https://nightly.datatables.net/js/jquery.dataTables.js") 
+    script(src="../assets/js/ajaxLoad.js") 
+    script.
+      $(document).ready( function () {
+        var table = $('#dataTables').DataTable();
+      } );
+
       
 
 

@@ -1,0 +1,205 @@
+
+.RoomsStatusV2 {
+  .rooms-status {
+    --main-color: #AAA;
+    .over-view {
+      display: grid;
+      grid-template-columns: repeat(var(--Num-columns), 1fr);
+      gap: 15px;
+  
+      .card-item {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+        justify-content: space-between;
+        background-color: #fff;
+        box-shadow: 0 0 5px rgba(#000, 0.2);
+        border: 2px solid transparent;
+        border-radius: 10px;
+        cursor: pointer;
+        &.maintenance {
+          --main-color: #D63652;
+        }
+        &.single {
+          --main-color: #005DAA;
+        }
+        &.double {
+          --main-color: #FF7A00;
+        }
+        &.triple {
+          --main-color: #139D61;
+        }
+        /* &.vip {
+          --main-color: #FDD533;
+        } */
+        .card-item-body {
+          .title {
+            margin-bottom: 5px;
+            font-weight: bold;
+  
+          }
+  
+          .number {
+            margin-bottom: 0;
+            font-weight: bold;
+            font-size: 32px;
+            color: var(--main-color);
+          }
+        }
+  
+        .card-item-icon {
+          width: 50px;
+          height: 50px;
+          background-color: var(--main-color);
+          border-radius: 5px;
+          display: grid;
+          place-items: center;
+          color: #fff;
+          i {
+            font-size: 32px;
+            color: #fff;
+          }
+        }
+      }
+    }
+  
+    .container-room {
+      // background-color: #F4F5F7;
+      // box-shadow: 0 0 10px rgba(#000, 0.2);
+      // border-radius: 10px;
+      // padding: 15px;
+  
+      button.filter {
+        margin-inline-start: auto;
+        display: block;
+        margin-bottom: 15px;
+  
+      }
+  
+      .floor {
+        background-color: #E4F2FF;
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba(#000, 0.2);
+        padding: 15px 5px;
+        
+        margin-bottom: 15px;
+        h4 {
+          font-weight: bold;
+          padding-inline-start: 15px;
+        }
+        .container-floor {
+          background-color: #fff;
+          display: flex;
+          flex-wrap: nowrap;
+          gap: 15px;
+          padding: 15px 10px;
+          border-radius: 10px;
+          width: 100%;
+          overflow-x: auto;
+          &::-webkit-scrollbar {
+            height: 5px !important;
+          } 
+          .card-room {
+            &.maintenance {
+              --main-color: #D63652;
+            }
+            &.single {
+              --main-color: #005DAA;
+            }
+            &.double {
+              --main-color: #FF7A00;
+            }
+            &.triple {
+              --main-color: #139D61;
+            }
+            &.vip {
+              --main-color: #FDD533;
+            }
+  
+            label {
+              background-color: #fff;
+              border: 1px solid var(--main-color);
+              border-radius: 10px;
+              width: 90px;
+              height: 90px;
+              display: flex;
+              flex-direction: column;
+              flex-grow: 1;
+              position: relative;
+              cursor: pointer;
+              transition: all 0.4s ease-in-out;
+              &::before {
+                content: '\f111';
+                font-family: "Font Awesome 6 Free";
+                position: absolute;
+                top: 5px;
+                inset-inline-start: 5px;
+                color: #ddd;
+                transition: all 0.4s ease-in-out;
+  
+              }
+  
+              .icon {
+                color: var(--main-color);
+                display: flex;
+                font-size: 32px;
+                flex-grow: 1;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.4s ease-in-out;
+  
+              }
+  
+              .text {
+                background-color: var(--main-color);
+                margin-bottom: 0;
+                text-align: center;
+                padding: 5px;
+                border-end-start-radius: 7px;
+                border-end-end-radius: 7px;
+                font-weight: bold;
+                transition: all 0.4s ease-in-out;
+                color: #fff;
+              }
+              &:hover {
+                // --main-color: #90ccfd;
+                transform: scale(1.05);
+                animation: pulse 1s linear  infinite;
+              }
+            }
+            input[type="checkbox"] {
+              display: none;
+              &:checked ~ label {
+                --main-color: #81c784;
+                &::before {
+                  content: '\f058';
+                  color: var(--main-color);
+                }
+                .text {
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}

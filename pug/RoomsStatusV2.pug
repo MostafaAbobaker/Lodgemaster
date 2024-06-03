@@ -1,0 +1,129 @@
+- var titlePage = 'RoomsStatusV2';
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .Dashboard-home.RoomsStatusV2
+      include includes/asideBar.pug
+      //- start Content category hotel
+      section.content-category-hotel 
+        include includes/headerNavBar.pug
+
+        //- Start Load Master page 
+        #pageMasterLoad.rooms-status
+          .container-fluid.pt-3 
+            .over-view(style="--Num-columns: 6;")
+              .card-item 
+                .card-item-body 
+                  h4.title Total Roms
+                  h3.number 312
+                .card-item-icon 
+                  .fa-solid.fa-bed 
+              .card-item.vip(style="--main-color: #FDD533;") 
+                .card-item-body 
+                  h4.title VIP
+                  h3.number 17
+                .card-item-icon 
+                  .fa-solid.fa-bed 
+              .card-item.triple 
+                .card-item-body 
+                  h4.title Triple
+                  h3.number 15
+                .card-item-icon 
+                  .fa-solid.fa-bed 
+              .card-item.double 
+                .card-item-body 
+                  h4.title Double
+                  h3.number 102
+                .card-item-icon 
+                  .fa-solid.fa-bed 
+              .card-item.single 
+                .card-item-body 
+                  h4.title Single
+                  h3.number 75
+                .card-item-icon 
+                  .fa-solid.fa-bed 
+              .card-item.maintenance 
+                .card-item-body 
+                  h4.title Maintenance
+                  h3.number 7
+                .card-item-icon 
+                  .fa-solid.fa-bed 
+            .container-room 
+              button.filter(class="btn btn-master  rounded-pill btn-Create-Order px-4" disabled) Add Rule
+              .floor 
+                h4 1st Floor
+                .container-floor 
+                  - var n = 0;
+                    while n <= 20
+                      .card-room( class=n == 1 || n == 7 ? "maintenance" : " "  title=n == 1 || n == 7 ? "Maintenance" : " "
+                                  class=n == 2 || n == 8 ? "single" : " "       
+                                  class=n == 3 || n == 9 ? "double" : " "       
+                                  class=n == 4 || n == 10 ? "triple" : " "      
+                                  class=n == 5 || n == 11 ? "vip" : " "          )
+                        input(id=`Room${n}` type="checkbox", name="")
+                        label(for=`Room${n}`) 
+                          .icon 
+                            .fa-solid.fa-bed 
+                          h5.text= `${100 + n++}`
+              .floor 
+                h4 2th Floor
+                .container-floor 
+                  - var h = 0;
+                    while h <= 20
+                      .card-room( class=h == 1 || h == 7 ? "maintenance" : " "  title=h == 1 || h == 7 ? "Maintenance" : " "
+                                  class=h == 2 || h == 8 ? "single" : " "       
+                                  class=h == 3 || h == 9 ? "double" : " "       
+                                  class=h == 4 || h == 10 ? "triple" : " "      
+                                  class=h == 5 || h == 11 ? "vip" : " "          )
+                        input(id=`Room2th${h}` type="checkbox", name="")
+                        label(for=`Room2th${h}`) 
+                          .icon 
+                            .fa-solid.fa-bed 
+                          h5.text= `${100 + h++}`
+              .floor 
+                h4 3th Floor
+                .container-floor 
+                  - var i = 0;
+                    while i <= 20
+                      .card-room( class=i == 1 || i == 7 ? "maintenance" : " "  title=i == 1 || i == 7 ? "Maintenance" : " "
+                                  class=i == 2 || i == 8 ? "single" : " "       
+                                  class=i == 3 || i == 9 ? "double" : " "       
+                                  class=i == 4 || i == 10 ? "triple" : " "      
+                                  class=i == 5 || i == 11 ? "vip" : " "          )
+                        input(id=`Room3th${i}` type="checkbox", name="")
+                        label(for=`Room3th${i}`) 
+                          .icon 
+                            .fa-solid.fa-bed 
+                          h5.text= `${100 + i++}`
+              .floor 
+                h4 4th Floor
+                .container-floor 
+                  - var z = 0;
+                    while z <= 20
+                      .card-room( class=z == 1 || z == 7 ? "maintenance" : " "  title=z == 1 || z == 7 ? "Maintenance" : " "
+                                  class=z == 2 || z == 8 ? "single" : " "       
+                                  class=z == 3 || z == 9 ? "double" : " "       
+                                  class=z == 4 || z == 10 ? "triple" : " "      
+                                  class=z == 5 || z == 11 ? "vip" : " "          )
+                        input(id=`Room4th${z}` type="checkbox", name="")
+                        label(for=`Room4th${z}`) 
+                          .icon 
+                            .fa-solid.fa-bed 
+                          h5.text= `${100 + z++}`                  
+                        
+          //- include ./CreateOrder.pug
+            
+
+
+      //- End Content category hotel
+    //- Start Modal
+    include includes/modal.pug 
+    include includes/script.pug
+    script(src="../assets/js/ajaxLoad.js") 
+    
+      
+
+
+

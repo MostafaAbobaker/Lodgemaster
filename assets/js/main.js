@@ -37,8 +37,8 @@ $(document).ready(function () {
       .removeClass("active");
     $("#demo .step-steps li.active").next().addClass("active");
   });
-  $("aside.aside-bar ul li").click(function () {
-    $(this).addClass("active").siblings().removeClass("active");
+  $(".icon-toggle").click(function () {
+    $(' .Dashboard-home').toggleClass("show-expand-aside ");
   });
   if ($("table.table").hasClass("table-responsive-scroll")) {
     $(".scroll-table").addClass("active");
@@ -68,12 +68,12 @@ $(document).ready(function () {
   $(".group-button .btn-outline-master").click(function () {
     $(this).addClass("active").siblings().removeClass('active');
   });
-  $(".expand-aside").click(function () {
-    $("aside.aside-bar").toggleClass("show-expand-aside");
-  });
-  $(".show-aside").click(function () {
-    $("aside.aside-bar").toggleClass("show-aside");
-  });
+  // $(".expand-aside").click(function () {
+  //   $("aside.aside-bar").toggleClass("show-expand-aside");
+  // });
+  // $(".show-aside").click(function () {
+  //   $("aside.aside-bar").toggleClass("show-aside");
+  // });
 
   $("#incrementButton").click(function () {
     if ($("#inputCount").val() < 99) {
@@ -123,5 +123,26 @@ $(document).ready(function () {
     $('#exampleDataList .form-control').val(labelInfo);
     $('#AddOrderItem ').attr("disabled", false);
     $(this).attr("disabled", true);
+  });
+  
+});
+
+
+
+/* Javascript */
+
+document.addEventListener('DOMContentLoaded', function () {
+  var collapses = document.querySelectorAll('#collapseGroup .collapse');
+  collapses.forEach(function (collapse) {
+      collapse.addEventListener('show.bs.collapse', function () {
+          collapses.forEach(function (otherCollapse) {
+              if (otherCollapse !== collapse) {
+                  var bsCollapse = new bootstrap.Collapse(otherCollapse, {
+                      toggle: false
+                  });
+                  bsCollapse.hide();
+              }
+          });
+      });
   });
 });
