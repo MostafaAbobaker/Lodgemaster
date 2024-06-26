@@ -1,0 +1,158 @@
+- var titlePage = 'DashboardChart';
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .Dashboard-home.show-expand-aside
+      include includes/asideBar.pug
+      //- start Content category hotel
+      section.content-category-hotel 
+        include includes/headerNavBar.pug
+
+    
+        //- Start Load Master page 
+        #pageMasterLoad.pt-3
+          .container-fluid 
+            .row
+              .col-lg-4.mb-3 
+                .card
+                  .card-header.p-3.mx-2.fw-bold Housekeeping 
+                  .card-body
+                    #HousekeepingChart
+              .col-lg-4.mb-3 
+                .card
+                  .card-header.p-3.mx-2.fw-bold Maintenance  
+                  .card-body
+                    #MaintenanceChart
+              .col-lg-4.mb-3 
+                .card
+                  .card-header.p-3.mx-2.fw-bold Management 
+                  .card-body
+                    #ManagementChart
+
+              .col-lg-6.mb-3
+                .card
+                  .card-header.p-3.mx-2.fw-bold Items 
+                  .card-body
+                    #ItemsChart
+
+      //- End Content category hotel
+    //- Start Modal
+    include includes/modal.pug 
+    include includes/script.pug
+    script(src="./assets/js/apexcharts.min.js") 
+    script(src="./assets/js/chartFun.js") 
+    //- script(src="../assets/js/ajaxLoad.js") 
+    script(src="https://nightly.datatables.net/js/jquery.dataTables.js") 
+    script(src="../assets/js/ajaxLoad.js") 
+    script.
+      var options = {
+        series: [2935, 188, 15, 11, 2926],
+
+        colors: ["#845fc3", "#c28252", "#6ac66a", "#5899be",  "#37a210" ,"#b85443"],
+
+        labels: ["Completed", "In Process", "ReOpen", "Hold", "Closed"],
+        legend: {
+          show: true,
+          position: "bottom"
+        },
+        chart: {
+          type: "donut"
+        }
+      };
+
+      var chart = new ApexCharts(document.querySelector("#HousekeepingChart"), options);
+      chart.render();
+
+
+      var options = {
+        series: [577 , 80, 15, 22, 528],
+
+        colors: ["#845fc3", "#c28252", "#6ac66a", "#5899be",  "#37a210" ,"#b85443"],
+
+        labels: ["Completed", "In Process", "ReOpen", "Hold", "Closed"],
+        legend: {
+          show: true,
+          position: "bottom"
+        },
+        chart: {
+          type: "donut"
+        }
+      };
+
+      var chart = new ApexCharts(document.querySelector("#MaintenanceChart"), options);
+      chart.render();
+
+
+      var options = {
+        series: [5 , 4, 2, 2, 1],
+
+        colors: ["#845fc3", "#c28252", "#6ac66a", "#5899be",  "#37a210" ,"#b85443"],
+
+        labels: ["Completed", "In Process", "ReOpen", "Hold", "Closed"],
+        legend: {
+          show: true,
+          position: "bottom"
+        },
+        chart: {
+          type: "donut"
+        }
+      };
+      var chart = new ApexCharts(document.querySelector("#ManagementChart"), options);
+      chart.render();
+
+
+
+
+       var options = {
+          series: [{
+          name: 'Total Count',
+          data: [44, 55, 41, 67, 22, 43, 21]
+        }, {
+          name: 'Remaining Count',
+          data: [13, 23, 20, 8, 13, 27, 33]
+        }],
+        
+        colors: ["#845fc3", "#c28252", "#6ac66a", "#5899be",  "#37a210" ,"#b85443"],
+          
+          chart: {
+          type: 'bar',
+          height: 350,
+          stacked: true,
+          stackType: '100%'
+        },
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            legend: {
+              position: 'bottom',
+              offsetX: -10,
+              offsetY: 0
+            }
+          }
+        }],
+        xaxis: {
+          categories: ['Makeup', 'Water', 'Blanket', 'Bath Towel', 'Other Housekeeping', 'Other Maintenance',
+            'Iron'
+          ],
+        },
+        fill: {
+          opacity: 1
+        },
+        legend: {
+          position: 'bottom',
+          
+        },
+        };
+
+        var chart = new ApexCharts(document.querySelector("#ItemsChart"), options);
+        chart.render();
+      
+      
+    
+
+
+
+
+

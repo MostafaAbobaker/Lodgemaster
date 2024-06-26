@@ -243,7 +243,14 @@
       margin-inline-start: var(--width-aside);
       transition: all 0.3s ease-in-out;
       min-height: 100svh;
+      @media (max-width: 1399.98px)  {
+        --width-aside : 90px;
+      }
+      @media (max-width: 767.98px) {
+        --width-aside : 0;
+      }
   }
+
   .header-filter {
     background-color: #fff;
     border-radius: 20px;
