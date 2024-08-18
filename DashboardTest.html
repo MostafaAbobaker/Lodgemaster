@@ -133,6 +133,23 @@
       <section class="content-category-hotel"> 
         <div class="pt-3" id="pageMasterLoad">
           <div class="container-fluid"> 
+            <ul class="nav nav-tabs ms-4" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Dashboard</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Pending Orders</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Guest Orders <span class="ms-2 p-2 badge text-bg-danger">9</span></button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" >All Orders</button>
+              </li>
+            </ul>
+            <div class="tab-content overview-Orders" id="myTabContent">
+              <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+
             <div class="row">
               <div class="col-lg-4 mb-3"> 
                 <div class="card">
@@ -161,7 +178,7 @@
               <div class="col-lg-4 mb-3"> 
                 <div class="card">
                   <div class="card-header p-3 mx-2 fw-bold">Order Status </div>
-                  <div class="card-body">
+                  <div class="card-body p-0">
                     <div id="OrderStatusChart">        </div>
                   </div>
                 </div>
@@ -184,8 +201,8 @@
                 <div class="card">
                   <div class="card-header p-3 mx-2 fw-bold">Maintenance</div>
                   <div class="card-body">
-                    <button class="d-flex justify-content-between btn-primary btn rounded-pill mb-5 w-100 px-3"> <span>Pending Issues</span><span>12 </span></button>
-                    <button class="d-flex justify-content-between btn-success btn rounded-pill w-100 px-3 mb-4"> <span>Completed today</span><span>7 </span></button>
+                    <a class="d-flex justify-content-between btn-light btn rounded-pill mb-4 w-100 px-3"> <span>Pending Issues</span><span>12 </span></a>
+                    <a class="d-flex justify-content-between btn-light btn rounded-pill w-100 px-3 mb-3"> <span>Completed today</span><span>7 </span></a>
                   </div>
                 </div>
               </div>
@@ -197,6 +214,12 @@
                   </div>
                 </div>
               </div>
+            </div>
+            </div>
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
+            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
+            <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div>
+          
             </div>
           </div>
         </div>
@@ -797,19 +820,21 @@
         chart.render();
       
       
-            
         var options = {
           series: [11, 3, 1, 20],
           labels: ["Pending", "In-process", "Hold",  "Closed" ],
-      
           chart: {
-            type: "donut",
-            width: 300,
-            pie: {
-              expandOnClick: false
-            }
-          },
-          legend: {
+          type: 'donut',
+            width: 350
+        },
+        dataLabels: {
+              enabled: true,
+              formatter: function (val) {
+                return Math.floor(val)
+              },
+              
+              },
+        legend: {
             show: true,
       
             position: "left",
@@ -823,29 +848,68 @@
               vertical: 5
             }
           },
-          dataLabels: {
-            enabled: false
-          },
-          responsive: [
-            {
-              breakpoint: 700,
-              options: {
-                chart: {},
-                legend: {
-                  show: false,
-                  position: "bottom",
-                  horizontalAlign: "center"
-                }
-              }
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: 'bottom'
             }
-          ]
-        };
+          }
+        }]
+        };    
+        // var options = {
+        //   series: [11, 3, 1, 20],
+        //   labels: ["Pending", "In-process", "Hold",  "Closed" ],
+      
+        //   chart: {
+        //     type: "donut",
+        //     width: 300,
+        //     pie: {
+        //       expandOnClick: false
+        //     }
+        //   },
+        //   legend: {
+        //     show: true,
+      
+        //     position: "left",
+        //     horizontalAlign: "center",
+        //     width: undefined,
+        //     height: undefined,
+        //     fontSize: "16px",
+        //     offsetX: 0,
+        //     offsetY: 0,
+        //     itemMargin: {
+        //       vertical: 5
+        //     }
+        //   },
+        //   dataLabels: {
+        //     enabled: false
+        //   },
+        //   responsive: [
+        //     {
+        //       breakpoint: 700,
+        //       options: {
+        //         chart: {},
+        //         legend: {
+        //           show: false,
+        //           position: "bottom",
+        //           horizontalAlign: "center"
+        //         }
+        //       }
+        //     }
+        //   ]
+        // };
       
         var chart = new ApexCharts(document.querySelector("#OrderStatusChart"), options);
         chart.render();
+
+
         var options = {
           series: [11, 2],
-          labels: ["Guest", "Employee" ],
+          labels: ["Guest (11)", "Employee (2)" ],
       
           chart: {
             type: "donut",
