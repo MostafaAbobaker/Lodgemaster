@@ -131,7 +131,7 @@
         </div>
       </aside>
       <section class="content-category-hotel"> 
-        <div class="pt-3" id="pageMasterLoad">
+        <div class="pt-4" id="pageMasterLoad">
           <div class="container-fluid"> 
             <ul class="nav nav-tabs ms-4" id="myTab" role="tablist">
               <li class="nav-item" role="presentation">
@@ -175,14 +175,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 mb-3"> 
-                <div class="card">
-                  <div class="card-header p-3 mx-2 fw-bold">Order Status </div>
-                  <div class="card-body p-0">
-                    <div id="OrderStatusChart">        </div>
-                  </div>
-                </div>
-              </div>
+              
               <div class="col-lg-8 mb-3"> 
                 <div class="card">
                   <div class="card-body">
@@ -194,6 +187,14 @@
                     <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="--bs-progress-height: 3rem;--bs-progress-border-radius: 50px;">
                       <div class="progress-bar bg-success" style="width: 45%">45%</div>
                     </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-3"> 
+                <div class="card">
+                  <div class="card-header p-3 mx-2 fw-bold">Order Status </div>
+                  <div class="card-body p-0">
+                    <div id="OrderStatusChart">        </div>
                   </div>
                 </div>
               </div>
@@ -217,7 +218,235 @@
             </div>
             </div>
             <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
-            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
+            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+
+
+              <div class="filter-table add-item-order">
+                <div class="row align-items-center">
+                  <div class="col d-flex align-items-center">
+                    <a class="btn-reset me-2"><i class="fa-solid fa-arrows-rotate"></i></a>
+                    <div class="input-group ">
+                      <select class="form-select " id="inputGroupSelect01" style="max-width: 200px;">
+                        <option selected>All</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <input type="search" class="form-control input-sesrch" placeholder="Search All">
+                    </div>
+                    
+                  </div>
+                  <div class="col-auto ">
+                    <a href="" class="px-1 "><i class="fa-solid fa-table-cells"></i></a>
+                    <a href="" class="px-1 "><i class="fa-solid fa-download"></i></a>
+                    <a href="" class="px-1 "><i class="fa-solid fa-sliders"></i></a>
+                  </div>
+                </div>
+              </div>
+              <table class="table table-hover table-responsive">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Age/order</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Issue</th>
+                    <th scope="col">Priority</th>
+                    <th scope="col">Guest</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Requestor</th>
+                    <th scope="col">Assigned</th>
+                    <th scope="col">Team</th>
+                    <th scope="col">Follow Up</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="align-middle">
+                    <td data-label="">  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </td>
+                    <td data-label="Status">
+                      <div class="dropdown">
+                      <a class="link-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-regular fa-circle-play fa-2x"></i>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </div></td>
+                    <td data-label="Age/order">138
+                      <div class="time"><i class="fa-regular fa-clock text-info me-1"></i> 8h 45m</div>
+                    </td>
+                    <td data-label="Type"><a href="" class="link-danger"><i class="fa-solid fa-fire fa-2x"></i></a></td>
+                    <td data-label="Issue">Towels - Requested
+                      <div class="acton">
+                        <a href=""  class="link-secondary"><i class="fa-solid fa-calendar-days"></i></a>
+                        <a href=""  class="link-secondary"><i class="fa-solid fa-money-check-dollar"></i></a>
+                        <a href=""  class="link-secondary"><i class="fa-solid fa-barcode"></i></a>
+                        <a href=""  class="link-secondary"><i class="fa-solid fa-paperclip"></i></a>
+                      </div>
+                    </td>
+                    <td data-label="Priority"> 
+                      <a class="py-1 px-2 bg-danger text-white rounded-circle" >1</a>
+                    </td>
+                    <td data-label="Guest">Karen Wilder</td>
+                    <td data-label="Location"> Guest room 101</td>
+                    <td data-label="Requestor"> Annesia Pyfro</td>
+                    <td data-label="Assigned"> Cliff Baldwin a</td>
+                    <td data-label="Team"> HouseKeeping</td>
+                    <td data-label="Follow Up"> <a href="" class="btn btn-danger">New <i class="fa-solid fa-arrow-up fa-rotate-by ms-1" style="--fa-rotate-angle: 45deg;"></i></a></td>
+                  </tr>
+                  <tr class="align-middle">
+                    <td data-label="">  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </td>
+                    <td data-label="Status">
+                      <div class="dropdown">
+                      <a class="link-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-circle-exclamation fa-2x"></i>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </div></td>
+                    <td data-label="Age/order">138
+                      <div class="time"><i class="fa-regular fa-clock text-info me-1"></i> 8h 45m</div>
+                    </td>
+                    <td data-label="Type"><a href="" class="link-danger"><i class="fa-solid fa-fire fa-2x"></i></a></td>
+                    <td data-label="Issue">Towels - Requested
+                      <div class="acton">
+                        <a href=""  class="link-secondary"><i class="fa-solid fa-calendar-days"></i></a>
+                        <a href=""  class="link-secondary"><i class="fa-solid fa-money-check-dollar"></i></a>
+                        <a href=""  class="link-secondary"><i class="fa-solid fa-barcode"></i></a>
+                        <a href=""  class="link-secondary"><i class="fa-solid fa-paperclip"></i></a>
+                      </div>
+                    </td>
+                    <td data-label="Priority"> 
+                      <a class="py-1 px-2 bg-success text-white rounded-circle" >3</a>
+                    </td>
+                    <td data-label="Guest">Karen Wilder</td>
+                    <td data-label="Location"> Guest room 101</td>
+                    <td data-label="Requestor"> Annesia Pyfro</td>
+                    <td data-label="Assigned"> Cliff Baldwin a</td>
+                    <td data-label="Team"> Engineering</td>
+                    <td data-label="Follow Up"> <a href="" class="btn btn-danger">New <i class="fa-solid fa-arrow-up fa-rotate-by ms-1" style="--fa-rotate-angle: 45deg;"></i></a></td>
+                  </tr>
+                  <tr class="align-middle">
+                    <td data-label="">  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </td>
+                    <td data-label="Status">
+                      <div class="dropdown">
+                      <a class="link-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-circle-exclamation fa-2x"></i>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </div></td>
+                    <td data-label="Age/order">138
+                      <div class="time"><i class="fa-regular fa-clock text-info me-1"></i> 8h 45m</div>
+                    </td>
+                    <td data-label="Type"><a href="" class="link-secondary"><i class="fa-solid fa-newspaper fa-2x"></i></a></td>
+                    <td data-label="Issue">Towels - Requested
+                      <div class="acton">
+                        <a href=""  class="link-secondary"><i class="fa-solid fa-calendar-days"></i></a>
+                        <a href=""  class="link-secondary"><i class="fa-solid fa-money-check-dollar"></i></a>
+                        <a href=""  class="link-secondary"><i class="fa-solid fa-barcode"></i></a>
+                        <a href=""  class="link-secondary"><i class="fa-solid fa-paperclip"></i></a>
+                      </div>
+                    </td>
+                    <td data-label="Priority"> 
+                      <a class="py-1 px-2 bg-warning text-white rounded-circle" >2</a>
+                    </td>
+                    <td data-label="Guest">Karen Wilder</td>
+                    <td data-label="Location"> Guest room 101</td>
+                    <td data-label="Requestor"> Annesia Pyfro</td>
+                    <td data-label="Assigned"> Cliff Baldwin a</td>
+                    <td data-label="Team"> Other</td>
+                    <td data-label="Follow Up"> <a href="" class="btn btn-danger">New <i class="fa-solid fa-arrow-up fa-rotate-by ms-1" style="--fa-rotate-angle: 45deg;"></i></a></td>
+                  </tr>
+                  <tr class="align-middle">
+                    <td data-label="">  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </td>
+                    <td data-label="Status">
+                      <div class="dropdown">
+                      <a class="link-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-regular fa-bell fa-2x"></i></i>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </div></td>
+                    <td data-label="Age/order">138
+                      <div class="time"><i class="fa-regular fa-clock text-info me-1"></i> 8h 45m</div>
+                    </td>
+                    <td data-label="Type"><a href="" class="link-secondary"><i class="fa-solid fa-truck-ramp-box fa-2x"></i></a></td>
+                    <td data-label="Issue">Towels - Requested
+                      <div class="acton">
+                        <a href=""  class="link-secondary"><i class="fa-solid fa-calendar-days"></i></a>
+                        <a href=""  class="link-secondary"><i class="fa-solid fa-money-check-dollar"></i></a>
+                        <a href=""  class="link-secondary"><i class="fa-solid fa-barcode"></i></a>
+                        <a href=""  class="link-secondary"><i class="fa-solid fa-paperclip"></i></a>
+                      </div>
+                    </td>
+                    <td data-label="Priority"> 
+                      <a class="py-1 px-2 bg-warning text-white rounded-circle" >2</a>
+                    </td>
+                    <td data-label="Guest">Karen Wilder</td>
+                    <td data-label="Location"> Guest room 101</td>
+                    <td data-label="Requestor"> Annesia Pyfro</td>
+                    <td data-label="Assigned"> Cliff Baldwin a</td>
+                    <td data-label="Team"> Other</td>
+                    <td data-label="Follow Up"> <a href="" class="btn btn-danger">New <i class="fa-solid fa-arrow-up fa-rotate-by ms-1" style="--fa-rotate-angle: 45deg;"></i></a></td>
+                  </tr>
+                  <tr class="align-middle">
+                    <td data-label="">  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </td>
+                    <td data-label="Status">
+                      <div class="dropdown">
+                      <a class="link-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-circle-exclamation fa-2x"></i>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </div></td>
+                    <td data-label="Age/order">138
+                      <div class="time"><i class="fa-regular fa-clock text-info me-1"></i> 8h 45m</div>
+                    </td>
+                    <td data-label="Type"><a href="" class="link-secondary"><i class="fa-solid fa-newspaper fa-2x"></i></a></td>
+                    <td data-label="Issue">Towels - Requested
+                      <div class="acton">
+                        <a href=""  class="link-info"><i class="fa-solid fa-calendar-days"></i></a>
+                        <a href=""  class="link-secondary"><i class="fa-solid fa-money-check-dollar"></i></a>
+                        <a href=""  class="link-secondary"><i class="fa-solid fa-barcode"></i></a>
+                        <a href=""  class="link-secondary"><i class="fa-solid fa-paperclip"></i></a>
+                      </div>
+                    </td>
+                    <td data-label="Priority"> 
+                      <a class="py-1 px-2 bg-warning text-white rounded-circle" >2</a>
+                    </td>
+                    <td data-label="Guest">Karen Wilder</td>
+                    <td data-label="Location"> Guest room 101</td>
+                    <td data-label="Requestor"> Annesia Pyfro</td>
+                    <td data-label="Assigned"> Cliff Baldwin a</td>
+                    <td data-label="Team"> Other</td>
+                    <td data-label="Follow Up"> <a href="" class="btn btn-danger">New <i class="fa-solid fa-arrow-up fa-rotate-by ms-1" style="--fa-rotate-angle: 45deg;"></i></a></td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+
             <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div>
           
             </div>
@@ -225,491 +454,7 @@
         </div>
       </section>
     </div>
-    <!-- Modal-->
-    <div class="modal fade model-filter-home" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div class="container-fluid"> 
-              <div class="row"> 
-                <div class="col-lg-12 mb-3"> 
-                  <h4 class="title">Status</h4>
-                  <div class="group-button-toggle">
-                    <div class="btn-toggle mx-2 bg-outline-open rounded-pill d-flex align-items-center p-2"> 
-                      <div class="icon me-1"> <i class="fa-regular fa-circle-play"></i></div>
-                      <div class="text">Open</div>
-                    </div>
-                    <div class="btn-toggle mx-2 bg-outline-process rounded-pill d-flex align-items-center p-2"> 
-                      <div class="icon me-1"> <i class="fa-regular fa-clock"></i></div>
-                      <div class="text">In process</div>
-                    </div>
-                    <div class="btn-toggle mx-2 bg-outline-Completed rounded-pill d-flex align-items-center p-2"> 
-                      <div class="icon me-1"> <i class="fa-regular fa-circle-check"></i></div>
-                      <div class="text">Completed</div>
-                    </div>
-                    <div class="btn-toggle mx-2 bg-outline-Hold rounded-pill d-flex align-items-center p-2"> 
-                      <div class="icon me-1"> <i class="fa-regular fa-circle-pause"></i></div>
-                      <div class="text">Hold  </div>
-                    </div>
-                    <div class="btn-toggle mx-2 bg-outline-Closed rounded-pill d-flex align-items-center p-2"> 
-                      <div class="icon me-1"> <i class="fa-solid fa-lock"></i></div>
-                      <div class="text">Closed</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 mb-3">
-                  <label class="fw-bold">Order number</label>
-                  <div class="d-flex mb-3 flex-wrap">
-                    <div class="form-group d-flex col-md-6 px-2 align-items-center col-sm-12 mb-3">
-                      <label class="col-4 text-end pe-2" for="">From</label>
-                      <input class="form-control" type="text">
-                    </div>
-                    <div class="form-group d-flex col-md-6 px-2 align-items-center col-sm-12 mb-3">
-                      <label class="col-4 text-end pe-2" for="">To</label>
-                      <input class="form-control" type="text">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="fw-bold" for="">Location</label>
-                    <input class="form-control" type="text">
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <label class="fw-bold">Run Time</label>
-                  <div class="d-flex mb-3 flex-wrap">
-                    <div class="form-group d-flex col-md-6 align-items-center col-sm-12 mb-3 col-lg-6">
-                      <label class="col-4 text-end pe-2" for="">From</label>
-                      <input class="form-control" type="time">
-                    </div>
-                    <div class="form-group d-flex col-md-6 align-items-center col-sm-12 mb-3 col-lg-6">
-                      <label class="col-4 text-end pe-2" for="">To</label>
-                      <input class="form-control" type="time">
-                    </div>
-                  </div>
-                  <label class="fw-bold">Date</label>
-                  <div class="d-flex mb-3 flex-wrap">
-                    <div class="form-group d-flex col-md-6 align-items-center col-sm-12 mb-3 col-lg-6">
-                      <label class="col-4 text-end pe-2" for="">From</label>
-                      <input class="form-control" type="date">
-                    </div>
-                    <div class="form-group d-flex col-md-6 align-items-center col-sm-12 mb-3 col-lg-6">
-                      <label class="col-4 text-end pe-2" for="">To</label>
-                      <input class="form-control" type="date">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer justify-content-start"> 
-            <button class="btn btn-primary btn-apply rounded-pill col-7" type="button">Apply Filters</button>
-            <button class="btn btn-light rounded-pill" type="button" data-bs-dismiss="modal">Cancel</button>
-            <button class="btn btn-light rounded-pill" type="button">Reset</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade model-filter-home" id="AddItem" tabindex="-1" aria-labelledby="AddItemLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Add Item</h1>
-            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid"> 
-              <div class="row"> 
-                <div class="col-lg-12 mb-2">
-                  <div class="form-group">
-                    <label>English Name</label>
-                    <input class="form-control" type="text">
-                  </div>
-                </div>
-                <div class="col-lg-12 mb-2">
-                  <div class="form-group">
-                    <label>Arabic Name</label>
-                    <input class="form-control" type="text">
-                  </div>
-                </div>
-                <div class="col-lg-12 mb-2">
-                  <div class="form-group">
-                    <label>Department</label>
-                    <select class="form-select select-color w-100" aria-label="Default select example">
-                      <option selected="">Maintenance</option>
-                      <option value="1">Reception </option>
-                      <option value="2">Delivery</option>
-                      <option value="3">Procurement</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-lg-12 mb-2">
-                  <div class="form-check content-check-box">
-                    <input class="form-check-input check-service" id="flexCheckDefault" type="checkbox" value="">
-                    <label class="form-check-label" for="flexCheckDefault">Service</label>
-                    <div class="row"> 
-                      <div class="col-lg-12 mb-2">
-                        <div class="form-check form-switch d-flex p-0"><span>
-                            <label class="form-check-label" for="flexSwitchCheckDefault">outStock</label></span>
-                          <input class="mx-2 form-check-input" id="flexSwitchCheckDefault" type="checkbox" role="switch">
-                          <label class="form-check-label" for="flexSwitchCheckDefault">InStock </label>
-                        </div>
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="form-group">
-                          <label>Quantity</label>
-                          <input class="form-control" type="text">
-                        </div>
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="form-group">
-                          <label>Minima Quantity</label>
-                          <input class="form-control" type="text">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer justify-content-start"> 
-            <button class="btn btn-primary btn-apply rounded-pill col-12" type="button" data-bs-toggle="modal" data-bs-target="#ConfirmAddItem">ADD </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade model-filter-home" id="ChangeAssignee" tabindex="-1" aria-labelledby="ChangeAssigneeLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Assign to</h1>
-            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid"> 
-              <div class="row"> 
-                <div class="col-lg-12 mb-3">
-                  <div class="form-group">
-                    <select class="form-select select-color" aria-label="Default select example">
-                      <option selected="">Katef</option>
-                      <option value="1">Ali </option>
-                      <option value="2">Alaa</option>
-                      <option value="3">Amer</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer justify-content-start"> 
-            <button class="btn btn-primary btn-apply rounded-pill col-12" type="button" data-bs-toggle="modal" data-bs-target="#ConfirmAddItem">Change </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade model-filter-home" id="ChangeDeferred" tabindex="-1" aria-labelledby="ChangeDeferredLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel"> Defer</h1>
-            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid"> 
-              <div class="row"> 
-                <div class="col-lg-12 mb-3">
-                  <div class="form-group">
-                    <input class="form-control" type="date" name="">
-                  </div>
-                </div>
-                <div class="col-lg-12 mb-3">
-                  <div class="form-group">
-                    <input class="form-control" type="time" name="">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer justify-content-start"> 
-            <button class="btn btn-primary btn-apply rounded-pill col-12" type="button" data-bs-toggle="modal" data-bs-target="#ConfirmAddItem">Change </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade model-filter-home" id="ChangeDepartment" tabindex="-1" aria-labelledby="ChangeDepartmentLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Department</h1>
-            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid"> 
-              <h5 class="mb-3">Department</h5>
-              <select class="form-select select-color" aria-label="Default select example">
-                <option selected="">Maintenance</option>
-                <option value="1">Reception </option>
-                <option value="2">Delivery</option>
-                <option value="3">Procurement      </option>
-              </select>
-            </div>
-          </div>
-          <div class="modal-footer justify-content-start"> 
-            <button class="btn btn-primary btn-apply rounded-pill col-12" type="button" data-bs-toggle="modal" data-bs-target="#ConfirmAddItem">Change </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade model-state-Table" id="modelStateTable" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <div class="modal-title d-flex flex-wrap align-items-center"> 
-              <div class="bg-open text-dark rounded-pill px-4 py-1 mb-2">Open</div>
-              <div class="inputs-group mx-3 mb-2"> 
-                <div class="label">Order Created</div>
-                <div class="input-value d-flex algin-items-center"> <span class="icon me-2 text-primary"> <i class="fa-solid fa-calendar-days fa-fw"></i></span><span class="text">15 May, 2023</span></div>
-              </div>
-              <div class="inputs-group mx-3 mb-2"> 
-                <div class="label">&nbsp;</div>
-                <div class="input-value d-flex algin-items-center"> <span class="icon me-2 text-primary"> <i class="fa-regular fa-clock fa-fw"></i></span><span class="text">2:00PM</span></div>
-              </div>
-              <div class="inputs-group mx-3 mb-2"> 
-                <div class="label">Run time</div>
-                <div class="input-value d-flex algin-items-center"> <span class="icon me-2 text-primary"> <i class="fa-solid fa-hourglass fa-fw"></i></span><span class="text">02 h: 05 minutes</span></div>
-              </div>
-            </div>
-            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body p-0">
-            <div class="container-fluid"> 
-              <div class="row"> 
-                <div class="col-lg-7 col-md-12 col-sm-12"></div>
-                <div class="col-lg-5 col-md-12 col-sm-12">
-                  <div class="Recent-part p-3"> 
-                    <h5 class="title">Recent Activity</h5>
-                    <div class="list-group">
-                      <div class="list-group-item list-group-item-action">
-                        <div class="d-flex w-100 justify-content-between">
-                          <h5 class="mb-1 title">Hassan Task Created</h5><small>20 min ago</small>
-                        </div><small class="note">Created at 15/05/202 - 2:00PM</small>
-                      </div>
-                      <div class="list-group-item list-group-item-action">
-                        <div class="d-flex w-100 justify-content-between">
-                          <h5 class="mb-1 title">Hassan Added Products</h5><small>25 min ago</small>
-                        </div><small class="note">Added at 15/05/202 - 2:00PM</small>
-                      </div>
-                      <div class="list-group-item list-group-item-action">
-                        <div class="d-flex w-100 justify-content-between">
-                          <h5 class="mb-1 title">Hassan Assigned to Kattef</h5><small>35 min ago</small>
-                        </div><small class="note">Assigned at 15/05/202 - 2:00PM</small>
-                      </div>
-                      <div class="list-group-item list-group-item-action">
-                        <div class="d-flex w-100 justify-content-between">
-                          <h5 class="mb-1 title">Hassan Assigned to Kattef</h5><small>35 min ago</small>
-                        </div><small class="note">Added at 15/05/202 - 2:00PM</small>
-                      </div>
-                      <div class="list-group-item list-group-item-action">
-                        <div class="d-flex w-100 justify-content-between">
-                          <h5 class="mb-1 title">Kattef Completed Order</h5><small>35 min ago</small>
-                        </div><small class="note">Added at 15/05/202 - 2:00PM</small>
-                      </div>
-                      <div class="list-group-item list-group-item-action">
-                        <div class="d-flex w-100 justify-content-between">
-                          <h5 class="mb-1 title">Hassan Marked as finished</h5><small>35 min ago</small>
-                        </div><small class="note">Added at 15/05/202 - 2:00PM</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal-->
-    <div class="modal fade" id="OrderPlaced" tabindex="-1" aria-labelledby="OrderPlacedLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered"> 
-        <div class="modal-content">
-          <div class="modal-body text-center p-5">
-            <div class="icon mb-3 text-primary"> <i class="fa-solid fa-circle-check fa-fw fa-9x"> </i></div>
-            <h3 class="mb-3 fw-bold"> Order Placed</h3>
-            <p class="mb-3"> Your has been order placed and SMS has been sent successfully. To Preview the SMS <a href="">Click here</a></p><a class="btn btn-master px-5 rounded-pill btn-Create-Order" href="CreateOrderGeneralAddItem.html">Continue</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal-->
-    <div class="modal fade" id="OrderSMS" tabindex="-1" aria-labelledby="OrderSMSLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body text-center p-5">
-            <div class="icon mb-3 text-primary"> <i class="fa-solid fa-circle-check fa-fw fa-9x"> </i></div>
-            <h3 class="mb-3 fw-bold"> Message Resent</h3>
-            <p class="mb-3"> Your has been resent.</p><a class="btn btn-master px-5 rounded-pill btn-Create-Order" href="LayoutDashboard.html">Continue</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="ConfirmAddItem" tabindex="-1" aria-labelledby="OrderSMSLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body text-center p-5">
-            <div class="icon mb-3 text-primary"> <i class="fa-solid fa-circle-check fa-fw fa-9x"> </i></div>
-            <h3 class="mb-3 fw-bold"> Item Added</h3>
-            <p class="mb-3"> Your item has been added successfully.</p><a class="btn btn-master px-5 rounded-pill btn-Create-Order" href="Items.html">Continue</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="ConfirmSteps" tabindex="-1" aria-labelledby="ConfirmStepsLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body text-center p-5">
-            <div class="icon mb-3 text-primary"> <i class="fa-solid fa-circle-check fa-fw fa-9x"> </i></div>
-            <h3 class="mb-3 fw-bold"> Inspection submitted</h3>
-            <p class="mb-3"> Your inspection has been submitted. Thank you so much</p><a class="btn btn-master px-5 rounded-pill btn-Create-Order" href="LayoutDashboard.html">Continue</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="PublishSetupRoom" tabindex="-1" aria-labelledby="PublishSetupRoomLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body text-center p-5">
-            <div class="icon mb-3 text-primary"> <i class="fa-solid fa-circle-check fa-fw fa-9x"> </i></div>
-            <h3 class="mb-3 fw-bold"> Inspection form Published</h3>
-            <p class="mb-3"> Your inspection has been published.</p><a class="btn btn-master px-5 rounded-pill btn-Create-Order" href="Inspection.html">Continue</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="AddUser" tabindex="-1" aria-labelledby="AddUserLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body text-center p-5">
-            <div class="icon mb-3 text-primary"> <i class="fa-solid fa-circle-check fa-fw fa-9x"> </i></div>
-            <h3 class="mb-3 fw-bold"> User Added</h3>
-            <p class="mb-3"> We have sent email to added email address to login.</p><a class="btn btn-master px-5 rounded-pill btn-Create-Order" href="LayoutDashboard.html">Continue</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="AddDepartment" tabindex="-1" aria-labelledby="AddDepartmentLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body text-center p-5">
-            <div class="icon mb-3 text-primary"> <i class="fa-solid fa-circle-check fa-fw fa-9x"> </i></div>
-            <h3 class="mb-3 fw-bold"> Department Added</h3>
-            <p class="mb-3"> We have sent email to added email address to login.</p><a class="btn btn-master px-5 rounded-pill btn-Create-Order" href="LayoutDashboard.html">Continue</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="PasswordChanged" tabindex="-1" aria-labelledby="PasswordChangedLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body text-center p-5">
-            <div class="icon mb-3 text-primary"> <i class="fa-solid fa-circle-check fa-fw fa-9x"> </i></div>
-            <h3 class="mb-3 fw-bold">Password has been changed.</h3><a class="btn btn-master px-5 rounded-pill btn-Create-Order" href="ProfileSettings.html">Continue</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="AddPhone" tabindex="-1" aria-labelledby="AddPhoneLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body text-center p-5">
-            <h3 class="mb-3 fw-bold text-primary">Add new mobile number</h3>
-            <p class="mb-3"> Please add your mobile number here, we will be verifying the mobile number by sending 4 digit OTP</p>
-            <div class="mb-3">
-              <input class="form-control" id="exampleFormControlInput1" type="text" placeholder="+966 55 176 6662">
-            </div><a class="btn btn-master px-5 rounded-pill btn-Create-Order" href="#" data-bs-toggle="modal" data-bs-target="#PasswordOTP">Submit</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="AddEmail" tabindex="-1" aria-labelledby="AddEmailLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body text-center p-5">
-            <h3 class="mb-3 fw-bold text-primary">Add email address</h3>
-            <p class="mb-3"> Please add your email address here, we will be verifying the email by sending 4 digit OTP</p>
-            <div class="mb-3">
-              <input class="form-control" id="exampleFormControlInput1" type="email" placeholder="name@example.com">
-            </div><a class="btn btn-master px-5 rounded-pill btn-Create-Order" href="#" data-bs-toggle="modal" data-bs-target="#EmailOTP">Submit</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="EmailOTP" tabindex="-1" aria-labelledby="EmailOTPLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body text-center p-5">
-            <h3 class="mb-3 fw-bold text-primary">Email OTP Verification</h3>
-            <p class="mb-3"> Please type OTP as shared on your email address</p>
-            <div class="inputs-otp">
-              <input class="input-otp" type="number">
-              <input class="input-otp" type="number" disabled="">
-              <input class="input-otp" type="number" disabled="">
-              <input class="input-otp" type="number" disabled="">
-            </div>
-            <p>OTP not recieved? <a href="#">RESEND</a></p><a class="btn btn-primary px-5 rounded-pill Verify" href="#" disabled data-bs-toggle="modal" data-bs-target="#VerifyEmail">Verify</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="VerifyEmail" tabindex="-1" aria-labelledby="VerifyEmailLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body text-center p-5">
-            <div class="icon mb-3 text-primary"> <i class="fa-solid fa-circle-check fa-fw fa-9x"> </i></div>
-            <h3 class="mb-3 fw-bold">Verification Complete</h3>
-            <p class="mb-3">Thank you for verifying the email address. Your new email has been added.</p><a class="btn btn-master px-5 rounded-pill btn-Create-Order" href="ProfileSettings.html">Continue</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="PasswordOTP" tabindex="-1" aria-labelledby="PasswordOTPLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body text-center p-5">
-            <h3 class="mb-3 fw-bold text-primary">Mobile number verification</h3>
-            <p class="mb-3"> Please type OTP as shared on your mobile number +966 55 176 6662</p>
-            <div class="inputs-otp">
-              <input class="input-otp" type="number">
-              <input class="input-otp" type="number" disabled="">
-              <input class="input-otp" type="number" disabled="">
-              <input class="input-otp" type="number" disabled="">
-            </div>
-            <p>OTP not recieved? <a href="#">RESEND</a></p><a class="btn btn-primary px-5 rounded-pill Verify" href="#" disabled data-bs-toggle="modal" data-bs-target="#VerifyPassword">Verify</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="VerifyPassword" tabindex="-1" aria-labelledby="VerifyPasswordLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body text-center p-5">
-            <div class="icon mb-3 text-primary"> <i class="fa-solid fa-circle-check fa-fw fa-9x"> </i></div>
-            <h3 class="mb-3 fw-bold">Verification Complete</h3>
-            <p class="mb-3">Thank you for verifying the number. Your new mobile number has been added.</p><a class="btn btn-master px-5 rounded-pill btn-Create-Order" href="ProfileSettings.html">Continue</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="ViewImageModal" tabindex="-1" aria-labelledby="ViewImageModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Image test.jpg</h1>
-            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body text-center p-0" style="height: 500px"><img class="w-100 h-100" src="../../assets/images/NewProject2.png" alt="" style="    object-fit: contain;"></div>
-        </div>
-      </div>
-    </div>
+    
     <script src="./assets/js/jquery-3.6.3.min.js"> </script>
     <script src="./assets/js/bootstrap.bundle.min.js"> </script>
     <script src="./assets/js/select2.min.js"> </script>
@@ -822,7 +567,7 @@
       
         var options = {
           series: [11, 3, 1, 20],
-          labels: ["Pending", "In-process", "Hold",  "Closed" ],
+          labels: ["Pending (11)", "In-process (3)", "Hold (1)",  "Closed (20 )" ],
           chart: {
           type: 'donut',
             width: 350
@@ -849,60 +594,16 @@
             }
           },
         responsive: [{
-          breakpoint: 480,
+          breakpoint: 1000,
           options: {
-            chart: {
-              width: 200
-            },
+            
             legend: {
               position: 'bottom'
             }
           }
         }]
         };    
-        // var options = {
-        //   series: [11, 3, 1, 20],
-        //   labels: ["Pending", "In-process", "Hold",  "Closed" ],
-      
-        //   chart: {
-        //     type: "donut",
-        //     width: 300,
-        //     pie: {
-        //       expandOnClick: false
-        //     }
-        //   },
-        //   legend: {
-        //     show: true,
-      
-        //     position: "left",
-        //     horizontalAlign: "center",
-        //     width: undefined,
-        //     height: undefined,
-        //     fontSize: "16px",
-        //     offsetX: 0,
-        //     offsetY: 0,
-        //     itemMargin: {
-        //       vertical: 5
-        //     }
-        //   },
-        //   dataLabels: {
-        //     enabled: false
-        //   },
-        //   responsive: [
-        //     {
-        //       breakpoint: 700,
-        //       options: {
-        //         chart: {},
-        //         legend: {
-        //           show: false,
-        //           position: "bottom",
-        //           horizontalAlign: "center"
-        //         }
-        //       }
-        //     }
-        //   ]
-        // };
-      
+        
         var chart = new ApexCharts(document.querySelector("#OrderStatusChart"), options);
         chart.render();
 
@@ -910,24 +611,16 @@
         var options = {
           series: [11, 2],
           labels: ["Guest (11)", "Employee (2)" ],
-      
           chart: {
             type: "donut",
             width: 300,
-            pie: {
-              expandOnClick: false
-            }
           },
           legend: {
             show: true,
       
             position: "left",
             horizontalAlign: "center",
-            width: undefined,
-            height: undefined,
             fontSize: "16px",
-            offsetX: 0,
-            offsetY: 0,
             itemMargin: {
               vertical: 5
             }
@@ -937,13 +630,11 @@
           },
           responsive: [
             {
-              breakpoint: 700,
+              breakpoint: 1000,
               options: {
                 chart: {},
                 legend: {
-                  show: false,
                   position: "bottom",
-                  horizontalAlign: "center"
                 }
               }
             }
