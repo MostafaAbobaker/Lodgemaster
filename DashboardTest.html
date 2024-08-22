@@ -175,22 +175,7 @@
                   </div>
                 </div>
               </div>
-              
-              <div class="col-lg-8 mb-3"> 
-                <div class="card">
-                  <div class="card-body">
-                    <label class="mb-2" for="">   Pending inspection    </label>
-                    <div class="progress mb-5" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="--bs-progress-height: 3rem;--bs-progress-border-radius: 50px;">
-                      <div class="progress-bar bg-danger" style="width: 25%">25%</div>
-                    </div>
-                    <label class="mb-2" for="">       Today’s inspected rooms</label>
-                    <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="--bs-progress-height: 3rem;--bs-progress-border-radius: 50px;">
-                      <div class="progress-bar bg-success" style="width: 45%">45%</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 mb-3"> 
+              <div class="col-lg-6 mb-3"> 
                 <div class="card">
                   <div class="card-header p-3 mx-2 fw-bold">Order Status </div>
                   <div class="card-body p-0">
@@ -198,7 +183,23 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-8 mb-3"> 
+              <div class="col-lg-6 mb-3"> 
+                <div class="card">
+                  <div class="card-header p-3 mx-2 fw-bold">Order Status </div>
+                  <div class="card-body">
+                    <label class="mb-1" for="">   Pending inspection    </label>
+                    <div class="progress mb-3" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="--bs-progress-height: 1rem;--bs-progress-border-radius: 50px;">
+                      <div class="progress-bar bg-danger" style="width: 25%">25%</div>
+                    </div>
+                    <label class="mb-1" for="">       Today’s inspected rooms</label>
+                    <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="--bs-progress-height: 1rem;--bs-progress-border-radius: 50px;">
+                      <div class="progress-bar bg-success" style="width: 45%">45%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-6 mb-3"> 
                 <div class="card">
                   <div class="card-header p-3 mx-2 fw-bold">Maintenance</div>
                   <div class="card-body">
@@ -207,10 +208,10 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 mb-3"> 
+              <div class="col-lg-6 mb-3"> 
                 <div class="card">
                   <div class="card-header p-3 mx-2 fw-bold">Order Status </div>
-                  <div class="card-body">
+                  <div class="card-body p-0">
                     <div id="StatusOrderChart">        </div>
                   </div>
                 </div>
@@ -566,11 +567,11 @@
       
       
         var options = {
-          series: [11, 3, 1, 20],
-          labels: ["Pending (11)", "In-process (3)", "Hold (1)",  "Closed (20 )" ],
+          series: [11, 3, 1],
+          labels: ["Pending (11)", "In-process (3)", "Hold (1)" ],
           chart: {
           type: 'donut',
-            width: 350
+            height: 140
         },
         dataLabels: {
               enabled: true,
@@ -613,7 +614,7 @@
           labels: ["Guest (11)", "Employee (2)" ],
           chart: {
             type: "donut",
-            width: 300,
+            height: 140,
           },
           legend: {
             show: true,
@@ -644,5 +645,11 @@
         var chart = new ApexCharts(document.querySelector("#StatusOrderChart"), options);
         chart.render();
     </script>
+
+    <style>
+      #SvgjsG1295 , #SvgjsG1345 {
+        transform: translate(50%, 0);
+      }
+    </style>
   </body>
 </html>
