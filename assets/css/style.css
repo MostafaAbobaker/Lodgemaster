@@ -2288,6 +2288,59 @@ aside.aside-bar .body-aside-bar ul li:hover > a {
   font-size: 1.2rem;
 }
 
+.time-management {
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
+}
+.time-management .category-item {
+  display: block;
+  width: 100%;
+  margin: auto;
+  background-color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 30px;
+  border-radius: 15px;
+  transition: all 0.4s ease-in-out;
+}
+.time-management .category-item .image {
+  margin-bottom: 15px;
+}
+.time-management .category-item .image img {
+  height: 100px;
+  transition: all 0.4s ease-in-out;
+}
+.time-management .category-item .heder-category-item {
+  font-weight: bold;
+  font-size: 22px;
+  transition: all 0.4s ease-in-out;
+  color: #333;
+}
+.time-management .category-item:hover {
+  background-color: #005daa;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.time-management .category-item:hover img {
+  filter: brightness(0) invert(1);
+}
+.time-management .category-item:hover .heder-category-item {
+  color: #fff;
+}
+.time-management input::-webkit-outer-spin-button,
+.time-management input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.time-management input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.dataTables_length, .dataTables_filter {
+  display: none !important;
+}
+
 body {
   font-family: "Helvetica", sans-serif;
 }

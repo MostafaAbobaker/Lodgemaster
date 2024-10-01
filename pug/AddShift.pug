@@ -1,0 +1,76 @@
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .Dashboard-home.time-management
+      include includes/headerNavBar.pug
+      include includes/asideBar.pug
+      //- start Content category hotel
+      section.content-category-hotel 
+        //- Start Filter
+        //- include includes/FilterDashboard.pug
+        //- End Filter
+        //- Start Load Master page 
+        #pageMasterLoad
+          //- Start Create Order
+          .Create-Order
+            .container 
+              .row 
+                .col-lg-12 
+                  //- Start Create Order
+                  .Create-Order.mt-4
+                    .container-fluid 
+                      .row.justify-content-center
+                        .col-lg-10 
+                          .card-master.mb-4
+                            .title-card.position-relative.text-center
+                              a.position-absolute.top-0.start-0(href="TimeManagement.html")
+                                i.fa-solid.fa-arrow-left-long
+                              h4.mb-4.fw-bold Add Shift
+                          .card-master.mb-4    
+                            .body-card
+                              
+                                
+                              .container-fluid
+                                .row.justify-content-center
+                                  .col-lg-8.col-md-12.col-sm-12.mb-4.p-0
+                                    .mb-3 
+                                      label(for="") English Name
+                                      input.form-control(type="text", name="")
+                                    .mb-3 
+                                      label(for="") Arabic Name
+                                      input.form-control(type="text", name="")
+                                    .mb-3 
+                                      label(for="") Start Time 
+                                      input.form-control(type="time", name="")
+                                    .mb-3 
+                                      label(for="") End Time 
+                                      input.form-control(type="time", name="")
+                          
+                                
+                                  
+                          a.btn.btn-dark.d-block.w-100.mb-5.p-3(href='button' data-bs-toggle="modal" data-bs-target="#OrderPlaced") Save
+        
+
+
+
+                    //- End Create Order
+                  
+   
+            
+
+
+                    //- End Content category hotel
+    //- Start Modal
+    include includes/modal.pug 
+    include includes/script.pug
+    script(src="../assets/js/ajaxLoad.js") 
+    
+      
+
+
+
+     
+//- End Create Order
+

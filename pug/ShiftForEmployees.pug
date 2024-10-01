@@ -1,0 +1,311 @@
+- var titlePage = 'RoomsStatus';
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .Dashboard-home
+      include includes/asideBar.pug
+      //- start Content category hotel
+      section.content-category-hotel 
+        include includes/headerNavBar.pug
+
+        //- Start Load Master page 
+        #pageMasterLoad.rooms-status
+          .container-fluid.pt-3 
+            header.header-filter.align-items-end
+              .over-view.w-50(style="--Num-columns-xl: 3; --Num-columns-md: 3 ; --Num-columns-sm: 2 ")
+                .card-item(style="--main-color: #ede6f9") 
+                    h3.number 312 
+                    .title 
+                      i.fa-solid.fa-user-tie
+                      span.text Total Employees
+                .card-item.vip(style="--main-color: #fadec9") 
+                    h3.number 17 
+                    .title 
+                      i.fa-solid.fa-building-user
+                      span.text Annual leave 
+            
+              .group-filter.d-flex 
+                .input-group.me-3
+                  input.form-control(type='search', placeholder="Search", aria-label="Recipient's username", aria-describedby='button-addon2')
+                  button#button-addon2.btn.btn-outline-master(type='button') 
+                    i.fa-solid.fa-magnifying-glass
+
+            table#dataTables.table.table-hover.table-responsive-scroll.data-Tables.table-striped
+                      thead
+                        tr
+                          th(scope='col')  
+                          th.w-25(scope='col') Name
+                          th(scope='col') UF Shift Status
+                          th(scope='col') Max Credits
+                          th(scope='col') Max zones
+                          th(scope='col') Room Sets
+                          th(scope='col') Shift Type 
+                          th(scope='col') Weekend
+                          th(scope='col') Notes
+                      tbody
+                        tr
+                          td.align-middle 
+                              input#1.form-check-input(type='checkbox', value='')
+
+                          td.align-middle(data-label="Name") 
+                             label.d-block.w-100(for="1") Abd El Rahman Ma...
+                          td(data-label="UF Shift Status") 
+                            input.form-control(type='number' , name="") 
+                          td(data-label="Max Credits") 
+                            input.form-control(type='number' , name="") 
+                          td(data-label="Max zones") 
+                            input.form-control(type='number' , name="")
+                          td(data-label="Room Sets") 
+                            input.form-control(type='number' , name="")
+                          td(data-label="Shift Type ")  
+                            select.form-select(aria-label='Default select example')
+                              option(selected='') Open this select menu
+                              option(value='1') MS
+                              option(value='2') ES
+                              option(value='3') NS
+                            
+                          td(data-label="Weekend") 
+                            select.form-select(aria-label='Default select example')
+                              option(selected='') Open this select menu
+                              option(value='1') Sunday
+                              option(value='2') Monday
+                              option(value='3') Tuesday
+                              option(value='4') Wednesday
+                              option(value='5') Thursday
+                              option(value='6') Friday
+                              option(value='7') Saturday
+                          td(data-label="Notes")     
+                            textarea#exampleFormControlTextarea1.form-control(rows='1')
+                        tr
+                          td.align-middle 
+                              input#2.form-check-input(type='checkbox', value='')
+
+                          td.align-middle(data-label="Name") 
+                             label.d-block.w-100(for="2") Mohamed Alaa Said
+                          td(data-label="UF Shift Status") 
+                            input.form-control(type='number' , name="") 
+                          td(data-label="Max Credits") 
+                            input.form-control(type='number' , name="") 
+                          td(data-label="Max zones") 
+                            input.form-control(type='number' , name="")
+                          td(data-label="Room Sets") 
+                            input.form-control(type='number' , name="")
+                          td(data-label="Shift Type ")  
+                            select.form-select(aria-label='Default select example')
+                              option(selected='') Open this select menu
+                              option(value='1') MS
+                              option(value='2') ES
+                              option(value='3') NS
+                            
+                          td(data-label="Weekend") 
+                            select.form-select(aria-label='Default select example')
+                              option(selected='') Open this select menu
+                              option(value='1') Sunday
+                              option(value='2') Monday
+                              option(value='3') Tuesday
+                              option(value='4') Wednesday
+                              option(value='5') Thursday
+                              option(value='6') Friday
+                              option(value='7') Saturday
+                          td(data-label="Notes")     
+                            textarea#exampleFormControlTextarea1.form-control(rows='1')
+                        tr
+                          td.align-middle 
+                              input#3.form-check-input(type='checkbox', value='')
+
+                          td.align-middle(data-label="Name") 
+                             label.d-block.w-100(for="3") Ahmed Ali Ayman
+                          td(data-label="UF Shift Status") 
+                            input.form-control(type='number' , name="") 
+                          td(data-label="Max Credits") 
+                            input.form-control(type='number' , name="") 
+                          td(data-label="Max zones") 
+                            input.form-control(type='number' , name="")
+                          td(data-label="Room Sets") 
+                            input.form-control(type='number' , name="")
+                          td(data-label="Shift Type ")  
+                            select.form-select(aria-label='Default select example')
+                              option(selected='') Open this select menu
+                              option(value='1') MS
+                              option(value='2') ES
+                              option(value='3') NS
+                            
+                          td(data-label="Weekend") 
+                            select.form-select(aria-label='Default select example')
+                              option(selected='') Open this select menu
+                              option(value='1') Sunday
+                              option(value='2') Monday
+                              option(value='3') Tuesday
+                              option(value='4') Wednesday
+                              option(value='5') Thursday
+                              option(value='6') Friday
+                              option(value='7') Saturday
+                          td(data-label="Notes")     
+                            textarea#exampleFormControlTextarea1.form-control(rows='1')
+                        tr
+                          td.align-middle 
+                              input#4.form-check-input(type='checkbox', value='')
+
+                          td.align-middle(data-label="Name") 
+                            label.d-block.w-100(for="4") Atef Gamal Mourad
+                          td(data-label="UF Shift Status") 
+                            input.form-control(type='number' , name="") 
+                          td(data-label="Max Credits") 
+                            input.form-control(type='number' , name="") 
+                          td(data-label="Max zones") 
+                            input.form-control(type='number' , name="")
+                          td(data-label="Room Sets") 
+                            input.form-control(type='number' , name="")
+                          td(data-label="Shift Type ")  
+                            select.form-select(aria-label='Default select example')
+                              option(selected='') Open this select menu
+                              option(value='1') MS
+                              option(value='2') ES
+                              option(value='3') NS
+                            
+                          td(data-label="Weekend") 
+                            select.form-select(aria-label='Default select example')
+                              option(selected='') Open this select menu
+                              option(value='1') Sunday
+                              option(value='2') Monday
+                              option(value='3') Tuesday
+                              option(value='4') Wednesday
+                              option(value='5') Thursday
+                              option(value='6') Friday
+                              option(value='7') Saturday
+                          td(data-label="Notes")     
+                            textarea#exampleFormControlTextarea1.form-control(rows='1')
+
+                        
+                        
+                        tr
+                          td.align-middle 
+                              input#5.form-check-input(type='checkbox', value='')
+
+                          td.align-middle(data-label="Name") 
+                            label.d-block.w-100(for="5") Mahmoud Omar Yasir
+                          td(data-label="UF Shift Status") 
+                            input.form-control(type='number' , name="") 
+                          td(data-label="Max Credits") 
+                            input.form-control(type='number' , name="") 
+                          td(data-label="Max zones") 
+                            input.form-control(type='number' , name="")
+                          td(data-label="Room Sets") 
+                            input.form-control(type='number' , name="")
+                          td(data-label="Shift Type ")  
+                            select.form-select(aria-label='Default select example')
+                              option(selected='') Open this select menu
+                              option(value='1') MS
+                              option(value='2') ES
+                              option(value='3') NS
+                            
+                          td(data-label="Weekend") 
+                            select.form-select(aria-label='Default select example')
+                              option(selected='') Open this select menu
+                              option(value='1') Sunday
+                              option(value='2') Monday
+                              option(value='3') Tuesday
+                              option(value='4') Wednesday
+                              option(value='5') Thursday
+                              option(value='6') Friday
+                              option(value='7') Saturday
+                          td(data-label="Notes")     
+                            textarea#exampleFormControlTextarea1.form-control(rows='1')
+                        tr
+                          td.align-middle 
+                              input#6.form-check-input(type='checkbox', value='')
+
+                          td.align-middle(data-label="Name") 
+                            label.d-block.w-100(for="6") Mohamed Alaa Said
+                          td(data-label="UF Shift Status") 
+                            input.form-control(type='number' , name="") 
+                          td(data-label="Max Credits") 
+                            input.form-control(type='number' , name="") 
+                          td(data-label="Max zones") 
+                            input.form-control(type='number' , name="")
+                          td(data-label="Room Sets") 
+                            input.form-control(type='number' , name="")
+                          td(data-label="Shift Type ")  
+                            select.form-select(aria-label='Default select example')
+                              option(selected='') Open this select menu
+                              option(value='1') MS
+                              option(value='2') ES
+                              option(value='3') NS
+                            
+                          td(data-label="Weekend") 
+                            select.form-select(aria-label='Default select example')
+                              option(selected='') Open this select menu
+                              option(value='1') Sunday
+                              option(value='2') Monday
+                              option(value='3') Tuesday
+                              option(value='4') Wednesday
+                              option(value='5') Thursday
+                              option(value='6') Friday
+                              option(value='7') Saturday
+                          td(data-label="Notes")     
+                            textarea#exampleFormControlTextarea1.form-control(rows='1')
+                        tr.opacity-75.disabled
+                          td.align-middle 
+                              input#7.form-check-input(type='checkbox', value='' disabled)
+
+                          td.align-middle(data-label="Name") 
+                            label.d-block.w-100(for="7") Mostafa Ahmed Gad
+                          td(data-label="UF Shift Status") 
+                            input.form-control(type='number' , name="") 
+                          td(data-label="Max Credits") 
+                            input.form-control(type='number' , name="") 
+                          td(data-label="Max zones") 
+                            input.form-control(type='number' , name="")
+                          td(data-label="Room Sets") 
+                            input.form-control(type='number' , name="")
+                          td(data-label="Shift Type ")  
+                            select.form-select(aria-label='Default select example')
+                              option(selected='') Open this select menu
+                              option(value='1') MS
+                              option(value='2') ES
+                              option(value='3') NS
+                            
+                          td(data-label="Weekend") 
+                            select.form-select(aria-label='Default select example')
+                              option(selected='') Open this select menu
+                              option(value='1') Sunday
+                              option(value='2') Monday
+                              option(value='3') Tuesday
+                              option(value='4') Wednesday
+                              option(value='5') Thursday
+                              option(value='6') Friday
+                              option(value='7') Saturday
+                          td(data-label="Notes")     
+                            textarea#exampleFormControlTextarea1.form-control(rows='1')
+
+            .d-flex.justify-content-end
+                                            a.btn.btn-master.rounded-pill.w-25(href='TimeManagement.html') Save            
+                        
+
+
+            
+            .container-room 
+                  
+          //- include ./CreateOrder.pug
+            
+
+
+      //- End Content category hotel
+    //- Start Modal
+    include includes/modal.pug 
+    include includes/script.pug
+    script(src="../assets/js/ajaxLoad.js") 
+
+    script(src="https://nightly.datatables.net/js/jquery.dataTables.js") 
+    script(src="../assets/js/ajaxLoad.js") 
+    script.
+      $(document).ready( function () {
+        var table = $('#dataTables').DataTable();
+      } );
+    
+      
+
+
+
