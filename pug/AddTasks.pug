@@ -1,0 +1,412 @@
+- var titlePage = 'Time Management';
+
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .Dashboard-home
+      include includes/asideBar.pug
+      //- start Content category hotel
+      section.content-category-hotel 
+        include includes/headerNavBar.pug
+
+        //- Start Load Master page 
+        #pageMasterLoad.time-management.addTask-page
+          .container-fluid.pt-3 
+            header.header-filter.align-items-end
+            
+              .group-filter.d-flex 
+                .input-group.me-3
+                  input.form-control(type='week', )
+                  button#button-addon2.btn.btn-outline-master(type='button') 
+                    i.fa-solid.fa-calendar-days
+                .input-group.me-3
+                  input.form-control(type='search', placeholder="Search", aria-label="Recipient's username", aria-describedby='button-addon2')
+                  button#button-addon2.btn.btn-outline-master(type='button') 
+                    i.fa-solid.fa-magnifying-glass
+
+            .table-responsive-addTasks
+              table.table.table-bordered
+                thead 
+                  tr 
+                    th.text-center.align-middle Employees
+                    th.text-center.align-middle 
+                      .day Sunday
+                      .date 6/10
+                    th.text-center.align-middle 
+                      .day Monday
+                      .date 7/10
+                    th.text-center.align-middle 
+                      .day Tuesday
+                      .date 8/10
+                    th.text-center.align-middle 
+                      .day Wednesday
+                      .date 9/10
+                    th.text-center.align-middle 
+                      .day Thursday
+                      .date 10/10
+                    th.text-center.align-middle 
+                      .day Friday
+                      .date 11/10
+                    th.text-center.align-middle 
+                      .day Saturday
+                      .date 12/10
+                tbody
+                  tr 
+                    th 
+                      .name Mohamed Alaa Said
+                      .time 28/ 40 hrs
+                      .progress(role='progressbar', aria-label='Example with label', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                        .progress-bar(style='width: 25%') 25%
+
+                    td  
+                      .add-task 
+                        button.btn.btn-primary.btn-sm(type='button', data-bs-toggle='modal', data-bs-target='#AddTask') Add Task
+                    td   
+                      .holiday
+                        h6 Weekend 
+                        .footer-card 
+                          .dropdown
+                            a.btn.btn-light.dropdown-toggle.btn-sm(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                              | Edit
+                            ul.dropdown-menu
+                              li
+                                a.dropdown-item(type='button', data-bs-toggle='modal', data-bs-target='#ChangeVacation') Change vacation
+                              li
+                                a.dropdown-item(type="button", onclick="confirm('Do You Want To Cancel Vacation!')")  Cancel vacation
+                              
+
+                    td    
+                      .holiday.sickLeave
+                        h6 Sick Leave 
+                        .footer-card 
+                          .dropdown
+                            a.btn.btn-light.dropdown-toggle.btn-sm(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                              | Edit
+                            ul.dropdown-menu
+                              li
+                                a.dropdown-item(type='button', data-bs-toggle='modal', data-bs-target='#ChangeVacation') Change vacation
+                              li
+                                a.dropdown-item(type="button", onclick="confirm('Do You Want To Cancel Vacation!')")  Cancel vacation
+                              
+                    
+                    td  
+                      .holiday.Work-time
+                        h6 08:05 - 16:00 => MS
+                        .hour-time 7 / 8 hrs
+                        .progress(role='progressbar', aria-label='Basic example', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100')
+                          .progress-bar.w-75
+
+                        .footer-card 
+                          .dropdown
+                            a.btn.btn-light.dropdown-toggle.btn-sm(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                              | Edit
+                            ul.dropdown-menu
+                              li
+                                a.dropdown-item(type='button', data-bs-toggle='modal', data-bs-target='#AddTask') Add Task
+                              li
+                                a.dropdown-item(type='button', data-bs-toggle='modal', data-bs-target='#ChangeEmployee') Change Employee
+                              li
+                                a.dropdown-item(type='button', data-bs-toggle='modal', data-bs-target='#ChangeShift') Change Shift
+                              li
+                                a.dropdown-item( type='button',data-bs-toggle="modal" data-bs-target="#moreInfo") More Info
+                          
+                  tr 
+                    th 
+                      .name Ahmed Ali Ayman
+                      .time 38/ 40 hrs
+                      .progress(role='progressbar', aria-label='Example with label', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100')
+                        .progress-bar.bg-warning(style='width: 75%') 75%
+
+                    td    
+                    td    
+                    td    
+                    td    
+                    td    
+                    td    
+                    td    
+
+
+
+
+            .d-flex.justify-content-end
+              a.btn.btn-master.rounded-pill.w-25(href='TimeManagement.html') Save            
+                        
+            
+
+            
+            .container-room 
+                  
+          //- include ./CreateOrder.pug
+            
+
+
+      //- End Content category hotel
+    //- Start Modal
+
+
+
+
+
+
+
+    //- Modal Add Task
+    #AddTask.modal.fade(tabindex='-1', aria-labelledby='exampleModalLabel', aria-hidden='true')
+      .modal-dialog
+        .modal-content
+          .modal-header
+            h1#exampleModalLabel.modal-title.fs-5 Add task
+            button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+          .modal-body
+            .mb-3
+              label.form-label(for='exampleInputEmail1') Name Employee
+              input.form-control(type='text' )
+            .mb-3
+              label.form-label(for='exampleInputEmail1') Rooms
+              select.form-select(aria-label='Default select example')
+                option(selected='') Open this select menu
+                option(value='1') One
+                option(value='2') Two
+                option(value='3') Three
+            #contentValue.d-flex.flex-wrap.mb-3
+              span.badge-item.mx-2.mb-2
+                span.text Room 101
+                span.icon-exit
+                  i.fa-solid.fa-xmark.fa-fw
+    
+            .mb-3
+              label.form-label(for='exampleInputEmail1') Serves
+              select.form-select(aria-label='Default select example')
+                option(selected='') Open this select menu
+                option(value='1') One
+                option(value='2') Two
+                option(value='3') Three
+            #contentValue.d-flex.flex-wrap.mb-3
+              span.badge-item.mx-2.mb-2
+                span.text Room 101
+                span.icon-exit
+                  i.fa-solid.fa-xmark.fa-fw
+
+          .modal-footer
+            button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
+            button.btn.btn-primary(type='button') Save changes
+
+    //- Modal Change Employee
+    #ChangeEmployee.modal.fade(tabindex='-1', aria-labelledby='exampleModalLabel', aria-hidden='true')
+      .modal-dialog
+        .modal-content
+          .modal-header
+            h1#exampleModalLabel.modal-title.fs-5 Change Employee
+            button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+          .modal-body
+            .mb-3
+              label.form-label(for='exampleInputEmail1') Select Employee
+              select.form-select(aria-label='Default select example')
+                option(selected='') Open this select menu
+                option(value='1') One
+                option(value='2') Two
+                option(value='3') Three
+            
+          .modal-footer
+            button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
+            button.btn.btn-primary(type='button') Save changes
+
+    //- Modal Change Shift
+    #ChangeShift.modal.fade(tabindex='-1', aria-labelledby='exampleModalLabel', aria-hidden='true')
+      .modal-dialog
+        .modal-content
+          .modal-header
+            h1#exampleModalLabel.modal-title.fs-5 Change Shift
+            button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+          .modal-body
+            .mb-3
+              label.form-label(for='exampleInputEmail1') Select Shift
+              select.form-select(aria-label='Default select example')
+                option(selected='') Open this select menu
+                option(value='1') One
+                option(value='2') Two
+                option(value='3') Three
+            
+          .modal-footer
+            button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
+            button.btn.btn-primary(type='button') Save changes
+
+    //- Modal Change Vacation
+    #ChangeVacation.modal.fade(tabindex='-1', aria-labelledby='exampleModalLabel', aria-hidden='true')
+      .modal-dialog
+        .modal-content
+          .modal-header
+            h1#exampleModalLabel.modal-title.fs-5 Change Vacation
+            button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+          .modal-body
+            .mb-3
+              label.form-label(for='exampleInputEmail1') Select Vacation
+              select.form-select(aria-label='Default select example')
+                option(selected='') Open this select menu
+                option(value='1') One
+                option(value='2') Two
+                option(value='3') Three
+            
+          .modal-footer
+            button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
+            button.btn.btn-primary(type='button') Save changes
+
+
+
+    //- Modal More Info
+    #moreInfo.modal.fade(tabindex='-1', aria-labelledby='exampleModalLabel', aria-hidden='true')
+      .modal-dialog.modal-xl
+        .modal-content
+          .modal-header
+            h1#exampleModalLabel.modal-title.fs-5 Mohamed Alaa Said  Info
+            button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+          .modal-body
+            //- Start Tap 
+            ul#myTab.nav.nav-tabs(role='tablist')
+              li.nav-item(role='presentation')
+                button#home-tab.nav-link.active(data-bs-toggle='tab', data-bs-target='#home-tab-pane', type='button', role='tab', aria-controls='home-tab-pane', aria-selected='true') Over View
+              li.nav-item(role='presentation')
+                button#profile-tab.nav-link(data-bs-toggle='tab', data-bs-target='#profile-tab-pane', type='button', role='tab', aria-controls='profile-tab-pane', aria-selected='false') More Info
+            #myTabContent.tab-content
+              #home-tab-pane.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab', tabindex='0') 
+                #chartOverView
+              #profile-tab-pane.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab', tabindex='0') 
+
+                table.table.table-striped.table-bordered.mt-2
+                  thead 
+                    tr 
+                      th No. Task
+                      th Room No.
+                      th Type Room
+                      th Credits
+                      th Status
+                      th Physical time Start 
+                      th Physical time End 
+                      th Time Difference
+                  tbody 
+                    tr 
+                      td 01
+                      td Room 110
+                      td Single
+                      td 2
+                      td New
+                      td 00:00
+                      td 00:00
+                      td 00:00
+                    tr 
+                      td 02
+                      td Room 111
+                      td Double
+                      td 5
+                      td Closed
+                      td 09:30
+                      td 10:00
+                      td.text-success -00:05
+                    tr 
+                      td 03
+                      td Room 112
+                      td Double
+                      td 3
+                      td Active
+                      td 11:15
+                      td 00:00
+                      td 00:00
+                    tr 
+                      td 04
+                      td Room 113
+                      td Double
+                      td 5
+                      td Closed
+                      td 09:15
+                      td 09:30
+                      td 00:00
+                    tr 
+                      td 05
+                      td Room 115
+                      td Single
+                      td 2
+                      td Closed
+                      td 09:30
+                      td 10:00
+                      td.text-danger +00:15
+                  tfoot 
+                    tr  
+                      th Total
+                      td 10
+                      td 
+                      td 43
+                      td 
+                      td 
+                      td 
+                      td 
+
+
+
+          .modal-footer
+            button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
+
+
+    include includes/script.pug
+    script(src="../assets/js/ajaxLoad.js") 
+
+    script(src="https://nightly.datatables.net/js/jquery.dataTables.js") 
+    script(src="../assets/js/apexcharts.min.js") 
+    script.
+      var options = {
+        chart: {
+          type: "line",
+          height: 350
+        },
+
+        series: [
+          {
+            name: "Ideal Trend",
+            type: "line",
+            data: [300, 250, 200, 150, 100, 50, 0],
+            color: "#feb019"
+          },
+          {
+            name: "Remaining",
+            type: "area",
+            data: [330, 230, 210, 190],
+            color: "#0078D4"
+          }
+        ],
+        stroke: {
+          width: [5, 2]
+        },
+        dataLabels: {
+          enabled: false
+        },
+        fill: {
+          opacity: [0.85, 0.25],
+          gradient: {
+            inverseColors: false,
+            shade: "light",
+            type: "vertical",
+            opacityFrom: 0.85,
+            opacityTo: 0.55
+          }
+        },
+        xaxis: {
+          categories: [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ]
+        }
+      };
+
+      var chart = new ApexCharts(document.querySelector("#chartOverView"), options);
+      chart.render();
+
+    
+      
+
+
+

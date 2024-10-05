@@ -1,0 +1,277 @@
+- var titlePage = 'Time Management';
+
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body 
+    .Dashboard-home
+      include includes/asideBar.pug
+      //- start Content category hotel
+      section.content-category-hotel 
+        include includes/headerNavBar.pug
+
+        //- Start Load Master page 
+        #pageMasterLoad.time-management.addTask-page
+          .container-fluid.pt-3 
+            ul#myTab.nav.nav-tabs(role='tablist')
+              li.nav-item(role='presentation')
+                button#home-tab.nav-link.active(data-bs-toggle='tab', data-bs-target='#home-tab-pane', type='button', role='tab', aria-controls='home-tab-pane', aria-selected='true') Task Status
+              li.nav-item(role='presentation')
+                button#profile-tab.nav-link(data-bs-toggle='tab', data-bs-target='#profile-tab-pane', type='button', role='tab', aria-controls='profile-tab-pane', aria-selected='false') Over View
+            #myTabContent.tab-content
+              #home-tab-pane.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab', tabindex='0') 
+                header.header-filter.mt-3.g-3
+                  .container-fluid 
+                      .row
+                          .col-lg-3
+                              .mb-3
+                                  label.form-label(for='') Employee
+                                  select.form-select(aria-label='Default select example')
+                                      option(selected='') Open this select menu
+                                      option(value='1') One
+                                      option(value='2') Two
+                                      option(value='3') Three
+                          .col-lg-3        
+                              .mb-3
+                                  label.form-label(for='') Shift
+                                  select.form-select(aria-label='Default select example')
+                                      option(selected='') Open this select menu
+                                      option(value='1') One
+                                      option(value='2') Two
+                                      option(value='3') Three
+                          .col-lg-3            
+                              .mb-3
+                                  label.form-label(for='') Room
+                                  select.form-select(aria-label='Default select example')
+                                      option(selected='') Open this select menu
+                                      option(value='1') One
+                                      option(value='2') Two
+                                      option(value='3') Three
+                          .col-lg-3            
+                              .mb-3.text-end
+                                  label.form-label(for='') &nbsp;
+                                  a.btn.btn-master.rounded-pill.d-block
+                                      i.fa-solid.fa-magnifying-glass.me-2
+                                      | Search
+
+
+
+              #profile-tab-pane.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab', tabindex='0') 
+                //- .d-flex.justify-content-end.mt-3.mb-3
+                //-   .btn-group(role='group', aria-label='Basic radio toggle button group')
+                //-     input#btnradio1.btn-check(type='radio', name='btnradio', autocomplete='off', checked='')
+                //-     label.btn.btn-outline-primary(for='btnradio1') To Day
+                //-     input#btnradio2.btn-check(type='radio', name='btnradio', autocomplete='off')
+                //-     label.btn.btn-outline-primary(for='btnradio2') By Week
+                //-     input#btnradio3.btn-check(type='radio', name='btnradio', autocomplete='off')
+                //-     label.btn.btn-outline-primary(for='btnradio3') By Month
+                //- .container-fluid 
+                //-   .row 
+                //-     .col-lg-4
+                //-       .card
+                //-         .card-header.p-3.mx-2.fw-bold Total Tasks 
+                //-         .card-body
+                //-           #TotalTasks
+                //-     .col-lg-8
+                //-       .card
+                //-         .card-header.p-3.mx-2.fw-bold Burndown Trend
+                //-         .card-body
+                //-           #chartOverView
+
+
+
+            
+
+            
+
+            
+            
+                  
+        
+
+
+
+
+    //- Modal Change Vacation
+    #ChangeStatus.modal.fade(tabindex='-1', aria-labelledby='exampleModalLabel', aria-hidden='true')
+      .modal-dialog
+        .modal-content
+            .modal-header
+              h1#exampleModalLabel.modal-title.fs-5 Change Status
+              button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+            .modal-body
+              .mb-3
+                  label.form-label(for='exampleInputEmail1') Change Status Task
+                  select.form-select(aria-label='Default select example')
+                    option(selected='') Open this select menu
+                    option(value='1') One
+                    option(value='2') Two
+                    option(value='3') Three
+            
+            .modal-footer
+              button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
+              button.btn.btn-primary(type='button') Save changes
+
+
+  
+
+    include includes/script.pug
+    script(src="../assets/js/ajaxLoad.js") 
+
+    script(src="https://nightly.datatables.net/js/jquery.dataTables.js") 
+    script(src="../assets/js/apexcharts.min.js") 
+    script.
+      $(document).ready(function() {
+        $('.icon-toggle-down').click(function() {
+          $(this).closest('tr').toggleClass('full-screen');
+        });
+      });
+      
+    script.
+      var options = {
+        chart: {
+          type: "line",
+          height: 350
+        },
+
+        series: [
+          {
+            name: "Ideal Trend",
+            type: "line",
+            data: [300, 250, 200, 150, 100, 50, 0],
+            color: "#feb019"
+          },
+          {
+            name: "Remaining",
+            type: "area",
+            data: [330, 230, 210, 190],
+            color: "#0078D4"
+          }
+        ],
+        stroke: {
+          width: [5, 2]
+        },
+        dataLabels: {
+          enabled: false
+        },
+        fill: {
+          opacity: [0.85, 0.25],
+          gradient: {
+            inverseColors: false,
+            shade: "light",
+            type: "vertical",
+            opacityFrom: 0.85,
+            opacityTo: 0.55
+          }
+        },
+        xaxis: {
+          categories: [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ]
+        }
+      };
+
+      var chart = new ApexCharts(document.querySelector("#chartOverView"), options);
+      chart.render();
+
+
+      var options = {
+        chart: {
+          type: "donut",
+          height: 500
+        },
+
+        labels: ["New", "Active", "Resolved", "Closed"],
+        dataLabels: {
+          enabled: false
+        },
+        plotOptions: {
+          pie: {
+            donut: {
+              labels: {
+                show: true,
+                name: {
+                  show: true,
+                  fontSize: "22px",
+                  fontFamily: "Rubik",
+                  color: "#f00",
+                  offsetY: -10
+                },
+                value: {
+                  show: true,
+                  fontSize: "16px",
+                  fontFamily: "Helvetica, Arial, sans-serif",
+                  color: undefined,
+                  fontWeight: 900,
+                  offsetY: 16,
+                  color: "#333",
+                  formatter: function (val) {
+                    return val;
+                  }
+                },
+                total: {
+                  show: true,
+                  label: "Total",
+                  color: "#333",
+                  fontWeight: 900,
+                  formatter: function (w) {
+                    return w.globals.seriesTotals.reduce((a, b) => {
+                      return a + b;
+                    }, 0);
+                  }
+                }
+              }
+            }
+          }
+        },
+        series: [44, 55, 41, 17],
+        tooltip: {
+          enabled: true,
+
+          y: {
+            series: [
+              {
+                name: "series A"
+              },
+              {
+                name: "series B"
+              }
+            ],
+            title: {
+              formatter: function (seriesName) {
+                return "";
+              }
+            }
+          }
+        },
+        legend: {
+          show: true,
+          position: "bottom",
+          labels: {
+            colors: "#333"
+          },
+          markers: {
+            width: 12,
+            height: 12,
+            strokeWidth: 0,
+            radius: 0
+          }
+        }
+      };
+
+      var chart = new ApexCharts(document.querySelector("#TotalTasks"), options);
+
+      chart.render();
+
+          
+            
+
+
+

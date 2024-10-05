@@ -1,0 +1,388 @@
+header.header-filter.mt-3.g-3
+    .container-fluid 
+        .row
+            .col-lg-3
+                .mb-3
+                    label.form-label(for='') Employee
+                    select.form-select(aria-label='Default select example')
+                        option(selected='') Open this select menu
+                        option(value='1') One
+                        option(value='2') Two
+                        option(value='3') Three
+            .col-lg-3        
+                .mb-3
+                    label.form-label(for='') Shift
+                    select.form-select(aria-label='Default select example')
+                        option(selected='') Open this select menu
+                        option(value='1') One
+                        option(value='2') Two
+                        option(value='3') Three
+            .col-lg-3            
+                .mb-3
+                    label.form-label(for='') Room
+                    select.form-select(aria-label='Default select example')
+                        option(selected='') Open this select menu
+                        option(value='1') One
+                        option(value='2') Two
+                        option(value='3') Three
+            .col-lg-3            
+                .mb-3.text-end
+                    label.form-label(for='') &nbsp;
+                    a.btn.btn-master.rounded-pill.d-block
+                        i.fa-solid.fa-magnifying-glass.me-2
+                        | Search
+
+
+.table-responsive-task-status
+    table.table.table-responsive
+        thead
+            tr 
+                th(style="width:2%") 
+                th(style="width:18%")   Employees
+                th(style="width:20%") New
+                th(style="width:20%") Active
+                th(style="width:20%") Resolved
+                th(style="width:20%") Closed
+        tbody 
+            tr.full-screen 
+                td.text-center 
+                    .icon-toggle-down
+                        i.fa-solid.fa-caret-right
+                td Mohamed Alaa Said
+                td.td-colspan(colspan="4") 
+                    span.new.me-2 9 not started 
+                    span.active.me-2 1 in progress 
+                    span.Closed.me-2 3 in Close
+                td.normal
+                    .holiday.Work-time.mb-1
+                        h6.d-flex.justify-content-between 
+                            .text Room 113Room 113
+                            .type-room.bg-secondary T
+
+                        .hour-time Stripped / 5 Credits
+
+                        .footer-card.justify-content-between 
+                            .status.text-body-tertiary 
+                                i.fa-solid.fa-circle.me-1.fa-2xs
+                                | New
+                            .dropdown
+                                a.btn.btn-light.dropdown-toggle.btn-sm(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                    | Edit
+                                ul.dropdown-menu
+                                    li
+                                        a.dropdown-item(type='button', data-bs-toggle='modal', data-bs-target='#ChangeStatus') Change Status
+                                    li
+                                        a.dropdown-item(type="button", onclick="confirm('Do You Want To Remove Task!')") Remove Task
+                    .holiday.Work-time.mb-1
+                        h6.d-flex.justify-content-between 
+                            .text Room 113Room 132
+                            .type-room.bg-success D
+
+                        .hour-time Inspected / 2 Credits
+
+                        .footer-card.justify-content-between 
+                            .status.text-body-tertiary 
+                                i.fa-solid.fa-circle.me-1.fa-2xs
+                                | New
+                            .dropdown
+                                a.btn.btn-light.dropdown-toggle.btn-sm(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                    | Edit
+                                ul.dropdown-menu
+                                    li
+                                        a.dropdown-item(type='button', data-bs-toggle='modal', data-bs-target='#ChangeStatus') Change Status
+                                    li
+                                        a.dropdown-item(type="button", onclick="confirm('Do You Want To Remove Task!')") Remove Task
+
+                    .holiday.Work-time.mb-1
+                        h6.d-flex.justify-content-between 
+                            .text Room 113Room 125
+                            .type-room.bg-primary S
+
+                        .hour-time Stripped / 5 Credits
+
+                        .footer-card.justify-content-between 
+                            .status.text-body-tertiary 
+                                i.fa-solid.fa-circle.me-1.fa-2xs
+                                | New
+                            .dropdown
+                                a.btn.btn-light.dropdown-toggle.btn-sm(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                    | Edit
+                                ul.dropdown-menu
+                                    li
+                                        a.dropdown-item(type='button', data-bs-toggle='modal', data-bs-target='#ChangeStatus') Change Status
+                                    li
+                                        a.dropdown-item(type="button", onclick="confirm('Do You Want To Remove Task!')") Remove Task
+
+                td.normal
+                    .holiday.Work-time.mb-1
+                        h6.d-flex.justify-content-between 
+                            .text Room 127
+                            .type-room.bg-warning V
+
+                        .hour-time DND / 1 Credits
+
+                        .footer-card.justify-content-between 
+                            .status.text-primary
+                                i.fa-solid.fa-circle.me-1.fa-2xs
+                                | Active
+                            .dropdown
+                              a.btn.btn-light.dropdown-toggle.btn-sm(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                | Edit
+                              ul.dropdown-menu
+                                li
+                                  a.dropdown-item(type='button', data-bs-toggle='modal', data-bs-target='#ChangeStatus') Change Status
+                                li
+                                  a.dropdown-item(type="button", onclick="confirm('Do You Want To Remove Task!')") Remove Task
+                                
+
+                td.normal
+                td.normal
+                    .holiday.Work-time.mb-1
+                        h6.d-flex.justify-content-between 
+                            .text Room 127
+                            .type-room.bg-danger K
+
+                        .hour-time Cleaned / 10 Credits
+
+                        .footer-card.justify-content-between 
+                            .status.text-success
+                                i.fa-solid.fa-circle.me-1.fa-2xs
+                                | Closed
+                            .dropdown
+                                a.btn.btn-light.dropdown-toggle.btn-sm(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                    | Edit
+                                ul.dropdown-menu
+                                    li
+                                    a.dropdown-item(type='button', data-bs-toggle='modal', data-bs-target='#ChangeStatus') Change Status
+                                    li
+                                    a.dropdown-item(type="button", onclick="confirm('Do You Want To Remove Task!')") Remove Task
+            
+            tr.full-screen 
+                td.text-center 
+                    .icon-toggle-down
+                        i.fa-solid.fa-caret-right
+                td Abd El Rahman Mohamed
+                td.td-colspan(colspan="4") 
+                    span.new.me-2 9 not started  
+                    span.active.me-2 1 in progress 
+                    span.Closed 3 in Close 
+                td.normal
+                    .holiday.Work-time.mb-1
+                        h6.d-flex.justify-content-between 
+                            .text Room 113Room 113
+                            .type-room.bg-secondary T
+
+                        .hour-time Stripped / 5 Credits
+
+                        .footer-card.justify-content-between 
+                            .status.text-body-tertiary 
+                                i.fa-solid.fa-circle.me-1.fa-2xs
+                                | New
+                            .dropdown
+                                a.btn.btn-light.dropdown-toggle.btn-sm(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                    | Edit
+                                ul.dropdown-menu
+                                    li
+                                        a.dropdown-item(type='button', data-bs-toggle='modal', data-bs-target='#ChangeStatus') Change Status
+                                    li
+                                        a.dropdown-item(type="button", onclick="confirm('Do You Want To Remove Task!')") Remove Task
+                    .holiday.Work-time.mb-1
+                        h6.d-flex.justify-content-between 
+                            .text Room 113Room 132
+                            .type-room.bg-success D
+
+                        .hour-time Inspected / 2 Credits
+
+                        .footer-card.justify-content-between 
+                            .status.text-body-tertiary 
+                                i.fa-solid.fa-circle.me-1.fa-2xs
+                                | New
+                            .dropdown
+                                a.btn.btn-light.dropdown-toggle.btn-sm(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                    | Edit
+                                ul.dropdown-menu
+                                    li
+                                        a.dropdown-item(type='button', data-bs-toggle='modal', data-bs-target='#ChangeStatus') Change Status
+                                    li
+                                        a.dropdown-item(type="button", onclick="confirm('Do You Want To Remove Task!')") Remove Task
+
+                    .holiday.Work-time.mb-1
+                        h6.d-flex.justify-content-between 
+                            .text Room 113Room 125
+                            .type-room.bg-primary S
+
+                        .hour-time Stripped / 5 Credits
+
+                        .footer-card.justify-content-between 
+                            .status.text-body-tertiary 
+                                i.fa-solid.fa-circle.me-1.fa-2xs
+                                | New
+                            .dropdown
+                                a.btn.btn-light.dropdown-toggle.btn-sm(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                    | Edit
+                                ul.dropdown-menu
+                                    li
+                                        a.dropdown-item(type='button', data-bs-toggle='modal', data-bs-target='#ChangeStatus') Change Status
+                                    li
+                                        a.dropdown-item(type="button", onclick="confirm('Do You Want To Remove Task!')") Remove Task
+
+                td.normal
+                    .holiday.Work-time.mb-1
+                        h6.d-flex.justify-content-between 
+                            .text Room 127
+                            .type-room.bg-warning V
+
+                        .hour-time DND / 1 Credits
+
+                        .footer-card.justify-content-between 
+                            .status.text-primary
+                                i.fa-solid.fa-circle.me-1.fa-2xs
+                                | Active
+                            .dropdown
+                              a.btn.btn-light.dropdown-toggle.btn-sm(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                | Edit
+                              ul.dropdown-menu
+                                li
+                                  a.dropdown-item(type='button', data-bs-toggle='modal', data-bs-target='#ChangeStatus') Change Status
+                                li
+                                  a.dropdown-item(type="button", onclick="confirm('Do You Want To Remove Task!')") Remove Task
+                                
+
+                td.normal
+                td.normal
+                    .holiday.Work-time.mb-1
+                        h6.d-flex.justify-content-between 
+                            .text Room 127
+                            .type-room.bg-danger K
+
+                        .hour-time Cleaned / 10 Credits
+
+                        .footer-card.justify-content-between 
+                            .status.text-success
+                                i.fa-solid.fa-circle.me-1.fa-2xs
+                                | Closed
+                            .dropdown
+                                a.btn.btn-light.dropdown-toggle.btn-sm(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                    | Edit
+                                ul.dropdown-menu
+                                    li
+                                    a.dropdown-item(type='button', data-bs-toggle='modal', data-bs-target='#ChangeStatus') Change Status
+                                    li
+                                    a.dropdown-item(type="button", onclick="confirm('Do You Want To Remove Task!')") Remove Task
+            tr.full-screen 
+                td.text-center 
+                    .icon-toggle-down
+                        i.fa-solid.fa-caret-right
+                td Ahmed Ali Ayman
+                td.td-colspan(colspan="4") 
+                    span.new.me-2 9 not started 
+                    span.active.me-2 1 in progress 
+                    span.Closed.me-2 3 in Close
+                td.normal
+                    .holiday.Work-time.mb-1
+                        h6.d-flex.justify-content-between 
+                            .text Room 113Room 113
+                            .type-room.bg-secondary T
+
+                        .hour-time Stripped / 5 Credits
+
+                        .footer-card.justify-content-between 
+                            .status.text-body-tertiary 
+                                i.fa-solid.fa-circle.me-1.fa-2xs
+                                | New
+                            .dropdown
+                                a.btn.btn-light.dropdown-toggle.btn-sm(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                    | Edit
+                                ul.dropdown-menu
+                                    li
+                                        a.dropdown-item(type='button', data-bs-toggle='modal', data-bs-target='#ChangeStatus') Change Status
+                                    li
+                                        a.dropdown-item(type="button", onclick="confirm('Do You Want To Remove Task!')") Remove Task
+                    .holiday.Work-time.mb-1
+                        h6.d-flex.justify-content-between 
+                            .text Room 113Room 132
+                            .type-room.bg-success D
+
+                        .hour-time Inspected / 2 Credits
+
+                        .footer-card.justify-content-between 
+                            .status.text-body-tertiary 
+                                i.fa-solid.fa-circle.me-1.fa-2xs
+                                | New
+                            .dropdown
+                                a.btn.btn-light.dropdown-toggle.btn-sm(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                    | Edit
+                                ul.dropdown-menu
+                                    li
+                                        a.dropdown-item(type='button', data-bs-toggle='modal', data-bs-target='#ChangeStatus') Change Status
+                                    li
+                                        a.dropdown-item(type="button", onclick="confirm('Do You Want To Remove Task!')") Remove Task
+
+                    .holiday.Work-time.mb-1
+                        h6.d-flex.justify-content-between 
+                            .text Room 113Room 125
+                            .type-room.bg-primary S
+
+                        .hour-time Stripped / 5 Credits
+
+                        .footer-card.justify-content-between 
+                            .status.text-body-tertiary 
+                                i.fa-solid.fa-circle.me-1.fa-2xs
+                                | New
+                            .dropdown
+                                a.btn.btn-light.dropdown-toggle.btn-sm(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                    | Edit
+                                ul.dropdown-menu
+                                    li
+                                        a.dropdown-item(type='button', data-bs-toggle='modal', data-bs-target='#ChangeStatus') Change Status
+                                    li
+                                        a.dropdown-item(type="button", onclick="confirm('Do You Want To Remove Task!')") Remove Task
+
+                td.normal
+                    .holiday.Work-time.mb-1
+                        h6.d-flex.justify-content-between 
+                            .text Room 127
+                            .type-room.bg-warning V
+
+                        .hour-time DND / 1 Credits
+
+                        .footer-card.justify-content-between 
+                            .status.text-primary
+                                i.fa-solid.fa-circle.me-1.fa-2xs
+                                | Active
+                            .dropdown
+                              a.btn.btn-light.dropdown-toggle.btn-sm(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                | Edit
+                              ul.dropdown-menu
+                                li
+                                  a.dropdown-item(type='button', data-bs-toggle='modal', data-bs-target='#ChangeStatus') Change Status
+                                li
+                                  a.dropdown-item(type="button", onclick="confirm('Do You Want To Remove Task!')") Remove Task
+                                
+
+                td.normal
+                td.normal
+                    .holiday.Work-time.mb-1
+                        h6.d-flex.justify-content-between 
+                            .text Room 127
+                            .type-room.bg-danger K
+
+                        .hour-time Cleaned / 10 Credits
+
+                        .footer-card.justify-content-between 
+                            .status.text-success
+                                i.fa-solid.fa-circle.me-1.fa-2xs
+                                | Closed
+                            .dropdown
+                                a.btn.btn-light.dropdown-toggle.btn-sm(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                    | Edit
+                                ul.dropdown-menu
+                                    li
+                                        a.dropdown-item(type='button', data-bs-toggle='modal', data-bs-target='#ChangeStatus') Change Status
+                                    li
+                                        a.dropdown-item(type="button", onclick="confirm('Do You Want To Remove Task!')") Remove Task
+
+            
+
+
+
