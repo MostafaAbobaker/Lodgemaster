@@ -14,7 +14,7 @@ html(lang="en")
         //- Start Load Master page 
         #pageMasterLoad.time-management.addTask-page
           .container-fluid.pt-3 
-            ul#myTab.nav.nav-tabs(role='tablist')
+            //- ul#myTab.nav.nav-tabs(role='tablist')
               li.nav-item(role='presentation')
                 button#home-tab.nav-link.active(data-bs-toggle='tab', data-bs-target='#home-tab-pane', type='button', role='tab', aria-controls='home-tab-pane', aria-selected='true') Task Status
               li.nav-item(role='presentation')
@@ -25,7 +25,7 @@ html(lang="en")
                   .container-fluid 
                       .row
                           .col-lg-3
-                              .mb-3
+                              div.mb-2
                                   label.form-label(for='') Employee
                                   select.form-select(aria-label='Default select example')
                                       option(selected='') Open this select menu
@@ -33,7 +33,7 @@ html(lang="en")
                                       option(value='2') Two
                                       option(value='3') Three
                           .col-lg-3        
-                              .mb-3
+                              div.mb-2
                                   label.form-label(for='') Shift
                                   select.form-select(aria-label='Default select example')
                                       option(selected='') Open this select menu
@@ -41,44 +41,110 @@ html(lang="en")
                                       option(value='2') Two
                                       option(value='3') Three
                           .col-lg-3            
-                              .mb-3
+                              div.mb-2
                                   label.form-label(for='') Room
                                   select.form-select(aria-label='Default select example')
                                       option(selected='') Open this select menu
                                       option(value='1') One
                                       option(value='2') Two
                                       option(value='3') Three
-                          .col-lg-3            
-                              .mb-3.text-end
-                                  label.form-label(for='') &nbsp;
+                          .col-lg-3  
+                              div.mb-2          
+                                  label.form-label(for='') Date
+                                  input.form-control(type="date") 
+                          .col-lg-3.ms-auto            
+                              .text-end
+                                  //- label.form-label(for='') &nbsp;
                                   a.btn.btn-master.rounded-pill.d-block
                                       i.fa-solid.fa-magnifying-glass.me-2
                                       | Search
-
-
-
-              #profile-tab-pane.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab', tabindex='0') 
-                //- .d-flex.justify-content-end.mt-3.mb-3
-                //-   .btn-group(role='group', aria-label='Basic radio toggle button group')
-                //-     input#btnradio1.btn-check(type='radio', name='btnradio', autocomplete='off', checked='')
-                //-     label.btn.btn-outline-primary(for='btnradio1') To Day
-                //-     input#btnradio2.btn-check(type='radio', name='btnradio', autocomplete='off')
-                //-     label.btn.btn-outline-primary(for='btnradio2') By Week
-                //-     input#btnradio3.btn-check(type='radio', name='btnradio', autocomplete='off')
-                //-     label.btn.btn-outline-primary(for='btnradio3') By Month
-                //- .container-fluid 
-                //-   .row 
-                //-     .col-lg-4
-                //-       .card
-                //-         .card-header.p-3.mx-2.fw-bold Total Tasks 
-                //-         .card-body
-                //-           #TotalTasks
-                //-     .col-lg-8
-                //-       .card
-                //-         .card-header.p-3.mx-2.fw-bold Burndown Trend
-                //-         .card-body
-                //-           #chartOverView
-
+                div.table-responsive
+                  table#dataTables.table.table-hover.table-responsive-scroll.data-Tables.table-striped.table-sm.table-bordered.double-width
+                        thead
+                          tr
+                            th(scope='col')  
+                            th Room No.
+                            th(style="width:9%")   Task Type
+                            th(style="width:9%") Task by time
+                            th(style="width:9%") Task Status
+                            th Dyman
+                            th Section
+                            th(style="width:9%") FD Status
+                            th(style="width:9%") Res. Status
+                            th(style="width:9%") Room Status
+                            th 
+                              i.fa-solid.fa-user
+                            th Attendant
+                            th(style="width:9%") No. Do h
+                            th(style="width:9%") Room Type
+                            th(style="width:9%") Credits
+                            th(style="width:9%") Comments
+                            th(style="width:9%") Start Time
+                            th(style="width:9%") End Time
+                            th(style="width:9%") Remaining
+                            th(style="width:9%") Guest Name
+                            th Pax
+                            th Sharer
+                            
+                        tbody
+                          tr
+                            td.align-middle 
+                                input#1.form-check-input(type='checkbox', value='')
+                            td 101 
+                            td Department 
+                            td 02-sep-2024-37 
+                            td 
+                              i.fa-solid.fa-circle.text-danger
+                            td  
+                            td F01 
+                            td Vacant 
+                            td Arrival 
+                            td 
+                              div.bg-danger.text-center.text-white Drey 
+                            td 
+                              i.fa-solid.fa-user
+                            td Elsa Schneder
+                            td 
+                            td DELUXE
+                            td 2
+                            td 
+                              i.fa-solid.fa-table-columns
+                            td 21:49
+                            td 22:03
+                            td 00:39:03
+                            td Ms Torsren sohn
+                            td 1(1+0)
+                            td 
+                            
+                          tr
+                            td.align-middle 
+                                input#1.form-check-input(type='checkbox', value='')
+                            td 101 
+                            td Department 
+                            td 02-sep-2024-37 
+                            td 
+                              i.fa-solid.fa-circle.text-success
+                            td  
+                            td F01 
+                            td Vacant 
+                            td Arrival 
+                            td 
+                              div.bg-info.text-center.text-white Drey 
+                            td 
+                              i.fa-solid.fa-user
+                            td Elsa Schneder
+                            td 
+                            td DELUXE
+                            td 2
+                            td 
+                              i.fa-solid.fa-table-columns
+                            td 21:49
+                            td 22:03
+                            td 00:39:03
+                            td Ms Torsren sohn
+                            td 1(1+0)
+                            td 
+                            
 
 
             

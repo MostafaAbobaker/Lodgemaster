@@ -243,21 +243,13 @@
         </nav>
         <div class="time-management addTask-page" id="pageMasterLoad">
           <div class="container-fluid pt-3"> 
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Task Status</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Over View</button>
-              </li>
-            </ul>
             <div class="tab-content" id="myTabContent">
               <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0"> 
                 <header class="header-filter mt-3 g-3">
                   <div class="container-fluid"> 
                     <div class="row">
                       <div class="col-lg-3">
-                        <div class="mb-3">
+                        <div class="mb-2">
                           <label class="form-label" for="">Employee</label>
                           <select class="form-select" aria-label="Default select example">
                             <option selected="">Open this select menu</option>
@@ -268,7 +260,7 @@
                         </div>
                       </div>
                       <div class="col-lg-3">       
-                        <div class="mb-3">
+                        <div class="mb-2">
                           <label class="form-label" for="">Shift</label>
                           <select class="form-select" aria-label="Default select example">
                             <option selected="">Open this select menu</option>
@@ -279,7 +271,7 @@
                         </div>
                       </div>
                       <div class="col-lg-3">           
-                        <div class="mb-3">
+                        <div class="mb-2">
                           <label class="form-label" for="">Room</label>
                           <select class="form-select" aria-label="Default select example">
                             <option selected="">Open this select menu</option>
@@ -289,16 +281,107 @@
                           </select>
                         </div>
                       </div>
-                      <div class="col-lg-3">           
-                        <div class="mb-3 text-end">
-                          <label class="form-label" for="">&nbsp;</label><a class="btn btn-master rounded-pill d-block"><i class="fa-solid fa-magnifying-glass me-2"></i>Search</a>
+                      <div class="col-lg-3"> 
+                        <div class="mb-2">         
+                          <label class="form-label" for="">Date</label>
+                          <input class="form-control" type="date">
                         </div>
+                      </div>
+                      <div class="col-lg-3 ms-auto">           
+                        <div class="text-end"><a class="btn btn-master rounded-pill d-block"><i class="fa-solid fa-magnifying-glass me-2"></i>Search</a></div>
                       </div>
                     </div>
                   </div>
                 </header>
+                <div class="table-responsive">
+                  <table class="table table-hover table-responsive-scroll data-Tables table-striped table-sm table-bordered double-width" id="dataTables">
+                    <thead>
+                      <tr>
+                        <th scope="col"> </th>
+                        <th>Room No.</th>
+                        <th style="width:9%">  Task Type</th>
+                        <th style="width:9%">Task by time</th>
+                        <th style="width:9%">Task Status</th>
+                        <th>Dyman</th>
+                        <th>Section</th>
+                        <th style="width:9%">FD Status</th>
+                        <th style="width:9%">Res. Status</th>
+                        <th style="width:9%">Room Status</th>
+                        <th> <i class="fa-solid fa-user"></i></th>
+                        <th>Attendant</th>
+                        <th style="width:9%">No. Do h</th>
+                        <th style="width:9%">Room Type</th>
+                        <th style="width:9%">Credits</th>
+                        <th style="width:9%">Comments</th>
+                        <th style="width:9%">Start Time</th>
+                        <th style="width:9%">End Time</th>
+                        <th style="width:9%">Remaining</th>
+                        <th style="width:9%">Guest Name</th>
+                        <th>Pax</th>
+                        <th>Sharer</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="align-middle"> 
+                          <input class="form-check-input" id="1" type="checkbox" value="">
+                        </td>
+                        <td>101 </td>
+                        <td>Department </td>
+                        <td>02-sep-2024-37 </td>
+                        <td> <i class="fa-solid fa-circle text-danger"></i></td>
+                        <td> </td>
+                        <td>F01 </td>
+                        <td>Vacant </td>
+                        <td>Arrival </td>
+                        <td> 
+                          <div class="bg-danger text-center text-white">Drey </div>
+                        </td>
+                        <td> <i class="fa-solid fa-user"></i></td>
+                        <td>Elsa Schneder</td>
+                        <td> </td>
+                        <td>DELUXE</td>
+                        <td>2</td>
+                        <td> <i class="fa-solid fa-table-columns"></i></td>
+                        <td>21:49</td>
+                        <td>22:03</td>
+                        <td>00:39:03</td>
+                        <td>Ms Torsren sohn</td>
+                        <td>1(1+0)</td>
+                        <td> </td>
+                      </tr>
+                      <tr>
+                        <td class="align-middle"> 
+                          <input class="form-check-input" id="1" type="checkbox" value="">
+                        </td>
+                        <td>101 </td>
+                        <td>Department </td>
+                        <td>02-sep-2024-37 </td>
+                        <td> <i class="fa-solid fa-circle text-success"></i></td>
+                        <td> </td>
+                        <td>F01 </td>
+                        <td>Vacant </td>
+                        <td>Arrival </td>
+                        <td> 
+                          <div class="bg-info text-center text-white">Drey </div>
+                        </td>
+                        <td> <i class="fa-solid fa-user"></i></td>
+                        <td>Elsa Schneder</td>
+                        <td> </td>
+                        <td>DELUXE</td>
+                        <td>2</td>
+                        <td> <i class="fa-solid fa-table-columns"></i></td>
+                        <td>21:49</td>
+                        <td>22:03</td>
+                        <td>00:39:03</td>
+                        <td>Ms Torsren sohn</td>
+                        <td>1(1+0)</td>
+                        <td> </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
-              <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0"> </div>
             </div>
           </div>
         </div>

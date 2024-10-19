@@ -2328,6 +2328,19 @@ aside.aside-bar .body-aside-bar ul li:hover > a {
 .time-management .category-item:hover .heder-category-item {
   color: #fff;
 }
+.time-management.addTask-page table.table {
+  /* &.double-width {
+    width: 120%;
+  } */
+}
+.time-management.addTask-page table.table.table-sm thead tr th, .time-management.addTask-page table.table.table-sm thead tr td, .time-management.addTask-page table.table.table-sm tbody tr th, .time-management.addTask-page table.table.table-sm tbody tr td {
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+}
+.time-management.addTask-page table.table.table-sm thead tr th, .time-management.addTask-page table.table.table-sm tbody tr th {
+  text-wrap: nowrap;
+}
 .time-management.addTask-page table.table tbody td {
   padding: 2px;
   transition: all 0.3s ease-in-out;

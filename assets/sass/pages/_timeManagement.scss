@@ -44,6 +44,23 @@
   &.addTask-page {
     
     table.table {
+      /* &.double-width {
+        width: 120%;
+      } */
+      &.table-sm {
+        thead,tbody {
+          tr {
+            th , td {
+              font-size: 12px;
+              text-align: center;
+              vertical-align: middle;
+            }
+            th {
+              text-wrap: nowrap;
+            }
+          }
+        }
+      }
       tbody {
         td {
           padding: 2px;
