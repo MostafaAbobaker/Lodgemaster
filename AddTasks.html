@@ -389,24 +389,39 @@
             </div>
             <div class="mb-3">
               <label class="form-label" for="exampleInputEmail1">Rooms</label>
-              <select class="form-select" aria-label="Default select example">
-                <option selected="">Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
+              <div class="input-group">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected="">Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three                      </option>
+                </select>
+                <button class="input-group-text btn btn-outline-success" id="basic-addon2"> <i class="fa-solid fa-plus"></i></button>
+              </div>
             </div>
-            <div class="d-flex flex-wrap mb-3" id="contentValue"><span class="badge-item mx-2 mb-2"><span class="text">Room 101</span><span class="icon-exit"><i class="fa-solid fa-xmark fa-fw"></i></span></span></div>
-            <div class="mb-3">
-              <label class="form-label" for="exampleInputEmail1">Serves</label>
-              <select class="form-select" aria-label="Default select example">
-                <option selected="">Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-            </div>
-            <div class="d-flex flex-wrap mb-3" id="contentValue"><span class="badge-item mx-2 mb-2"><span class="text">Room 101</span><span class="icon-exit"><i class="fa-solid fa-xmark fa-fw"></i></span></span></div>
+            <table class="table table-bordered text-center"> 
+              <thead> 
+                <tr> 
+                  <th>Room </th>
+                  <th>Services </th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody> 
+                <tr> 
+                  <td class="align-middle">101</td>
+                  <td class="align-middle"> 
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected="">Open this select menu</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </td>
+                  <td class="align-middle"> <i class="fa-solid fa-trash-can text-danger"></i></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>

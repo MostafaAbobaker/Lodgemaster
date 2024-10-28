@@ -164,30 +164,31 @@ html(lang="en")
               input.form-control(type='text' )
             .mb-3
               label.form-label(for='exampleInputEmail1') Rooms
-              select.form-select(aria-label='Default select example')
-                option(selected='') Open this select menu
-                option(value='1') One
-                option(value='2') Two
-                option(value='3') Three
-            #contentValue.d-flex.flex-wrap.mb-3
-              span.badge-item.mx-2.mb-2
-                span.text Room 101
-                span.icon-exit
-                  i.fa-solid.fa-xmark.fa-fw
-    
-            .mb-3
-              label.form-label(for='exampleInputEmail1') Serves
-              select.form-select(aria-label='Default select example')
-                option(selected='') Open this select menu
-                option(value='1') One
-                option(value='2') Two
-                option(value='3') Three
-            #contentValue.d-flex.flex-wrap.mb-3
-              span.badge-item.mx-2.mb-2
-                span.text Room 101
-                span.icon-exit
-                  i.fa-solid.fa-xmark.fa-fw
-
+              .input-group
+                select.form-select(aria-label='Default select example')
+                  option(selected='') Open this select menu
+                  option(value='1') One
+                  option(value='2') Two
+                  option(value='3') Three                      
+                button#basic-addon2.input-group-text.btn.btn-outline-success 
+                  i.fa-solid.fa-plus
+            table.table.table-bordered.text-center 
+              thead 
+                tr 
+                  th Room 
+                  th Services 
+                  th Action
+              tbody 
+                tr 
+                  td.align-middle 101
+                  td.align-middle 
+                    select.form-select(aria-label='Default select example')
+                      option(selected='') Open this select menu
+                      option(value='1') One
+                      option(value='2') Two
+                      option(value='3') Three
+                  td.align-middle 
+                    i.fa-solid.fa-trash-can.text-danger
           .modal-footer
             button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
             button.btn.btn-primary(type='button') Save changes
